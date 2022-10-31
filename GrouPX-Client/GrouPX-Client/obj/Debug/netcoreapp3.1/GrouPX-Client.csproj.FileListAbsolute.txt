@@ -1,0 +1,17 @@
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.exe
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.deps.json
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.runtimeconfig.json
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.runtimeconfig.dev.json
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.dll
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\bin\Debug\netcoreapp3.1\GrouPX-Client.pdb
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.csproj.AssemblyReference.cache
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX_Client.Form1.resources
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.csproj.GenerateResource.cache
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.AssemblyInfoInputs.cache
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.AssemblyInfo.cs
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.csproj.CoreCompileInputs.cache
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.dll
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.pdb
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX-Client.genruntimeconfig.cache
+D:\Andrea\Documenti\GitHub\GrouPX\GrouPX-Client\GrouPX-Client\obj\Debug\netcoreapp3.1\GrouPX_Client.Properties.Resources.resources
