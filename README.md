@@ -17,12 +17,16 @@ Il sistema si basa su
 | U3        | Admin              | Utenti con privilegi superiori, per controllare i contenuti                          |
 
 ### Funzionalità
-| ID Funzionalità | Nome sintetico | Utenti interessati | Descrizione                                              |
-| --------------- | -------------- | ------------------ | -------------------------------------------------------- |
-| F1              | Login          | U1                 | L'utente deve inserire username e password per procedere |
+| ID Funzionalità | Nome sintetico | Utenti interessati | Descrizione                                                                       |
+| --------------- | -------------- | ------------------ | --------------------------------------------------------------------------------- |
+| F1              | Login          | U1                 | L'utente deve inserire username e password per procedere                          |
+| F2              | Cerca utenti   | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname | 
 
 ## Roadmap
-[ ] Login
+- [ ] F1: Login
+  - [X] F1.1: Login con username e password prefissati
+  - [ ] F1.2: Login con username e password scelti dall'utente
+- [ ] F2: Cerca utenti
 
 ## Credits
 ### Images
