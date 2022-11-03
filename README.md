@@ -34,5 +34,7 @@ L'architettura è client-server
 
 ## Credits
 ### Immagini
-<a target="_blank" href="https://icons8.com/icon/7Ffvtg1xmgaV/test-account">Test Account</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br />
-<a target="_blank" href="https://www.flaticon.com/free-icon/shuttle_2285485?term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag">Shuttle</a>
+| Nome            | Autore          | Link                                              |
+| --------------- | --------------- | ------------------------------------------------- |
+| Test account    | Icons8          | https://icons8.com/icon/7Ffvtg1xmgaV/test-account |
+| Shuttle         | Freepik         | https://www.flaticon.com/free-icon/shuttle_2285485term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag | 
