@@ -3,7 +3,7 @@
 PiantApp è un'applicazione che consente agli utenti di condividere e parlare di piante. Ogni utente può condividere informazioni sulle piante che ha piantato, vedere le piante dei propri amici e moltre altre funzioni
 
 ## Architettura
-Il sistema si basa su
+L'architettura è client-server
 * Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
 * Client (da uno a n): richiedere informazioni al server
 
