@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Andrea",
+        "surname": "Ranica",
+        "nickname": "andre",
+        "email": "andrearanica2004@gmail.com",
+        "password": "bicigialla"
+    },
+    {
+        "name": "Riccardo",
+        "surname": "Ranica",
+        "nickname": "ranga",
+        "email": "riccardoranica@gmail.com",
+        "password": "rangapwd"
+    }
+]

@@ -1,0 +1,17 @@
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.Form1.resources
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.GenerateResource.cache
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.Properties.Resources.resources
