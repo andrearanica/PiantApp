@@ -1,4 +1,4 @@
-# 🪴 PiantApp
+# 🌵 PiantApp
 <!--Hai mai voluto--> 
 PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e parlare di piante. Ogni utente può condividere informazioni sulle piante che ha piantato, vedere le piante dei propri amici e moltre altre funzioni
 
