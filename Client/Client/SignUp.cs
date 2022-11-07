@@ -1,22 +1,30 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 
 namespace Client {
-    public partial class Login : Form {
-        Account account;
-        public Login (ref Account account) {
+    public partial class SignUp : Form {
+        Account newAccount;
+        public SignUp() {
             InitializeComponent();
-            this.account = account;
+            newAccount = new Account();
         }
 
-        private void btn_login_Click(object sender, EventArgs e) {
+        void setNewAccount() {
+            newAccount.name = txt_name.Text;
+            newAccount.surname = txt_surname.Text;
+            newAccount.nickname = txt_nickname.Text;
+            newAccount.email = txt_email.Text;
+            newAccount.password = txt_password.Text;
+        }
+        private void btn_register_Click(object sender, EventArgs e) {
+            setNewAccount();
             connect();
         }
 
-        private void connect () {
+        private void connect() {
             byte[] bytes = new byte[1024];
             try {
                 IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
@@ -24,29 +32,27 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"login { txt_username.Text } { txt_password.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { newAccount.password }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
                     if (response != "") {
-                        // response: surname + name + nickname + email + password
-                        string[] data = response.Split(' ');
-                        account.surname = data[0];
-                        account.name = data[1];
-                        account.nickname = data[2];
-                        account.email = data[3];
-                        account.password = data[4];
-                        MessageBox.Show($"{ account.name } { account.surname }");
-                        this.Close();
+
                     } else {
-                        lbl_error.Visible = true;
+                        lbl_error.Text = "Dati non validi";
                     }
+
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     MessageBox.Show("C'è stato un errore, riprova");
                 }
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 MessageBox.Show("C'è stato un errore, riprova");
             }
         }

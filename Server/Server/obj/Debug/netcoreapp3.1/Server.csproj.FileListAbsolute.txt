@@ -15,3 +15,8 @@ D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server
 D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
 D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
 D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.Properties.Resources.resources
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete

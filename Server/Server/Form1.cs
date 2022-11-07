@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Text;
+using System.Text.Json;
+using System.Collections.Generic;
 
 namespace Server {
     public partial class Form1 : Form {
@@ -44,12 +46,25 @@ namespace Server {
         public void Off () {
             status = false;
         }
-        private bool login (string username, string password) {
-            if (username == "andre" && password == "bicigialla") {
-                return true;
-            } else {
-                return false;
+        private List<Account> readJSON () {
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            return JsonSerializer.Deserialize<List<Account>>(json);
+        }
+        private bool login (string username, string password, ref Account result) {
+            foreach (Account account in readJSON()) {
+                if (account.nickname == username && account.password == password) {
+                    result = account;
+                    return true;
+                }
             }
+            return false;
+        }
+        private void writeNewAccount (Account account) {
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+            accounts.Add(account);
+            json = JsonSerializer.Serialize(accounts);
+            System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", json);
         }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
@@ -72,17 +87,38 @@ namespace Server {
                         }
                     }
                     listbox.Items.Add($"Testo ricevuto: { data }");
-                    // Check
-                    if (data[0] == 'l') {
+
+                    if (data[0] == 'l')
+                    {                           // If the user sends login
                         string info = data.Substring(6);
-                        string[] loginInfo = info.Split(' '); 
-                        if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1))) {
-                            handler.Send(Encoding.ASCII.GetBytes("Login effettuato"));
-                        } else {
-                            handler.Send(Encoding.ASCII.GetBytes("Login errato"));
+                        string[] loginInfo = info.Split(' ');
+                        Account result = new Account();
+                        if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1), ref result)) {
+                            handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password }"));
                         }
+                        else {
+                            handler.Send(Encoding.ASCII.GetBytes(""));
+                        }
+
+                    }
+                    else if (data[0] == 'r') {                    // If the user sends registration
+                        string info = data.Substring(9);
+                        string[] signupInfo = info.Split(' ');
+                        Account newAccount = new Account();
+                        newAccount.surname = signupInfo[0];
+                        newAccount.name = signupInfo[1];
+                        newAccount.nickname = signupInfo[2];
+                        newAccount.email = signupInfo[3];
+                        newAccount.password = signupInfo[4].Remove(signupInfo[4].Length - 1, 1);
+                        writeNewAccount(newAccount);
+
+                        handler.Send(Encoding.ASCII.GetBytes("successfull"));
+
+                    } else if (data[0] == 'p') { 
+                        
+
                     } else {
-                        handler.Send(Encoding.ASCII.GetBytes("N'hoccapito"));
+                        handler.Send(Encoding.ASCII.GetBytes(""));
                     }
                     listbox.Items.Add(data);
 
@@ -92,6 +128,19 @@ namespace Server {
             } catch (Exception e) {
                 listbox.Items.Add($"Errore: { e.ToString() }");
             }
+        }
+    }
+    public class Account {
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string nickname { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public Account () {
+            this.name = this.surname = this.nickname = this.email = this.password = "undefined";
+        }
+        public Account (string name, string surname, string nickname, string email, string password) {
+            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password;
         }
     }
 }

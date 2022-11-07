@@ -95,6 +95,7 @@ namespace Client
             this.txt_password.Location = new System.Drawing.Point(74, 186);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(228, 27);
             this.txt_password.TabIndex = 3;
             // 
