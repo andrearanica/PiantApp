@@ -28,9 +28,10 @@ L'architettura è client-server
 | F4              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                              |
 
 ## 🚀 Roadmap
-- [ ] F1: Login
+- [X] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
-  - [ ] F1.2: Login con username e password scelti dall'utente
+  - [X] F1.2: Login con username e password scelti dall'utente
+  - [X] F1.3: Registrazione
 - [ ] F2: Cerca utenti
 - [ ] F3: Pubblicare contenuti
 - [ ] F4: Interagire con i post
