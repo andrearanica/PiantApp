@@ -88,8 +88,7 @@ namespace Server {
                     }
                     listbox.Items.Add($"Testo ricevuto: { data }");
 
-                    if (data[0] == 'l')
-                    {                           // If the user sends login
+                    if (data[0] == 'l') {                           // If the user sends login
                         string info = data.Substring(6);
                         string[] loginInfo = info.Split(' ');
                         Account result = new Account();
@@ -101,7 +100,7 @@ namespace Server {
                         }
 
                     }
-                    else if (data[0] == 'r') {                    // If the user sends registration
+                    else if (data[0] == 'r') {                      // If the user sends registration
                         string info = data.Substring(9);
                         string[] signupInfo = info.Split(' ');
                         Account newAccount = new Account();

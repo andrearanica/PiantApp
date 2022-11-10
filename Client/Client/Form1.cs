@@ -36,8 +36,9 @@ namespace Client {
 
         private void createPost (UserPost post) {
             Label title = new Label();
+            title.Visible = true;
             title.Text = post.title;
-            title.Location = new System.Drawing.Point(10, 10);
+            title.Location = new System.Drawing.Point(113, 163);
         }
     }
     public class Account {
