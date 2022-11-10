@@ -5,6 +5,12 @@ PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e
 ## 👷🏻‍♂️ Utilizzo
 Per utilizzare il programma esegui il server e fai partire il servizio premendo il pulsante apposito. Successivamente esegui i client ed effettua il login
 
+## ✨ Funzionamento
+Una volta aperta l'app ed effettuato l'accesso, verrà mostrato nella home uno dei nuovi post; puoi mettere mi piace, commentare, visitare il profilo dell'utente che ha postato, oppure passare al prossimo post. In questo modo, verrà mostrato un post per volta.
+Tramite i tasti laterali si può passare alle sezioni:
+  - Home
+  - Cerca utente
+
 ## ⚙️ Architettura
 L'architettura è client-server
 * Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
