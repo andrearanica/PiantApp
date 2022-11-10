@@ -22,6 +22,7 @@ namespace Client {
                 login.ShowDialog();
                 lbl_name.Text = account.name;
                 pnl_header.Visible = false;
+                createPost(new UserPost("Ciao", "andre"));
             } else {
                 Info info = new Info(account);
                 info.ShowDialog();
@@ -33,8 +34,10 @@ namespace Client {
             signUp.ShowDialog();
         }
 
-        private void getPosts () {
-
+        private void createPost (UserPost post) {
+            Label title = new Label();
+            title.Text = post.title;
+            title.Location = new System.Drawing.Point(10, 10);
         }
     }
     public class Account {
