@@ -10,6 +10,7 @@ Una volta aperta l'app ed effettuato l'accesso, verrà mostrato nella home uno d
 Tramite i tasti laterali si può passare alle sezioni:
   - Home
   - Cerca utente
+  - Ultimi "mi piace"
 
 ## ⚙️ Architettura
 L'architettura è client-server
