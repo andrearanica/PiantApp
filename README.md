@@ -42,6 +42,8 @@ L'architettura è client-server
 - [ ] F2: Cerca utenti
 - [ ] F3: Pubblicare contenuti
 - [ ] F4: Interagire con i post
+- [ ] Aggiunte varie
+  - [ ] Visualizzare se un utente è online
 - [ ] Bug
   - [ ] Compaiono popup a caso, magari toglili <3
   - [ ] Quando faccio login e esco senza loggare, scompare il signup
