@@ -39,6 +39,8 @@ L'architettura è client-server
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
+  - [ ] F1.4 Controlla email valida e password con numeri e caratteri speciali
+  - [ ] F1.5 Controlla input vuoti nel login
 - [ ] F2: Cerca utenti
 - [ ] F3: Pubblicare contenuti
 - [ ] F4: Interagire con i post
@@ -48,9 +50,7 @@ L'architettura è client-server
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
   - [X] Responsive server
-  - [ ] Controlla email valida e password con numeri e caratteri speciali
-  - [ ] Controlla input vuoti nel login
-  - [ ] Quando finisce registrazione, chiude form
+  - [X] Quando finisce registrazione, chiude form
 
 ## ❤️ Credits
 ### Immagini
