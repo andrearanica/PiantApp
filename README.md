@@ -5,6 +5,13 @@ PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e
 ## 👷🏻‍♂️ Utilizzo
 Per utilizzare il programma esegui il server e fai partire il servizio premendo il pulsante apposito. Successivamente esegui i client ed effettua il login
 
+## ✨ Funzionamento
+Una volta aperta l'app ed effettuato l'accesso, verrà mostrato nella home uno dei nuovi post; puoi mettere mi piace, commentare, visitare il profilo dell'utente che ha postato, oppure passare al prossimo post. In questo modo, verrà mostrato un post per volta.
+Tramite i tasti laterali si può passare alle sezioni:
+  - Home
+  - Cerca utente
+  - Ultimi "mi piace"
+
 ## ⚙️ Architettura
 L'architettura è client-server
 * Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
@@ -23,20 +30,31 @@ L'architettura è client-server
 | ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                       |
 | --------------- | --------------------- | ------------------ | --------------------------------------------------------------------------------- |
 | F1              | Login                 | U1                 | L'utente deve inserire username e password per procedere                          |
-| F2              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname |
-| F3              | Pubblicare contenuti  | U2                 | Coming soon...                                                                    |
-| F4              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                              |
+| F2              | Visualizzare post     | U2, U3             | Nella home dell'utente, deve essere presente un post                              |
+| F3              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname |
+| F4              | Pubblicare contenuti  | U2                 | Coming soon...                                                                    |
+| F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                              |
 
 ## 🚀 Roadmap
 - [X] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
-- [ ] F2: Cerca utenti
-- [ ] F3: Pubblicare contenuti
-- [ ] F4: Interagire con i post
+  - [X] F1.4 Controlla email valida e password con numeri e caratteri speciali
+  - [X] F1.5 Controlla input vuoti nel login
+- [ ] F2: Visualizzare post
+  - [ ] F2.1: Creare un post di prova
+  - [ ] F2.2: Leggere post da database
+- [ ] F3: Cerca utenti
+- [ ] F4: Pubblicare contenuti
+- [ ] F5: Interagire con i post
+- [ ] Aggiunte varie
+  - [ ] Visualizzare se un utente è online
 - [ ] Bug
-  - [ ] Compaiono popup a caso, magari toglili <3
+  - [X] Compaiono popup a caso, magari toglili <3
+  - [X] Quando faccio login e esco senza loggare, scompare il signup
+  - [X] Responsive server
+  - [X] Quando finisce registrazione, chiude form
 
 ## ❤️ Credits
 ### Immagini
