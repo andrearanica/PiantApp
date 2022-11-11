@@ -43,6 +43,7 @@ L'architettura è client-server
 - [ ] F4: Interagire con i post
 - [ ] Bug
   - [ ] Compaiono popup a caso, magari toglili <3
+  - [ ] Quando faccio login e esco, scompare il signup
 
 ## ❤️ Credits
 ### Immagini
