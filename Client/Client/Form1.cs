@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client {
@@ -20,8 +14,10 @@ namespace Client {
             if (account.name == "undefined") {
                 Login login = new Login(ref account);
                 login.ShowDialog();
-                lbl_name.Text = account.name;
-                pnl_header.Visible = false;
+                if (account.name != "undefined") {
+                    lbl_name.Text = account.name;
+                    pnl_header.Visible = false;
+                }
                 createPost(new UserPost("Ciao", "andre"));
             } else {
                 Info info = new Info(account);
@@ -33,12 +29,29 @@ namespace Client {
             SignUp signUp = new SignUp();
             signUp.ShowDialog();
         }
-
+        private void createTitle (string title) {
+            Label lbl_title = new Label();
+            lbl_title.Visible = true;
+            lbl_title.Text = title;
+            Font font = new Font("Century Gothic", 18);
+            lbl_title.Font = font;
+            lbl_title.Location = new System.Drawing.Point(113, 60);
+            lbl_title.Size = new System.Drawing.Size(140, 140);
+            Controls.Add(lbl_title);
+        }
+        private void createNickname (string nickname) {
+            Label lbl_nickname = new Label();
+            lbl_nickname.Visible = true;
+            lbl_nickname.Text = nickname;
+            Font font = new Font("Century Gothic", 14);
+            lbl_nickname.Font = font;
+            lbl_nickname.Location = new System.Drawing.Point(113, 80);
+            lbl_nickname.Size = new System.Drawing.Size(140, 140);
+            Controls.Add(lbl_nickname);
+        }
         private void createPost (UserPost post) {
-            Label title = new Label();
-            title.Visible = true;
-            title.Text = post.title;
-            title.Location = new System.Drawing.Point(113, 163);
+            createTitle(post.title);
+            createNickname(post.author);
         }
     }
     public class Account {

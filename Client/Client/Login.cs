@@ -36,7 +36,6 @@ namespace Client {
                         account.nickname = data[2];
                         account.email = data[3];
                         account.password = data[4];
-                        MessageBox.Show($"{ account.name } { account.surname }");
                         this.Close();
                     } else {
                         lbl_error.Visible = true;

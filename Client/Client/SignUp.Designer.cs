@@ -164,10 +164,12 @@ namespace Client
             this.lbl_error.AutoSize = true;
             this.lbl_error.BackColor = System.Drawing.Color.White;
             this.lbl_error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_error.Location = new System.Drawing.Point(227, 349);
+            this.lbl_error.Location = new System.Drawing.Point(204, 339);
             this.lbl_error.Name = "lbl_error";
-            this.lbl_error.Size = new System.Drawing.Size(0, 20);
+            this.lbl_error.Size = new System.Drawing.Size(113, 20);
             this.lbl_error.TabIndex = 12;
+            this.lbl_error.Text = "Dati non validi";
+            this.lbl_error.Visible = false;
             // 
             // SignUp
             // 

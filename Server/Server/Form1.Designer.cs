@@ -58,7 +58,7 @@ namespace Server
             this.pnl_home.Controls.Add(this.btn_start);
             this.pnl_home.Location = new System.Drawing.Point(-1, 0);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(84, 627);
+            this.pnl_home.Size = new System.Drawing.Size(84, 985);
             this.pnl_home.TabIndex = 1;
             // 
             // btn_start
@@ -94,18 +94,21 @@ namespace Server
             // 
             // list_update
             // 
+            this.list_update.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.list_update.FormattingEnabled = true;
             this.list_update.ItemHeight = 21;
             this.list_update.Location = new System.Drawing.Point(90, 94);
             this.list_update.Name = "list_update";
-            this.list_update.Size = new System.Drawing.Size(1058, 340);
+            this.list_update.Size = new System.Drawing.Size(600, 298);
             this.list_update.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 625);
+            this.ClientSize = new System.Drawing.Size(702, 419);
             this.Controls.Add(this.list_update);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.label2);
@@ -113,8 +116,9 @@ namespace Server
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(718, 458);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Server";
             this.pnl_home.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
