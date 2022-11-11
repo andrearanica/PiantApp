@@ -47,7 +47,7 @@ L'architettura è client-server
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
-  - [ ] Responsive server
+  - [X] Responsive server
   - [ ] Controlla email valida e password con numeri e caratteri speciali
   - [ ] Controlla input vuoti nel login
   - [ ] Quando finisce registrazione, chiude form
