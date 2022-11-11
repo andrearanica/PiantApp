@@ -45,8 +45,8 @@ L'architettura è client-server
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
 - [ ] Bug
-  - [ ] Compaiono popup a caso, magari toglili <3
-  - [ ] Quando faccio login e esco senza loggare, scompare il signup
+  - [X] Compaiono popup a caso, magari toglili <3
+  - [X] Quando faccio login e esco senza loggare, scompare il signup
   - [ ] Responsive server
   - [ ] Controlla email valida e password con numeri e caratteri speciali
   - [ ] Controlla input vuoti nel login
