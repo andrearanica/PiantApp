@@ -44,7 +44,11 @@ L'architettura è client-server
 - [ ] F4: Interagire con i post
 - [ ] Bug
   - [ ] Compaiono popup a caso, magari toglili <3
-  - [ ] Quando faccio login e esco, scompare il signup
+  - [ ] Quando faccio login e esco senza loggare, scompare il signup
+  - [ ] Responsive server
+  - [ ] Controlla email valida e password con numeri e caratteri speciali
+  - [ ] Controlla input vuoti nel login
+  - [ ] Quando finisce registrazione, chiude form
 
 ## ❤️ Credits
 ### Immagini
