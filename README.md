@@ -39,8 +39,8 @@ L'architettura è client-server
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
-  - [ ] F1.4 Controlla email valida e password con numeri e caratteri speciali
-  - [ ] F1.5 Controlla input vuoti nel login
+  - [X] F1.4 Controlla email valida e password con numeri e caratteri speciali
+  - [X] F1.5 Controlla input vuoti nel login
 - [ ] F2: Cerca utenti
 - [ ] F3: Pubblicare contenuti
 - [ ] F4: Interagire con i post
