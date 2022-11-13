@@ -42,7 +42,7 @@ L'architettura è client-server
   - [X] F1.3: Registrazione
   - [X] F1.4 Controlla email valida e password con numeri e caratteri speciali
   - [X] F1.5 Controlla input vuoti nel login
-  - [ ] F1.6 Controlla che il nickname sia libero
+  - [ ] F1.6 Controlla che il nickname e la mail sia libero
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
