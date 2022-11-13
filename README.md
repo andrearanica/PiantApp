@@ -27,22 +27,23 @@ L'architettura è client-server
 | U3        | Admin              | Utenti con privilegi superiori, per controllare i contenuti                          |
 
 ### Funzionalità
-| ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                       |
-| --------------- | --------------------- | ------------------ | --------------------------------------------------------------------------------- |
-| F1              | Login                 | U1                 | L'utente deve inserire username e password per procedere                          |
-| F2              | Visualizzare post     | U2, U3             | Nella home dell'utente, deve essere presente un post                              |
-| F3              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname |
-| F4              | Pubblicare contenuti  | U2                 | Coming soon...                                                                    |
-| F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                              |
+| ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                        |
+| --------------- | --------------------- | ------------------ | ---------------------------------------------------------------------------------- |
+| F1              | Login                 | U1                 | L'utente deve inserire username e password per procedere                           |
+| F2              | Visualizzare post     | U2, U3             | Nella home dell'utente, deve essere presente un post                               |
+| F3              | Pubblicare contenuti  | U2                 | L'utente può essere in grado di pubblicare un post                                 |
+| F4              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
+| F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
 
 ## 🚀 Roadmap
-- [X] F1: Login e registrazione
+- [ ] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
-  - [X] F1.4 Controlla email valida e password con numeri e caratteri speciali
-  - [X] F1.5 Controlla input vuoti nel login
-  - [ ] F1.6 Controlla che il nickname e la mail sia libero
+  - [X] F1.4: Controlla email valida e password con numeri e caratteri speciali
+  - [X] F1.5: Controlla input vuoti nel login
+  - [ ] F1.6: Controlla che il nickname e la mail sia libero
+  - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
@@ -50,10 +51,17 @@ L'architettura è client-server
   - [ ] F2.4: Visualizzare il post con una UI decente
   - [ ] F2.5: Le richieste possono essere effettuate solo da utenti loggati
   - [ ] F2.6: Cambiare il post restituito in base agli interessi
-  - [ ] F2.7: 
-- [ ] F3: Cerca utenti
-- [ ] F4: Pubblicare contenuti
+- [ ] F3: Pubblicare contenuti
+  - [ ] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
+  - [ ] F3.2: Aggiungere un'immagine dal web
+  - [ ] F3.3: Le richieste possono essere effettuate solo dal utenti loggati
+- [ ] F4: Cerca utenti
+  - [ ] F4.1: Vedere tutti gli utenti presenti nel database
+  - [ ] F4.2: Cercare un utente in base al nickname
+  - [ ] F4.3: Visualizzare tutte le informazioni sull'utente in una form (like, commenti...)
 - [ ] F5: Interagire con i post
+  - [ ] F5.1: Like ai post
+  - [ ] F5.2: Commenti ai post
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
 - [ ] Bug
