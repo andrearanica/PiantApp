@@ -38,6 +38,7 @@ namespace Client
             this.btn_signup = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_newPost = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             this.pnl_header.SuspendLayout();
@@ -131,11 +132,22 @@ namespace Client
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_newPost
+            // 
+            this.btn_newPost.Location = new System.Drawing.Point(275, 17);
+            this.btn_newPost.Name = "btn_newPost";
+            this.btn_newPost.Size = new System.Drawing.Size(94, 27);
+            this.btn_newPost.TabIndex = 4;
+            this.btn_newPost.Text = "Ricarica";
+            this.btn_newPost.UseVisualStyleBackColor = true;
+            this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 581);
+            this.Controls.Add(this.btn_newPost);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.label1);
@@ -164,6 +176,7 @@ namespace Client
         private System.Windows.Forms.Button btn_signup;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_newPost;
     }
 }
 

@@ -66,6 +66,52 @@ namespace Server {
             json = JsonSerializer.Serialize(accounts);
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", json);
         }
+        private void login (string data, ref Socket handler) {
+            string info = data.Substring(6);
+            string[] loginInfo = info.Split(' ');
+            Account result = new Account();
+            if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1), ref result)) {
+                handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password }"));
+            } else {
+                handler.Send(Encoding.ASCII.GetBytes(""));
+            }
+        }
+        private void register (string data, ref Socket handler) {
+            string info = data.Substring(9);
+            string[] signupInfo = info.Split(' ');
+            Account newAccount = new Account();
+            newAccount.surname = signupInfo[0];
+            newAccount.name = signupInfo[1];
+            newAccount.nickname = signupInfo[2];
+            newAccount.email = signupInfo[3];
+            newAccount.password = signupInfo[4].Remove(signupInfo[4].Length - 1, 1);
+
+            bool valid = true;
+
+            foreach (Account account in readJSON()) {
+                if (account.nickname == newAccount.nickname || account.email == newAccount.email) {
+                    valid = false;
+                }
+            }
+                
+            if (valid) {
+                writeNewAccount(newAccount);
+                handler.Send(Encoding.ASCII.GetBytes("successfull"));
+            } else {
+                handler.Send(Encoding.ASCII.GetBytes(""));
+            }
+        }
+        private void post (string data, ref Socket handler) {
+            UserPost post = new UserPost();
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
+            List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(json);
+
+            post = posts[new Random().Next(0, posts.Count)];
+
+            MessageBox.Show($"{ post.title } { post.author } ");
+
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } {post.author}"));
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -89,33 +135,12 @@ namespace Server {
                     listbox.Items.Add($"Testo ricevuto: { data }");
 
                     if (data[0] == 'l') {                           // If the user sends login
-                        string info = data.Substring(6);
-                        string[] loginInfo = info.Split(' ');
-                        Account result = new Account();
-                        if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1), ref result)) {
-                            handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password }"));
-                        }
-                        else {
-                            handler.Send(Encoding.ASCII.GetBytes(""));
-                        }
-
+                        login(data, ref handler);
                     }
                     else if (data[0] == 'r') {                      // If the user sends registration
-                        string info = data.Substring(9);
-                        string[] signupInfo = info.Split(' ');
-                        Account newAccount = new Account();
-                        newAccount.surname = signupInfo[0];
-                        newAccount.name = signupInfo[1];
-                        newAccount.nickname = signupInfo[2];
-                        newAccount.email = signupInfo[3];
-                        newAccount.password = signupInfo[4].Remove(signupInfo[4].Length - 1, 1);
-                        writeNewAccount(newAccount);
-
-                        handler.Send(Encoding.ASCII.GetBytes("successfull"));
-
-                    } else if (data[0] == 'p') { 
-                        
-
+                        register(data, ref handler);
+                    } else if (data[0] == 'p') {
+                        post(data, ref handler);
                     } else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
                     }
@@ -140,6 +165,19 @@ namespace Server {
         }
         public Account (string name, string surname, string nickname, string email, string password) {
             this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password;
+        }
+    }
+    public class UserPost
+    {
+        public string title { get; set; }
+        public string author { get; set; }
+        public UserPost()
+        {
+
+        }
+        public UserPost(string title, string author)
+        {
+            this.title = title; this.author = author;
         }
     }
 }
