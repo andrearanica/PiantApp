@@ -56,7 +56,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
-  - [ ] F2.3: Vedere un post random
+  - [X] F2.3: Vedere un post random
   - [ ] F2.4: Visualizzare il post con una UI decente
   - [ ] F2.5: Le richieste possono essere effettuate solo da utenti loggati
   - [ ] F2.6: Cambiare il post restituito in base agli interessi
