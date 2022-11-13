@@ -29,11 +29,17 @@ L'architettura è client-server
 ### Funzionalità
 | ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                        |
 | --------------- | --------------------- | ------------------ | ---------------------------------------------------------------------------------- |
-| F1              | Login                 | U1                 | L'utente deve inserire username e password per procedere                           |
+| F1              | Login e registrazione | U1                 | L'utente deve inserire username e password per procedere                           |
 | F2              | Visualizzare post     | U2, U3             | Nella home dell'utente, deve essere presente un post                               |
 | F3              | Pubblicare contenuti  | U2                 | L'utente può essere in grado di pubblicare un post                                 |
 | F4              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
 | F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
+
+## 💻 Protocollo
+| ID Funzionalità | Nome sintetico        | Comando                                                                                       |
+| --------------- | --------------------- | --------------------------------------------------------------------------------------------- |
+| F1              | Login                 | ``` login nickname password$``` oppure ``` register surname name nickname email password$ ``` |
+| F2              | Visualizzare post     | ``` post$ ```                                                                                 | 
 
 ## 🚀 Roadmap
 - [ ] F1: Login e registrazione
