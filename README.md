@@ -44,8 +44,10 @@ L'architettura è client-server
   - [X] F1.5 Controlla input vuoti nel login
   - [ ] F1.6 Controlla che il nickname sia libero
 - [ ] F2: Visualizzare post
-  - [ ] F2.1: Creare un post di prova
-  - [ ] F2.2: Leggere post da database
+  - [X] F2.1: Vedere un post di prova
+  - [X] F2.2: Leggere tutti i post da database
+  - [ ] F2.3: Vedere un post random
+  - [ ] F2.3: Visualizzare il post con una UI decente
 - [ ] F3: Cerca utenti
 - [ ] F4: Pubblicare contenuti
 - [ ] F5: Interagire con i post
