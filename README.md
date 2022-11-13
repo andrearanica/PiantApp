@@ -13,9 +13,12 @@ Tramite i tasti laterali si può passare alle sezioni:
   - Ultimi "mi piace"
 
 ## ⚙️ Architettura
-L'architettura è client-server
-* Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
-* Client (da uno a n): richiedere informazioni al server
+### ⌨️ Architettura client-server
+ - Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
+ - Client (da uno a n): richiedere informazioni al server
+### 🗃️ Basi di dati
+ - /json/users.json contiene gli utenti registrati
+ - /json/posts.json contiene i post
 
 ## 🔎 Analisi casi d'uso 
 
