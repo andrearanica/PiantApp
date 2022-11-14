@@ -23,10 +23,10 @@ Tramite i tasti laterali si può passare alle sezioni:
 
 ### Utenti
 | ID Utente | Nome utente        | Descrizione                                                                          |
-| --------- | ------------------ | ---------------------------------------------------------------------------          |
+| --------- | ------------------ | ------------------------------------------------------------------------------------ |
 | U1        | Utente non loggato | Utente che non ha effettuato il login a cui viene richiesto di autenticarsi          |
 | U2        | Utente loggato     | Utente che ha effettuato l'accesso e che quindi può richiedere tutte le funzionalità |
-| U3        | Admin              | Utenti con privilegi superiori, per controllare i contenuti                          |
+| U3        | Admin              | Utenti con privilegi superiori, per controllare/eliminare i contenuti                |
 
 ### Funzionalità
 | ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                        |
