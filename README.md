@@ -78,6 +78,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Responsive server
   - [X] Quando finisce registrazione, chiude form
   - [X] Quando il client chiede il post si chiude la form
+  - [ ] Restituire lo stesso post di fila
 
 ## ❤️ Credits
 ### Immagini
