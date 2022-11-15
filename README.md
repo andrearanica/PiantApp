@@ -59,6 +59,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F2.4: Visualizzare il post con una UI decente
   - [ ] F2.5: Le richieste possono essere effettuate solo da utenti loggati
   - [ ] F2.6: Cambiare il post restituito in base agli interessi
+  - [ ] F2.7: Visualizzare i post recenti (solo frontend)
 - [ ] F3: Pubblicare contenuti
   - [ ] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
   - [ ] F3.2: Aggiungere un'immagine dal web
