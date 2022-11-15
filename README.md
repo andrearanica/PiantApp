@@ -61,7 +61,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F2.6: Cambiare il post restituito in base agli interessi
   - [ ] F2.7: Visualizzare i post recenti (solo frontend)
 - [ ] F3: Pubblicare contenuti
-  - [ ] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
+  - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
   - [ ] F3.2: Aggiungere un'immagine dal web
   - [ ] F3.3: Le richieste possono essere effettuate solo dal utenti loggati
 - [ ] F4: Cerca utenti
@@ -80,6 +80,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Quando finisce registrazione, chiude form
   - [X] Quando il client chiede il post si chiude la form
   - [ ] Restituire lo stesso post di fila
+  - [ ] Quando pubblico un post nella descrizione compare un $
 
 ## ❤️ Credits
 ### Immagini
