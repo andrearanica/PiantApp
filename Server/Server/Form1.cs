@@ -23,8 +23,8 @@ namespace Server {
         }
 
         private void updateStatus (bool status) {
-            if (status) lbl_status.Text = "Il tuo server è acceso";
-            else lbl_status.Text = "Il tuo server è spento";
+            if (status) lbl_status.Text = "Il server è acceso";
+            else lbl_status.Text = "Il server è spento";
         }
     }
 
@@ -108,9 +108,7 @@ namespace Server {
 
             post = posts[new Random().Next(0, posts.Count)];
 
-            MessageBox.Show($"{ post.title } { post.author } ");
-
-            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } {post.author}"));
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } #{ post.description }"));
         }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
@@ -139,7 +137,7 @@ namespace Server {
                     }
                     else if (data[0] == 'r') {                      // If the user sends registration
                         register(data, ref handler);
-                    } else if (data[0] == 'p') {
+                    } else if (data[0] == 'p') {                    // If the user sends post
                         post(data, ref handler);
                     } else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
@@ -167,17 +165,16 @@ namespace Server {
             this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password;
         }
     }
-    public class UserPost
-    {
+    public class UserPost {
         public string title { get; set; }
         public string author { get; set; }
-        public UserPost()
-        {
+        public string date { get; set; }
+        public string description { get; set; }
+        public UserPost() {
 
         }
-        public UserPost(string title, string author)
-        {
-            this.title = title; this.author = author;
+        public UserPost(string title, string author, string date, string description) {
+            this.title = title; this.author = author; this.date = date; this.description = description;
         }
     }
 }

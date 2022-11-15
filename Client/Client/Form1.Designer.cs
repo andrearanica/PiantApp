@@ -134,12 +134,14 @@ namespace Client
             // 
             // btn_newPost
             // 
-            this.btn_newPost.Location = new System.Drawing.Point(275, 17);
+            this.btn_newPost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_newPost.Location = new System.Drawing.Point(893, 62);
             this.btn_newPost.Name = "btn_newPost";
-            this.btn_newPost.Size = new System.Drawing.Size(94, 27);
+            this.btn_newPost.Size = new System.Drawing.Size(96, 29);
             this.btn_newPost.TabIndex = 4;
             this.btn_newPost.Text = "Ricarica";
             this.btn_newPost.UseVisualStyleBackColor = true;
+            this.btn_newPost.Visible = false;
             this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
             // 
             // Form1
@@ -153,6 +155,7 @@ namespace Client
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinimumSize = new System.Drawing.Size(1020, 620);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
