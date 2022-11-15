@@ -77,7 +77,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Quando faccio login e esco senza loggare, scompare il signup
   - [X] Responsive server
   - [X] Quando finisce registrazione, chiude form
-  - [ ] Quando il client chiede il post si chiude la form
+  - [X] Quando il client chiede il post si chiude la form
 
 ## ❤️ Credits
 ### Immagini
