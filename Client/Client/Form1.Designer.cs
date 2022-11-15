@@ -40,6 +40,7 @@ namespace Client
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             this.pnl_header.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Client
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.btn_addPost);
             this.panel1.Controls.Add(this.pic_profile);
             this.panel1.Controls.Add(this.lbl_name);
@@ -157,6 +159,16 @@ namespace Client
             this.btn_newPost.Visible = false;
             this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
             // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(11, 540);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(80, 30);
+            this.btn_logout.TabIndex = 2;
+            this.btn_logout.Text = "Esci";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -168,9 +180,10 @@ namespace Client
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1020, 620);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PiantApp";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();
@@ -194,6 +207,7 @@ namespace Client
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_newPost;
         private System.Windows.Forms.Button btn_addPost;
+        private System.Windows.Forms.Button btn_logout;
     }
 }
 

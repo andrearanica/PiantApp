@@ -128,6 +128,10 @@ namespace Client {
             AddPost addPost = new AddPost();
             addPost.ShowDialog();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e) {
+            Application.Restart();
+        }
     }
     public class Account {
         public string name { get; set; }

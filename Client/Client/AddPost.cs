@@ -37,6 +37,7 @@ namespace Client {
             } catch (Exception) {
                 MessageBox.Show("C'è stato un errore, riprova");
             }
+            this.Close();
         }
 
         private void btn_send_Click(object sender, EventArgs e) {
