@@ -18,3 +18,4 @@ D:\Andrea\Documenti\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client
 D:\Andrea\Documenti\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.Login.resources
 D:\Andrea\Documenti\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.Info.resources
 D:\Andrea\Documenti\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.SignUp.resources
+D:\Andrea\Documenti\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.AddPost.resources

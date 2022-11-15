@@ -110,6 +110,19 @@ namespace Server {
 
             handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } #{ post.description }"));
         }
+        private void addPost (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+            UserPost post = new UserPost(info[1], info[2], info[3], info[4]);
+
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
+            List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(json);
+
+            posts.Add(post);
+
+            System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize(posts));
+
+            handler.Send(Encoding.ASCII.GetBytes("successfull"));
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -139,7 +152,10 @@ namespace Server {
                         register(data, ref handler);
                     } else if (data[0] == 'p') {                    // If the user sends post
                         post(data, ref handler);
-                    } else {
+                    } else if (data[0] == 'a') {
+                        addPost(data, ref handler);
+                    }
+                    else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
                     }
                     listbox.Items.Add(data);

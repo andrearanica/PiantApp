@@ -31,6 +31,7 @@ namespace Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_addPost = new System.Windows.Forms.Button();
             this.pic_profile = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,12 +51,24 @@ namespace Client
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.btn_addPost);
             this.panel1.Controls.Add(this.pic_profile);
             this.panel1.Controls.Add(this.lbl_name);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(104, 585);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_addPost
+            // 
+            this.btn_addPost.Location = new System.Drawing.Point(31, 157);
+            this.btn_addPost.Name = "btn_addPost";
+            this.btn_addPost.Size = new System.Drawing.Size(40, 37);
+            this.btn_addPost.TabIndex = 1;
+            this.btn_addPost.Text = "+";
+            this.btn_addPost.UseVisualStyleBackColor = true;
+            this.btn_addPost.Visible = false;
+            this.btn_addPost.Click += new System.EventHandler(this.btn_addPost_Click);
             // 
             // pic_profile
             // 
@@ -180,6 +193,7 @@ namespace Client
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_newPost;
+        private System.Windows.Forms.Button btn_addPost;
     }
 }
 

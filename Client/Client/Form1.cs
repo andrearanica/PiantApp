@@ -31,6 +31,7 @@ namespace Client {
                     lbl_name.Text = account.name;
                     pnl_header.Visible = false;
                     btn_newPost.Visible = true;
+                    btn_addPost.Visible = true;
                 }
             } else {
                 Info info = new Info(account);
@@ -121,6 +122,11 @@ namespace Client {
         private void btn_newPost_Click(object sender, EventArgs e) {
             UserPost post = getPost();
             createPost(post);
+        }
+
+        private void btn_addPost_Click(object sender, EventArgs e) {
+            AddPost addPost = new AddPost();
+            addPost.ShowDialog();
         }
     }
     public class Account {
