@@ -62,8 +62,9 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F2.7: Visualizzare i post recenti (solo frontend)
 - [ ] F3: Pubblicare contenuti
   - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
-  - [ ] F3.2: Aggiungere un'immagine dal web
-  - [ ] F3.3: Le richieste possono essere effettuate solo dal utenti loggati
+  - [ ] F3.2: Controllare i dati inseriti
+  - [ ] F3.3: Aggiungere un'immagine dal web
+  - [ ] F3.4: Le richieste possono essere effettuate solo dal utenti loggati
 - [ ] F4: Cerca utenti
   - [ ] F4.1: Vedere tutti gli utenti presenti nel database
   - [ ] F4.2: Cercare un utente in base al nickname
