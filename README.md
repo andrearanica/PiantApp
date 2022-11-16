@@ -38,10 +38,11 @@ Tramite i tasti laterali si può passare alle sezioni:
 | F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
 
 ## 💻 Protocollo
-| ID Funzionalità | Nome sintetico        | Comando1                        | Comando2                                               |
-| --------------- | --------------------- | ------------------------------- | ------------------------------------------------------ |
-| F1              | Login                 | ``` login nickname password$``` | ``` register surname name nickname email password$ ``` |
-| F2              | Visualizzare post     | ``` post$ ```                   |                                                        |
+| ID Funzionalità | Nome sintetico        | Comando1                                   | Comando2                                               |
+| --------------- | --------------------- | -----------------------------------------  | ------------------------------------------------------ |
+| F1              | Login                 | ``` login nickname password$```            | ``` register surname name nickname email password$ ``` |
+| F2              | Visualizzare post     | ``` post$ ```                              |                                                        |
+| F3              | Pubblicare contenuti  | ``` add title author data description$ ``` |                                                        |
 
 ## 🚀 Roadmap
 - [ ] F1: Login e registrazione
