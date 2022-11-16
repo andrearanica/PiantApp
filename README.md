@@ -38,10 +38,11 @@ Tramite i tasti laterali si può passare alle sezioni:
 | F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
 
 ## 💻 Protocollo
-| ID Funzionalità | Nome sintetico        | Comando1                        | Comando2                                               |
-| --------------- | --------------------- | ------------------------------- | ------------------------------------------------------ |
-| F1              | Login                 | ``` login nickname password$``` | ``` register surname name nickname email password$ ``` |
-| F2              | Visualizzare post     | ``` post$ ```                   |                                                        |
+| ID Funzionalità | Nome sintetico        | Comando1                                   | Comando2                                               |
+| --------------- | --------------------- | -----------------------------------------  | ------------------------------------------------------ |
+| F1              | Login                 | ``` login nickname password$```            | ``` register surname name nickname email password$ ``` |
+| F2              | Visualizzare post     | ``` post$ ```                              |                                                        |
+| F3              | Pubblicare contenuti  | ``` add title author data description$ ``` |                                                        |
 
 ## 🚀 Roadmap
 - [ ] F1: Login e registrazione
@@ -62,8 +63,9 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F2.7: Visualizzare i post recenti (solo frontend)
 - [ ] F3: Pubblicare contenuti
   - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
-  - [ ] F3.2: Aggiungere un'immagine dal web
-  - [ ] F3.3: Le richieste possono essere effettuate solo dal utenti loggati
+  - [X] F3.2: Controllare i dati inseriti
+  - [ ] F3.3: Aggiungere un'immagine dal web
+  - [ ] F3.4: Le richieste possono essere effettuate solo dal utenti loggati
 - [ ] F4: Cerca utenti
   - [ ] F4.1: Vedere tutti gli utenti presenti nel database
   - [ ] F4.2: Cercare un utente in base al nickname
