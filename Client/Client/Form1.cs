@@ -13,6 +13,7 @@ namespace Client {
         Label lbl_title;
         Label lbl_description;
         Button btn_like;
+        Label lbl_date;
 
         public Form1() {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Client {
             lbl_title = new Label();
             lbl_description = new Label();
             btn_like = new Button();
+            lbl_date = new Label();
         }
 
         private void pic_profile_Click (object sender, EventArgs e) {
@@ -67,7 +69,7 @@ namespace Client {
             lbl_description.Text = description;
             Font font = new Font("Century Gothic", 11);
             lbl_description.Font = font;
-            lbl_description.Location = new System.Drawing.Point(133, 130);
+            lbl_description.Location = new System.Drawing.Point(133, 160);
             lbl_description.Size = new System.Drawing.Size(500, 30);
             Controls.Remove(lbl_description);
             Controls.Add(lbl_description);
@@ -75,14 +77,23 @@ namespace Client {
         private void createLike () {
             btn_like.Visible = true;
             btn_like.Text = "<3";
-            btn_like.Location = new System.Drawing.Point(133, 160);
+            btn_like.Location = new System.Drawing.Point(133, 190);
             btn_like.Size = new System.Drawing.Size(50, 50);
             Controls.Remove(btn_like);
             Controls.Add(btn_like);
         }
+        private void createDate (string date) {
+            lbl_date.Visible = true;
+            lbl_date.Text = date;
+            lbl_date.Location = new System.Drawing.Point(133, 130);
+            lbl_date.Size = new System.Drawing.Size(500, 30);
+            Controls.Remove(lbl_date);
+            Controls.Add(lbl_date);
+        }
         private void createPost (UserPost post) {
             createTitle(post.title);
             createNickname(post.author);
+            createDate(post.date);
             createDescription(post.description);
             createLike();
         }
@@ -125,12 +136,17 @@ namespace Client {
         }
 
         private void btn_addPost_Click(object sender, EventArgs e) {
-            AddPost addPost = new AddPost();
+            AddPost addPost = new AddPost(account.nickname);
             addPost.ShowDialog();
         }
 
         private void btn_logout_Click(object sender, EventArgs e) {
             Application.Restart();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     public class Account {

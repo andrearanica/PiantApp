@@ -31,6 +31,7 @@ namespace Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.btn_addPost = new System.Windows.Forms.Button();
             this.pic_profile = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace Client
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
-            this.btn_logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             this.pnl_header.SuspendLayout();
@@ -60,6 +60,16 @@ namespace Client
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(104, 585);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(11, 540);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(80, 30);
+            this.btn_logout.TabIndex = 2;
+            this.btn_logout.Text = "Esci";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_addPost
             // 
@@ -159,16 +169,6 @@ namespace Client
             this.btn_newPost.Visible = false;
             this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
             // 
-            // btn_logout
-            // 
-            this.btn_logout.Location = new System.Drawing.Point(11, 540);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(80, 30);
-            this.btn_logout.TabIndex = 2;
-            this.btn_logout.Text = "Esci";
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -183,7 +183,8 @@ namespace Client
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1020, 620);
             this.Name = "Form1";
-            this.Text = "PiantApp";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();

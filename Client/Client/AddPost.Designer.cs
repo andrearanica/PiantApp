@@ -97,7 +97,7 @@ namespace Client
             this.txt_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(144, 26);
-            this.txt_description.TabIndex = 3;
+            this.txt_description.TabIndex = 4;
             // 
             // btn_send
             // 
@@ -123,8 +123,9 @@ namespace Client
             this.txt_author.Location = new System.Drawing.Point(136, 160);
             this.txt_author.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_author.Name = "txt_author";
+            this.txt_author.ReadOnly = true;
             this.txt_author.Size = new System.Drawing.Size(144, 26);
-            this.txt_author.TabIndex = 6;
+            this.txt_author.TabIndex = 2;
             // 
             // label3
             // 
@@ -141,7 +142,7 @@ namespace Client
             this.txt_data.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_data.Name = "txt_data";
             this.txt_data.Size = new System.Drawing.Size(144, 26);
-            this.txt_data.TabIndex = 8;
+            this.txt_data.TabIndex = 3;
             // 
             // AddPost
             // 

@@ -10,8 +10,11 @@ using System.Net.Sockets;
 
 namespace Client {
     public partial class AddPost : Form {
-        public AddPost() {
+        string nickname;
+        public AddPost (string nickname) {
             InitializeComponent();
+            this.nickname = nickname;
+            txt_author.Text = nickname;
         }
 
         private void connect () {
@@ -40,8 +43,25 @@ namespace Client {
             this.Close();
         }
 
+        private bool checkData (string title, string author, string date, string description) {
+            if (title != "" && author != "" && date != "" && description != "") {
+                int n = 0;
+                foreach (char a in date) {
+                    if (a == '/') n++;
+                }
+                if (n > 1) return true;
+                else return false;
+            } else {
+                return false;
+            }
+        }
+
         private void btn_send_Click(object sender, EventArgs e) {
-            connect();
+            if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text)) {
+                connect();
+            } else {
+                MessageBox.Show("Dati inseriti non correttamente");
+            }
         }
     }
 }
