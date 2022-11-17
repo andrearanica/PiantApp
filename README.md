@@ -73,6 +73,9 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [ ] F5: Interagire con i post
   - [ ] F5.1: Like ai post
   - [ ] F5.2: Commenti ai post
+- [ ] UI:
+  - [ ] Cambia il design delle finestre secondarie
+  - [ ] Aggiungi dettagli piante
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
 - [ ] Bug
@@ -86,8 +89,11 @@ Tramite i tasti laterali si può passare alle sezioni:
 
 ## ❤️ Credits
 ### Immagini
-| Nome            | Autore          | Link                                              |
-| --------------- | --------------- | ------------------------------------------------- |
-| Test account    | Icons8          | https://icons8.com/icon/7Ffvtg1xmgaV/test-account |
-| Shuttle         | Freepik         | https://www.flaticon.com/free-icon/shuttle_2285485term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag | 
-| Plant icons	| Freepik		| https://www.flaticon.com/free-icons/plant
+| Nome            | Autore                | Link                                                                  |
+| --------------- | --------------------- | --------------------------------------------------------------------- |
+| Test account    | Icons8                | https://icons8.com/icon/7Ffvtg1xmgaV/test-account                     |
+| Shuttle         | Freepik               | https://www.flaticon.com/free-icon/shuttle_2285485term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag   | 
+| Plant icons	| Freepik		| https://www.flaticon.com/free-icons/plant                                       |
+| Lens            | Javis V. Pérez        | https://icon-icons.com/it/icona/ricerca-lente-di-ingrandimento/145939 |
+| Plus            | Becris                | https://icon-icons.com/icon/plus-add-more-detail/82972                |  
+| Next icons      | Smashicons - Flaticon | https://www.flaticon.com/free-icons/next
