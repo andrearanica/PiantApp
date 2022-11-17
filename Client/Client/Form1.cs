@@ -32,8 +32,9 @@ namespace Client {
                 if (account.name != "undefined") {
                     lbl_name.Text = account.name;
                     pnl_header.Visible = false;
-                    btn_newPost.Visible = true;
-                    btn_addPost.Visible = true;
+                    pic_search.Visible = true;
+                    pic_addPost.Visible = true;
+                    pic_next.Visible = true;
                 }
             } else {
                 Info info = new Info(account);
@@ -131,13 +132,11 @@ namespace Client {
             return post;
         }
         private void btn_newPost_Click(object sender, EventArgs e) {
-            UserPost post = getPost();
-            createPost(post);
+            createPost(getPost());
         }
 
         private void btn_addPost_Click(object sender, EventArgs e) {
-            AddPost addPost = new AddPost(account.nickname);
-            addPost.ShowDialog();
+            
         }
 
         private void btn_logout_Click(object sender, EventArgs e) {
@@ -147,6 +146,19 @@ namespace Client {
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e) {
+            AddPost addPost = new AddPost(account.nickname);
+            addPost.ShowDialog();
+        }
+
+        private void pic_search_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pic_next_Click(object sender, EventArgs e) {
+            createPost(getPost());
         }
     }
     public class Account {

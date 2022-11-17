@@ -55,7 +55,7 @@ namespace Client
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(144, 20);
+            this.label1.Location = new System.Drawing.Point(89, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 30);
@@ -64,7 +64,7 @@ namespace Client
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(74, 115);
+            this.txt_username.Location = new System.Drawing.Point(18, 115);
             this.txt_username.Margin = new System.Windows.Forms.Padding(4);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(228, 27);
@@ -73,7 +73,7 @@ namespace Client
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 90);
+            this.label2.Location = new System.Drawing.Point(81, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 21);
@@ -83,7 +83,7 @@ namespace Client
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 161);
+            this.label3.Location = new System.Drawing.Point(81, 161);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 21);
@@ -92,7 +92,7 @@ namespace Client
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(74, 186);
+            this.txt_password.Location = new System.Drawing.Point(18, 186);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -101,7 +101,7 @@ namespace Client
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(114, 264);
+            this.btn_login.Location = new System.Drawing.Point(63, 250);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(128, 40);
             this.btn_login.TabIndex = 5;
@@ -114,7 +114,7 @@ namespace Client
             this.lbl_error.AutoSize = true;
             this.lbl_error.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_error.Location = new System.Drawing.Point(82, 230);
+            this.lbl_error.Location = new System.Drawing.Point(26, 230);
             this.lbl_error.Name = "lbl_error";
             this.lbl_error.Size = new System.Drawing.Size(209, 17);
             this.lbl_error.TabIndex = 6;
@@ -125,7 +125,7 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 316);
+            this.ClientSize = new System.Drawing.Size(268, 316);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label3);

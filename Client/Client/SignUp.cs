@@ -38,10 +38,16 @@ namespace Client {
             return false;
         }
         private void btn_register_Click(object sender, EventArgs e) {
-            if (txt_name.Text != "" && txt_surname.Text != "" && validEmail(txt_email.Text) && validPassword(txt_password.Text)) {
-                setNewAccount();
-                connect();
-                this.Close();
+            lbl_error.Visible = false;
+            lbl_passwordError.Visible = false;
+            if (txt_name.Text != "" && txt_surname.Text != "" && validEmail(txt_email.Text)) {
+                if (validPassword(txt_password.Text)) {
+                    setNewAccount();
+                    connect();
+                    this.Close();
+                } else {
+                    lbl_passwordError.Visible = true;
+                }
             } else {
                 lbl_error.Visible = true;
             }

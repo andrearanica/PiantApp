@@ -16,6 +16,9 @@
     <Compile Update="Post.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>

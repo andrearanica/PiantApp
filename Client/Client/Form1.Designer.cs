@@ -31,19 +31,25 @@ namespace Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pic_addPost = new System.Windows.Forms.PictureBox();
+            this.pic_search = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
-            this.btn_addPost = new System.Windows.Forms.Button();
             this.pic_profile = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.btn_addPost = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_header = new System.Windows.Forms.Panel();
             this.btn_signup = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pic_next = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             this.pnl_header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,35 +58,48 @@ namespace Client
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.pic_addPost);
+            this.panel1.Controls.Add(this.pic_search);
             this.panel1.Controls.Add(this.btn_logout);
-            this.panel1.Controls.Add(this.btn_addPost);
             this.panel1.Controls.Add(this.pic_profile);
             this.panel1.Controls.Add(this.lbl_name);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(104, 585);
+            this.panel1.Size = new System.Drawing.Size(104, 624);
             this.panel1.TabIndex = 0;
+            // 
+            // pic_addPost
+            // 
+            this.pic_addPost.Image = ((System.Drawing.Image)(resources.GetObject("pic_addPost.Image")));
+            this.pic_addPost.Location = new System.Drawing.Point(24, 167);
+            this.pic_addPost.Name = "pic_addPost";
+            this.pic_addPost.Size = new System.Drawing.Size(55, 55);
+            this.pic_addPost.TabIndex = 5;
+            this.pic_addPost.TabStop = false;
+            this.pic_addPost.Visible = false;
+            this.pic_addPost.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pic_search
+            // 
+            this.pic_search.Image = ((System.Drawing.Image)(resources.GetObject("pic_search.Image")));
+            this.pic_search.Location = new System.Drawing.Point(24, 228);
+            this.pic_search.Name = "pic_search";
+            this.pic_search.Size = new System.Drawing.Size(55, 55);
+            this.pic_search.TabIndex = 3;
+            this.pic_search.TabStop = false;
+            this.pic_search.Visible = false;
+            this.pic_search.Click += new System.EventHandler(this.pic_search_Click);
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(11, 540);
+            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_logout.Location = new System.Drawing.Point(12, 579);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(80, 30);
             this.btn_logout.TabIndex = 2;
             this.btn_logout.Text = "Esci";
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
-            // 
-            // btn_addPost
-            // 
-            this.btn_addPost.Location = new System.Drawing.Point(31, 157);
-            this.btn_addPost.Name = "btn_addPost";
-            this.btn_addPost.Size = new System.Drawing.Size(40, 37);
-            this.btn_addPost.TabIndex = 1;
-            this.btn_addPost.Text = "+";
-            this.btn_addPost.UseVisualStyleBackColor = true;
-            this.btn_addPost.Visible = false;
-            this.btn_addPost.Click += new System.EventHandler(this.btn_addPost_Click);
             // 
             // pic_profile
             // 
@@ -105,26 +124,35 @@ namespace Client
             this.lbl_name.Text = "Guest";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_addPost
+            // 
+            this.btn_addPost.Location = new System.Drawing.Point(949, 536);
+            this.btn_addPost.Name = "btn_addPost";
+            this.btn_addPost.Size = new System.Drawing.Size(40, 37);
+            this.btn_addPost.TabIndex = 1;
+            this.btn_addPost.Text = "+";
+            this.btn_addPost.UseVisualStyleBackColor = true;
+            this.btn_addPost.Visible = false;
+            this.btn_addPost.Click += new System.EventHandler(this.btn_addPost_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(110, 16);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(129, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 28);
+            this.label1.Size = new System.Drawing.Size(368, 38);
             this.label1.TabIndex = 1;
-            this.label1.Text = "PiantApp";
+            this.label1.Text = "Benvenuto in PiantApp";
             // 
             // pnl_header
             // 
-            this.pnl_header.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_header.Controls.Add(this.btn_signup);
             this.pnl_header.Controls.Add(this.label2);
             this.pnl_header.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pnl_header.Location = new System.Drawing.Point(113, 60);
+            this.pnl_header.Location = new System.Drawing.Point(129, 62);
             this.pnl_header.Name = "pnl_header";
-            this.pnl_header.Size = new System.Drawing.Size(879, 97);
+            this.pnl_header.Size = new System.Drawing.Size(879, 136);
             this.pnl_header.TabIndex = 2;
             // 
             // btn_signup
@@ -148,10 +176,21 @@ namespace Client
             this.label2.Text = "Per effettuare l\'accesso, clicca sull\'immagine profilo\r\n\r\nSe non hai un account, " +
     "";
             // 
+            // pic_next
+            // 
+            this.pic_next.Image = ((System.Drawing.Image)(resources.GetObject("pic_next.Image")));
+            this.pic_next.Location = new System.Drawing.Point(909, 243);
+            this.pic_next.Name = "pic_next";
+            this.pic_next.Size = new System.Drawing.Size(56, 55);
+            this.pic_next.TabIndex = 2;
+            this.pic_next.TabStop = false;
+            this.pic_next.Visible = false;
+            this.pic_next.Click += new System.EventHandler(this.pic_next_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(224, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(491, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 53);
             this.pictureBox1.TabIndex = 3;
@@ -160,7 +199,7 @@ namespace Client
             // btn_newPost
             // 
             this.btn_newPost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_newPost.Location = new System.Drawing.Point(893, 62);
+            this.btn_newPost.Location = new System.Drawing.Point(909, 62);
             this.btn_newPost.Name = "btn_newPost";
             this.btn_newPost.Size = new System.Drawing.Size(96, 29);
             this.btn_newPost.TabIndex = 4;
@@ -173,10 +212,12 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 581);
+            this.ClientSize = new System.Drawing.Size(1020, 620);
+            this.Controls.Add(this.pic_next);
             this.Controls.Add(this.btn_newPost);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl_header);
+            this.Controls.Add(this.btn_addPost);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -187,9 +228,12 @@ namespace Client
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();
             this.pnl_header.ResumeLayout(false);
             this.pnl_header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,6 +253,9 @@ namespace Client
         private System.Windows.Forms.Button btn_newPost;
         private System.Windows.Forms.Button btn_addPost;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.PictureBox pic_search;
+        private System.Windows.Forms.PictureBox pic_addPost;
+        private System.Windows.Forms.PictureBox pic_next;
     }
 }
 

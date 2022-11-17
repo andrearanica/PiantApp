@@ -15,7 +15,7 @@ namespace Client {
         }
 
         private void Info_Load(object sender, EventArgs e) {
-            lbl_info.Text = $"Nome: { account.name } | Cognome: { account.surname } | Nickname: { account.nickname }\nEmail: { account.email } | Password: { account.password }";
+            lbl_info.Text = $"Nome: { account.name }\nCognome: { account.surname }\nNickname: { account.nickname }\nEmail: { account.email }\nPassword: { account.password }";
         }
     }
 }

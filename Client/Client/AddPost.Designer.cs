@@ -48,10 +48,10 @@ namespace Client
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
             this.panel1.Controls.Add(this.lbl_1);
-            this.panel1.Location = new System.Drawing.Point(-472, -1);
+            this.panel1.Location = new System.Drawing.Point(-498, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 106);
+            this.panel1.Size = new System.Drawing.Size(795, 61);
             this.panel1.TabIndex = 0;
             // 
             // lbl_1
@@ -59,7 +59,7 @@ namespace Client
             this.lbl_1.AutoSize = true;
             this.lbl_1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_1.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_1.Location = new System.Drawing.Point(545, 34);
+            this.lbl_1.Location = new System.Drawing.Point(568, 10);
             this.lbl_1.Name = "lbl_1";
             this.lbl_1.Size = new System.Drawing.Size(162, 32);
             this.lbl_1.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace Client
             // 
             // txt_title
             // 
-            this.txt_title.Location = new System.Drawing.Point(136, 124);
+            this.txt_title.Location = new System.Drawing.Point(136, 69);
             this.txt_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(144, 26);
@@ -76,7 +76,7 @@ namespace Client
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
-            this.lbl_title.Location = new System.Drawing.Point(12, 130);
+            this.lbl_title.Location = new System.Drawing.Point(12, 75);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(45, 20);
             this.lbl_title.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace Client
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 234);
+            this.label1.Location = new System.Drawing.Point(12, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Client
             // 
             // txt_description
             // 
-            this.txt_description.Location = new System.Drawing.Point(136, 228);
+            this.txt_description.Location = new System.Drawing.Point(136, 173);
             this.txt_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(144, 26);
@@ -101,7 +101,7 @@ namespace Client
             // 
             // btn_send
             // 
-            this.btn_send.Location = new System.Drawing.Point(71, 275);
+            this.btn_send.Location = new System.Drawing.Point(67, 217);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(171, 34);
             this.btn_send.TabIndex = 5;
@@ -112,7 +112,7 @@ namespace Client
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 166);
+            this.label2.Location = new System.Drawing.Point(12, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 7;
@@ -120,7 +120,7 @@ namespace Client
             // 
             // txt_author
             // 
-            this.txt_author.Location = new System.Drawing.Point(136, 160);
+            this.txt_author.Location = new System.Drawing.Point(136, 105);
             this.txt_author.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_author.Name = "txt_author";
             this.txt_author.ReadOnly = true;
@@ -130,7 +130,7 @@ namespace Client
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 200);
+            this.label3.Location = new System.Drawing.Point(12, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 9;
@@ -138,7 +138,7 @@ namespace Client
             // 
             // txt_data
             // 
-            this.txt_data.Location = new System.Drawing.Point(136, 194);
+            this.txt_data.Location = new System.Drawing.Point(136, 139);
             this.txt_data.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_data.Name = "txt_data";
             this.txt_data.Size = new System.Drawing.Size(144, 26);
@@ -148,7 +148,7 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 321);
+            this.ClientSize = new System.Drawing.Size(296, 275);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_data);
             this.Controls.Add(this.label2);
