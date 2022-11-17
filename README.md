@@ -86,8 +86,9 @@ Tramite i tasti laterali si può passare alle sezioni:
 
 ## ❤️ Credits
 ### Immagini
-| Nome            | Autore          | Link                                              |
-| --------------- | --------------- | ------------------------------------------------- |
-| Test account    | Icons8          | https://icons8.com/icon/7Ffvtg1xmgaV/test-account |
-| Shuttle         | Freepik         | https://www.flaticon.com/free-icon/shuttle_2285485term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag | 
-| Plant icons	| Freepik		| https://www.flaticon.com/free-icons/plant
+| Nome            | Autore          | Link                                                                  |
+| --------------- | --------------- | --------------------------------------------------------------------- |
+| Test account    | Icons8          | https://icons8.com/icon/7Ffvtg1xmgaV/test-account                     |
+| Shuttle         | Freepik         | https://www.flaticon.com/free-icon/shuttle_2285485term=start%20button&page=1&position=1&page=1&position=1&related_id=2285485&origin=tag   | 
+| Plant icons	| Freepik		| https://www.flaticon.com/free-icons/plant                                       |
+| Lens            | Javis V. Pérez  | https://icon-icons.com/it/icona/ricerca-lente-di-ingrandimento/145939 |
