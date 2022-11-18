@@ -7,6 +7,7 @@ Per utilizzare il programma esegui il server e fai partire il servizio premendo 
 Una volta aperto il client ed effettuato l'accesso verrà mostrato nella home un post; puoi mettere mi piace, commentare, visitare il profilo dell'utente che ha postato oppure passare al prossimo post. In questo modo, verrà mostrato un post per volta.
 Tramite i tasti laterali si può passare alle sezioni:
   - Home
+  - Pubblica post
   - Cerca utente
   - Ultimi "mi piace"
   - Logout
