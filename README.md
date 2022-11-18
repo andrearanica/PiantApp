@@ -15,7 +15,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 ## ⚙️ Architettura
 ### ⌨️ Architettura client-server
  - Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
- - Client (da uno a n): richiedere informazioni al server
+ - Client (da uno a n): richiedere informazioni al server e visualizzarle
 ### 🗃️ Basi di dati
  - /json/users.json contiene gli utenti registrati
  - /json/posts.json contiene i post
