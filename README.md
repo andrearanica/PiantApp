@@ -41,7 +41,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 ## 💻 Protocollo
 | ID Funzionalità | Nome sintetico        | Comando1                                   | Comando2                                               |
 | --------------- | --------------------- | -----------------------------------------  | ------------------------------------------------------ |
-| F1              | Login                 | ``` login nickname password$```            | ``` register surname name nickname email password$ ``` |
+| F1              | Login/registrazione   | ``` login nickname password$```            | ``` register surname name nickname email password$ ``` |
 | F2              | Visualizzare post     | ``` post$ ```                              |                                                        |
 | F3              | Pubblicare contenuti  | ``` add title author data description$ ``` |                                                        |
 
