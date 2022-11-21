@@ -69,8 +69,8 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F3.3: Aggiungere un'immagine dal web
   - [ ] F3.4: Le richieste possono essere effettuate solo dal utenti loggati
 - [ ] F4: Cerca utenti
-  - [ ] F4.1: Vedere tutti gli utenti presenti nel database
-  - [ ] F4.2: Cercare un utente in base al nickname
+  - [X] F4.1: Vedere tutti gli utenti presenti nel database
+  - [X] F4.2: Cercare un utente in base al nickname
   - [ ] F4.3: Visualizzare tutte le informazioni sull'utente in una form (like, commenti...)
 - [ ] F5: Interagire con i post
   - [ ] F5.1: Like ai post
