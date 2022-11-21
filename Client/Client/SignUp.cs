@@ -61,7 +61,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { newAccount.password }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { newAccount.password } { cmb_images.Text }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);

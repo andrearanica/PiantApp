@@ -44,6 +44,8 @@ namespace Client
             this.btn_register = new System.Windows.Forms.Button();
             this.lbl_error = new System.Windows.Forms.Label();
             this.lbl_passwordError = new System.Windows.Forms.Label();
+            this.cmb_images = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@ namespace Client
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 81);
+            this.label2.Location = new System.Drawing.Point(8, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 1;
@@ -95,7 +97,7 @@ namespace Client
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 117);
+            this.label3.Location = new System.Drawing.Point(8, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 3;
@@ -111,7 +113,7 @@ namespace Client
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 149);
+            this.label5.Location = new System.Drawing.Point(8, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 5;
@@ -128,7 +130,7 @@ namespace Client
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 213);
+            this.label4.Location = new System.Drawing.Point(12, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 9;
@@ -144,7 +146,7 @@ namespace Client
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 181);
+            this.label6.Location = new System.Drawing.Point(12, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 7;
@@ -152,7 +154,7 @@ namespace Client
             // 
             // btn_register
             // 
-            this.btn_register.Location = new System.Drawing.Point(17, 273);
+            this.btn_register.Location = new System.Drawing.Point(15, 328);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(236, 45);
             this.btn_register.TabIndex = 11;
@@ -166,7 +168,7 @@ namespace Client
             this.lbl_error.BackColor = System.Drawing.Color.White;
             this.lbl_error.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_error.ForeColor = System.Drawing.Color.Red;
-            this.lbl_error.Location = new System.Drawing.Point(35, 236);
+            this.lbl_error.Location = new System.Drawing.Point(33, 291);
             this.lbl_error.Name = "lbl_error";
             this.lbl_error.Size = new System.Drawing.Size(196, 34);
             this.lbl_error.TabIndex = 12;
@@ -178,18 +180,40 @@ namespace Client
             this.lbl_passwordError.AutoSize = true;
             this.lbl_passwordError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_passwordError.ForeColor = System.Drawing.Color.Red;
-            this.lbl_passwordError.Location = new System.Drawing.Point(30, 236);
+            this.lbl_passwordError.Location = new System.Drawing.Point(28, 291);
             this.lbl_passwordError.Name = "lbl_passwordError";
             this.lbl_passwordError.Size = new System.Drawing.Size(213, 34);
             this.lbl_passwordError.TabIndex = 13;
             this.lbl_passwordError.Text = " La password deve avere almeno \r\nun numero e un carattere speciale";
             this.lbl_passwordError.Visible = false;
             // 
+            // cmb_images
+            // 
+            this.cmb_images.FormattingEnabled = true;
+            this.cmb_images.Items.AddRange(new object[] {
+            "Cactus",
+            "Cipresso"});
+            this.cmb_images.Location = new System.Drawing.Point(108, 239);
+            this.cmb_images.Name = "cmb_images";
+            this.cmb_images.Size = new System.Drawing.Size(145, 28);
+            this.cmb_images.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 242);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Immagine";
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(270, 333);
+            this.ClientSize = new System.Drawing.Size(270, 386);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmb_images);
             this.Controls.Add(this.lbl_passwordError);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_register);
@@ -232,5 +256,7 @@ namespace Client
         private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Label lbl_error;
         private System.Windows.Forms.Label lbl_passwordError;
+        private System.Windows.Forms.ComboBox cmb_images;
+        private System.Windows.Forms.Label label7;
     }
 }

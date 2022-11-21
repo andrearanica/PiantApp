@@ -84,7 +84,8 @@ namespace Server {
             newAccount.name = signupInfo[1];
             newAccount.nickname = signupInfo[2];
             newAccount.email = signupInfo[3];
-            newAccount.password = signupInfo[4].Remove(signupInfo[4].Length - 1, 1);
+            newAccount.password = signupInfo[4];
+            newAccount.image = signupInfo[5].Remove(signupInfo[4].Length - 1, 1);
 
             bool valid = true;
 
@@ -123,6 +124,23 @@ namespace Server {
 
             handler.Send(Encoding.ASCII.GetBytes("successfull"));
         }
+        private void getUser (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+
+            bool found = false;
+            foreach (Account account in accounts) {
+                if (account.nickname == info[1].Split('$')[0]) {
+                    found = true;
+                    handler.Send(Encoding.ASCII.GetBytes(account.nickname));
+                }
+            }
+            if (!found) {
+                handler.Send(Encoding.ASCII.GetBytes("not found"));
+            }
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -154,6 +172,8 @@ namespace Server {
                         post(data, ref handler);
                     } else if (data[0] == 'a') {
                         addPost(data, ref handler);
+                    } else if (data[0] == 'u') {
+                        getUser(data, ref handler);
                     }
                     else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
@@ -174,6 +194,7 @@ namespace Server {
         public string nickname { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public string image { get; set; }
         public Account () {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
         }

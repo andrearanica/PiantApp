@@ -154,7 +154,8 @@ namespace Client {
         }
 
         private void pic_search_Click(object sender, EventArgs e) {
-
+            Search search = new Search();
+            search.ShowDialog();
         }
 
         private void pic_next_Click(object sender, EventArgs e) {
@@ -167,6 +168,7 @@ namespace Client {
         public string nickname { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public string image { get; set; }
         public Account () {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
         }
