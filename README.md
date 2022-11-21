@@ -87,6 +87,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Quando il client chiede il post si chiude la form
   - [ ] Restituire lo stesso post di fila
   - [ ] Quando pubblico un post nella descrizione compare un $
+  - [ ] Se nel post pubblicato ci sono spazi pota rebelot
 
 ## ❤️ Credits
 ### Immagini
