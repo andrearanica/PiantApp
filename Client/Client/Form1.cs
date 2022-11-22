@@ -25,6 +25,13 @@ namespace Client {
             lbl_date = new Label();
         }
 
+        private void setImg (string image) {
+            if (image == "Cactus")
+            {
+                
+            }
+        }
+
         private void pic_profile_Click (object sender, EventArgs e) {
             if (account.name == "undefined") {
                 Login login = new Login(ref account);

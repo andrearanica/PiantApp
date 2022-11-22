@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj": {}
+    "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj": {
+    "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\obj\\",
+        "projectPath": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\ranica.18375\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ranica.18375\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\andre\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
