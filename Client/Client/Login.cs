@@ -36,6 +36,9 @@ namespace Client {
                         account.nickname = data[2];
                         account.email = data[3];
                         account.password = data[4];
+                        account.image = data[5];
+                        account.likes = int.Parse(data[6]);
+                        account.liked = int.Parse(data[7]);
                         this.Close();
                     } else {
                         lbl_error.Visible = true;

@@ -31,6 +31,8 @@ namespace Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_countLiked = new System.Windows.Forms.Label();
+            this.pic_liked = new System.Windows.Forms.PictureBox();
             this.pic_addPost = new System.Windows.Forms.PictureBox();
             this.pic_search = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
@@ -45,6 +47,7 @@ namespace Client
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
@@ -58,6 +61,8 @@ namespace Client
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.lbl_countLiked);
+            this.panel1.Controls.Add(this.pic_liked);
             this.panel1.Controls.Add(this.pic_addPost);
             this.panel1.Controls.Add(this.pic_search);
             this.panel1.Controls.Add(this.btn_logout);
@@ -68,10 +73,31 @@ namespace Client
             this.panel1.Size = new System.Drawing.Size(104, 624);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_countLiked
+            // 
+            this.lbl_countLiked.AutoSize = true;
+            this.lbl_countLiked.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_countLiked.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_countLiked.Location = new System.Drawing.Point(42, 216);
+            this.lbl_countLiked.Name = "lbl_countLiked";
+            this.lbl_countLiked.Size = new System.Drawing.Size(0, 19);
+            this.lbl_countLiked.TabIndex = 7;
+            // 
+            // pic_liked
+            // 
+            this.pic_liked.Image = ((System.Drawing.Image)(resources.GetObject("pic_liked.Image")));
+            this.pic_liked.Location = new System.Drawing.Point(28, 166);
+            this.pic_liked.Name = "pic_liked";
+            this.pic_liked.Size = new System.Drawing.Size(44, 44);
+            this.pic_liked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_liked.TabIndex = 6;
+            this.pic_liked.TabStop = false;
+            this.pic_liked.Visible = false;
+            // 
             // pic_addPost
             // 
             this.pic_addPost.Image = ((System.Drawing.Image)(resources.GetObject("pic_addPost.Image")));
-            this.pic_addPost.Location = new System.Drawing.Point(24, 167);
+            this.pic_addPost.Location = new System.Drawing.Point(24, 268);
             this.pic_addPost.Name = "pic_addPost";
             this.pic_addPost.Size = new System.Drawing.Size(55, 55);
             this.pic_addPost.TabIndex = 5;
@@ -82,7 +108,7 @@ namespace Client
             // pic_search
             // 
             this.pic_search.Image = ((System.Drawing.Image)(resources.GetObject("pic_search.Image")));
-            this.pic_search.Location = new System.Drawing.Point(24, 228);
+            this.pic_search.Location = new System.Drawing.Point(24, 329);
             this.pic_search.Name = "pic_search";
             this.pic_search.Size = new System.Drawing.Size(55, 55);
             this.pic_search.TabIndex = 3;
@@ -108,6 +134,7 @@ namespace Client
             this.pic_profile.Location = new System.Drawing.Point(11, 42);
             this.pic_profile.Name = "pic_profile";
             this.pic_profile.Size = new System.Drawing.Size(80, 80);
+            this.pic_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_profile.TabIndex = 0;
             this.pic_profile.TabStop = false;
             this.pic_profile.Click += new System.EventHandler(this.pic_profile_Click);
@@ -171,10 +198,10 @@ namespace Client
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 63);
+            this.label2.Size = new System.Drawing.Size(470, 63);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Per effettuare l\'accesso, clicca sull\'immagine profilo\r\n\r\nSe non hai un account, " +
-    "";
+            this.label2.Text = "Per effettuare l\'accesso clicca sull\'immagine profilo a sinistra\r\n\r\nSe non hai un" +
+    " account, ";
             // 
             // pic_next
             // 
@@ -224,10 +251,11 @@ namespace Client
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1020, 620);
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = " PiantApp";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();
@@ -256,6 +284,8 @@ namespace Client
         private System.Windows.Forms.PictureBox pic_search;
         private System.Windows.Forms.PictureBox pic_addPost;
         private System.Windows.Forms.PictureBox pic_next;
+        private System.Windows.Forms.PictureBox pic_liked;
+        private System.Windows.Forms.Label lbl_countLiked;
     }
 }
 

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Client {
     public partial class Form1 : Form {
@@ -26,10 +27,7 @@ namespace Client {
         }
 
         private void setImg (string image) {
-            if (image == "Cactus")
-            {
-                
-            }
+            pic_profile.Image = new Bitmap(@$"..\..\..\img\{ account.image }.jpg");
         }
 
         private void pic_profile_Click (object sender, EventArgs e) {
@@ -42,6 +40,9 @@ namespace Client {
                     pic_search.Visible = true;
                     pic_addPost.Visible = true;
                     pic_next.Visible = true;
+                    setImg(account.image);
+                    pic_liked.Visible = true;
+                    lbl_countLiked.Text = account.liked.ToString();
                 }
             } else {
                 Info info = new Info(account);
@@ -176,11 +177,14 @@ namespace Client {
         public string email { get; set; }
         public string password { get; set; }
         public string image { get; set; }
-        public Account () {
+        public int likes { get; set; }
+        public int liked { get; set; }
+        public Account() {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
+            this.likes = this.liked = 0;
         }
-        public Account (string name, string surname, string nickname, string email, string password) {
-            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password;
+        public Account(string name, string surname, string nickname, string email, string password, int likes, int liked) {
+            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password; this.likes = likes; this.liked = liked;
         }
     }
     public class UserPost {

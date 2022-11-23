@@ -71,7 +71,7 @@ namespace Server {
             string[] loginInfo = info.Split(' ');
             Account result = new Account();
             if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1), ref result)) {
-                handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password }"));
+                handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password } { result.image } { result.likes } { result.liked }"));
             } else {
                 handler.Send(Encoding.ASCII.GetBytes(""));
             }
@@ -195,11 +195,14 @@ namespace Server {
         public string email { get; set; }
         public string password { get; set; }
         public string image { get; set; }
+        public int likes { get; set; }
+        public int liked { get; set; }
         public Account () {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
+            this.likes = this.liked = 0;
         }
-        public Account (string name, string surname, string nickname, string email, string password) {
-            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password;
+        public Account (string name, string surname, string nickname, string email, string password, int likes, int liked) {
+            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password; this.likes = likes; this.liked = liked;
         }
     }
     public class UserPost {

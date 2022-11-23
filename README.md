@@ -81,8 +81,9 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
   - [ ] Controlla le risposte delle richieste
-  - [ ] Immagini di profilo predefinite
+  - [X] Immagini di profilo predefinite
   - [X] Data automatica quando compilo un nuovo post
+  - [ ] Aggiungi img profili
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
@@ -104,3 +105,4 @@ Tramite i tasti laterali si può passare alle sezioni:
 | Plus            | Becris                | https://icon-icons.com/icon/plus-add-more-detail/82972                |  
 | Next icons      | Smashicons - Flaticon | https://www.flaticon.com/free-icons/next
 | Cipresso		| brgfx                 | https://www.freepik.com/free-vector/isolated-tree-white-background_29280578.htm#query=cartoon%20tree&position=20&from_view=keyword |
+| Cuore verde	| rawpixel.com          | https://it.freepik.com/vettori-gratuito/illustrazione-dell-icona-medica_2606899.htm#query=green%20heart&position=21&from_view=search&track=sph |
