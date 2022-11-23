@@ -120,7 +120,7 @@ namespace Client
             // 
             // txt_author
             // 
-            this.txt_author.Location = new System.Drawing.Point(136, 105);
+            this.txt_author.Location = new System.Drawing.Point(136, 106);
             this.txt_author.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_author.Name = "txt_author";
             this.txt_author.ReadOnly = true;
@@ -141,6 +141,7 @@ namespace Client
             this.txt_data.Location = new System.Drawing.Point(136, 139);
             this.txt_data.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_data.Name = "txt_data";
+            this.txt_data.ReadOnly = true;
             this.txt_data.Size = new System.Drawing.Size(144, 26);
             this.txt_data.TabIndex = 3;
             // 
@@ -163,6 +164,7 @@ namespace Client
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddPost";
             this.Text = "AddPost";
+            this.Load += new System.EventHandler(this.AddPost_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

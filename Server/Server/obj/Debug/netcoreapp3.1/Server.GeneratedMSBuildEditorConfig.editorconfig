@@ -1,9 +1,3 @@
 is_global = true
-build_property.ApplicationManifest = 
-build_property.StartupObject = 
-build_property.ApplicationDefaultFont = 
-build_property.ApplicationHighDpiMode = 
-build_property.ApplicationUseCompatibleTextRendering = 
-build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = Server
-build_property.ProjectDir = C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\
+build_property.ProjectDir = D:\Andrea\Documenti\GitHub\PiantApp\Server\Server\

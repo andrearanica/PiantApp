@@ -14,6 +14,8 @@ namespace Client {
         public AddPost (string nickname) {
             InitializeComponent();
             this.nickname = nickname;
+            txt_data.Text = $"{ DateTime.Now.Day }/{ DateTime.Now.Month }/{ DateTime.Now.Year }";
+            // DataGridViewColumnEventArgs
             txt_author.Text = nickname;
         }
 
@@ -56,12 +58,26 @@ namespace Client {
             }
         }
 
+        private void replace () {
+            txt_description.Text = txt_description.Text.Replace(' ', '-');
+            txt_title.Text = txt_title.Text.Replace(' ', '-');
+            txt_data.Text = txt_data.Text.Replace(' ', '-');
+            txt_author.Text = txt_author.Text.Replace(' ', '-');
+        }
+
         private void btn_send_Click(object sender, EventArgs e) {
+            replace();
+
             if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text)) {
                 connect();
             } else {
                 MessageBox.Show("Dati inseriti non correttamente");
             }
+        }
+
+        private void AddPost_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

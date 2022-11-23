@@ -80,6 +80,9 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] Aggiungi dettagli piante
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
+  - [ ] Controlla le risposte delle richieste
+  - [ ] Immagini di profilo predefinite
+  - [X] Data automatica quando compilo un nuovo post
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
@@ -87,8 +90,8 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Quando finisce registrazione, chiude form
   - [X] Quando il client chiede il post si chiude la form
   - [ ] Restituire lo stesso post di fila
-  - [ ] Quando pubblico un post nella descrizione compare un $
-  - [ ] Se nel post pubblicato ci sono spazi pota rebelot
+  - [X] Quando pubblico un post nella descrizione compare un $
+  - [X] Se nel post pubblicato ci sono spazi da problemi
 
 ## ❤️ Credits
 ### Immagini

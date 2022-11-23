@@ -59,7 +59,7 @@ namespace Client {
             Font font = new Font("Century Gothic", 20);
             lbl_title.Font = font;
             lbl_title.Location = new System.Drawing.Point(133, 60);
-            lbl_title.Size = new System.Drawing.Size(140, 30);
+            lbl_title.Size = new System.Drawing.Size(1000, 30);
             Controls.Remove(lbl_title);
             Controls.Add(lbl_title);
         }
@@ -121,10 +121,10 @@ namespace Client {
                     if (response != "") {
                         // response: title nickame
                         string[] data = response.Split(' ');
-                        post.title = data[0];
-                        post.author = data[1];
+                        post.title = data[0].Replace('-', ' ');
+                        post.author = data[1].Replace('-', ' ');
                         post.date = data[2];
-                        post.description = response.Substring(response.IndexOf('#') + 1);
+                        post.description = data[3].Replace('-', ' ').Replace('$', ' ');
                         // this.Close();
                     }
                     sender.Shutdown(SocketShutdown.Both);
@@ -147,7 +147,7 @@ namespace Client {
         }
 
         private void btn_logout_Click(object sender, EventArgs e) {
-            Application.Restart();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

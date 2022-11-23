@@ -109,7 +109,7 @@ namespace Server {
 
             post = posts[new Random().Next(0, posts.Count)];
 
-            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } #{ post.description }"));
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description }"));
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
