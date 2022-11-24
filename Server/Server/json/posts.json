@@ -1,14 +1,1 @@
-[
-	{
-		"title": "Primo!",
-		"author": "andre",
-		"date": "15/11/2022",
-		"description": "Ciao!-Primo-post,-se-funziona-sono-contento"
-	},
-	{
-		"title": "La-la",
-		"author": "andre",
-		"date": "23/11/2022",
-		"description": "Vediamo-la$"
-	}
-]
+[{"title":"Primo!","author":"andre","date":"15/11/2022","description":"Ciao!-Primo-post,-se-funziona-sono-contento"},{"title":"La-la","author":"andre","date":"23/11/2022","description":"Vediamo-la$"},{"title":"Nuovo-post","author":"andre","date":"24/11/2022","description":"Oggi-posto-perch?-va-il-programma$"}]

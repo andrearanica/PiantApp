@@ -183,8 +183,8 @@ namespace Client {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
             this.likes = this.liked = 0;
         }
-        public Account(string name, string surname, string nickname, string email, string password, int likes, int liked) {
-            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password; this.likes = likes; this.liked = liked;
+        public Account(string name, string surname, string nickname, string email, string password, string image, int likes, int liked) {
+            this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password; this.image = image;  this.likes = likes; this.liked = liked;
         }
     }
     public class UserPost {

@@ -4,18 +4,24 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.Encodings;
+using System.Drawing;
 
 namespace Client
 {
     public partial class Search : Form
     {
-        public Search()
-        {
+        Account account = new Account("", "", "", "", "", "", 0, 0);
+        public Search() {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
             connect();
+            if (account.image != "") {
+                pic_profile.Image = new Bitmap($@"..\..\..\img\{ account.image }.jpg");
+            } else {
+                pic_profile.Image = null;
+            }
         }
 
         private void connect () {
@@ -31,14 +37,18 @@ namespace Client
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     if (response != "not found") {
-                        lbl_result.Text = $"Account trovato: { response }";
+                        string[] data = response.Split(' ');
+                        account = new Account(data[1], data[0], data[2], data[3], data[4], data[5], int.Parse(data[6]), int.Parse(data[7]));
+                        lbl_result.Text = $"Account trovato:\n{ account.name } { account.surname } | { account.nickname }\nLikes: { account.likes } | Like ricevuti: { account.liked }";
+                        pic_profile.Image = new Bitmap(@$"..\..\..\img\{ account.image }.jpg");
                     } else {
+                        account = new Account("", "", "", "", "", "", 0, 0);
                         lbl_result.Text = "Account trovato: nessuno";
                     }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    //MessageBox.Show("C'è stato un errore, riprova");
                 }
             } catch (Exception) {
                 MessageBox.Show("C'è stato un errore, riprova");

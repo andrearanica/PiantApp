@@ -134,7 +134,7 @@ namespace Server {
             foreach (Account account in accounts) {
                 if (account.nickname == info[1].Split('$')[0]) {
                     found = true;
-                    handler.Send(Encoding.ASCII.GetBytes(account.nickname));
+                    handler.Send(Encoding.ASCII.GetBytes($"{ account.surname } { account.name } { account.nickname } { account.email } { account.password } { account.image } { account.likes } { account.liked }"));
                 }
             }
             if (!found) {

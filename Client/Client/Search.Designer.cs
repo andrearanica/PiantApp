@@ -29,12 +29,15 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.lbl_result = new System.Windows.Forms.Label();
+            this.pic_profile = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,16 +83,27 @@ namespace Client
             // 
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_result.Location = new System.Drawing.Point(13, 144);
+            this.lbl_result.Location = new System.Drawing.Point(172, 140);
             this.lbl_result.Name = "lbl_result";
             this.lbl_result.Size = new System.Drawing.Size(0, 20);
             this.lbl_result.TabIndex = 3;
+            // 
+            // pic_profile
+            // 
+            this.pic_profile.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_profile.InitialImage")));
+            this.pic_profile.Location = new System.Drawing.Point(13, 140);
+            this.pic_profile.Name = "pic_profile";
+            this.pic_profile.Size = new System.Drawing.Size(80, 80);
+            this.pic_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_profile.TabIndex = 4;
+            this.pic_profile.TabStop = false;
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 510);
+            this.ClientSize = new System.Drawing.Size(520, 345);
+            this.Controls.Add(this.pic_profile);
             this.Controls.Add(this.lbl_result);
             this.Controls.Add(this.txt_nickname);
             this.Controls.Add(this.label2);
@@ -99,6 +113,7 @@ namespace Client
             this.Text = "Search";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_profile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +126,6 @@ namespace Client
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_nickname;
         private System.Windows.Forms.Label lbl_result;
+        private System.Windows.Forms.PictureBox pic_profile;
     }
 }
