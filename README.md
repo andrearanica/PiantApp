@@ -55,6 +55,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F1.6: Controlla che il nickname e la mail sia libero
   - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
   - [ ] F1.8: L'utente può scegliere un'immagine preimpostata
+  - [ ] F1.9: Modificare le informazioni dell'utente (nome, cognome, piante...)
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
@@ -71,7 +72,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [ ] F4: Cerca utenti
   - [X] F4.1: Vedere tutti gli utenti presenti nel database
   - [X] F4.2: Cercare un utente in base al nickname
-  - [ ] F4.3: Visualizzare tutte le informazioni sull'utente in una form (like, commenti...)
+  - [X] F4.3: Visualizzare tutte le informazioni sull'utente in una form (like, piante...)
 - [ ] F5: Interagire con i post
   - [ ] F5.1: Like ai post
   - [ ] F5.2: Commenti ai post

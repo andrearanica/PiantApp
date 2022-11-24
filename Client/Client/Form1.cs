@@ -27,7 +27,7 @@ namespace Client {
         }
 
         private void setImg (string image) {
-            pic_profile.Image = new Bitmap(@$"..\..\..\img\{ account.image }.jpg");
+            pic_profile.Image = new Bitmap(@$"..\..\..\img\{ image }.jpg");
         }
 
         private void pic_profile_Click (object sender, EventArgs e) {
@@ -40,7 +40,7 @@ namespace Client {
                     pic_search.Visible = true;
                     pic_addPost.Visible = true;
                     pic_next.Visible = true;
-                    setImg(account.image);
+                    pic_profile.Image = new Bitmap($@"..\..\..\img\{ account.image }.jpg");
                     pic_liked.Visible = true;
                     lbl_countLiked.Text = account.liked.ToString();
                 }

@@ -191,8 +191,8 @@ namespace Client
             // 
             this.cmb_images.FormattingEnabled = true;
             this.cmb_images.Items.AddRange(new object[] {
-            "Cactus",
-            "Cipresso"});
+            "cactus",
+            "cipresso"});
             this.cmb_images.Location = new System.Drawing.Point(108, 239);
             this.cmb_images.Name = "cmb_images";
             this.cmb_images.Size = new System.Drawing.Size(145, 28);

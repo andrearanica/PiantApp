@@ -85,7 +85,11 @@ namespace Server {
             newAccount.nickname = signupInfo[2];
             newAccount.email = signupInfo[3];
             newAccount.password = signupInfo[4];
-            newAccount.image = signupInfo[5].Remove(signupInfo[4].Length - 1, 1);
+            newAccount.image = signupInfo[5].Remove(signupInfo[5].Length - 1, 1);
+            newAccount.likes = 0;
+            newAccount.liked = 0;
+            string[] plants = { "", "", "", "", "", "", "", "", "", "" };
+            newAccount.plants = plants;
 
             bool valid = true;
 
@@ -141,6 +145,41 @@ namespace Server {
                 handler.Send(Encoding.ASCII.GetBytes("not found"));
             }
         }
+        private void getPlants (string data, ref Socket handler) {
+            string nickname = data.Split(' ')[1].Split('$')[0];
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+            Account account = new Account();
+            string returnPlants = "";
+            foreach (Account a in accounts) {
+                if (a.nickname == nickname) {
+                    account = new Account(a.name, a.surname, a.nickname, a.email, a.password, a.likes, a.liked, a.plants);
+                    foreach (string plant in a.plants) {
+                        returnPlants += $" { plant }";
+                    }
+                    handler.Send(Encoding.ASCII.GetBytes(returnPlants)); 
+                    listbox.Items.Add($"Ritorno { returnPlants }");
+                }
+            }
+        }
+        private void addPlant (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+            string nickname = info[1]; string newPlant = info[2].Split('$')[0];
+
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+            foreach (Account a in accounts) {
+                if (a.nickname == nickname) {
+                    int lastPos = 0;
+                    while (a.plants[lastPos] != "" ) {
+                        if (a.plants[lastPos] != "") lastPos++;
+                    }
+                    a.plants[lastPos] = newPlant;
+                    handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                }
+            }
+            System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -174,8 +213,11 @@ namespace Server {
                         addPost(data, ref handler);
                     } else if (data[0] == 'u') {
                         getUser(data, ref handler);
-                    }
-                    else {
+                    } else if (data[0] == 'P') {
+                        getPlants(data, ref handler);
+                    } else if (data[0] == 'A') {
+                        addPlant(data, ref handler);
+                    }  else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
                     }
                     listbox.Items.Add(data);
@@ -197,11 +239,12 @@ namespace Server {
         public string image { get; set; }
         public int likes { get; set; }
         public int liked { get; set; }
+        public string[] plants { get; set; }
         public Account () {
             this.name = this.surname = this.nickname = this.email = this.password = "undefined";
             this.likes = this.liked = 0;
         }
-        public Account (string name, string surname, string nickname, string email, string password, int likes, int liked) {
+        public Account (string name, string surname, string nickname, string email, string password, int likes, int liked, string[] plants) {
             this.name = name; this.surname = surname; this.nickname = nickname; this.email = email; this.password = password; this.likes = likes; this.liked = liked;
         }
     }
