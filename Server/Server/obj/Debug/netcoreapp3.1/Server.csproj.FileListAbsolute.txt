@@ -30,11 +30,9 @@ C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\bin\Debug\netcorea
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.Form1.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.Properties.Resources.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.GenerateResource.cache
-C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
@@ -42,3 +40,4 @@ C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcorea
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+C:\Users\ranica.18375\Documents\GitHub\PiantApp\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache

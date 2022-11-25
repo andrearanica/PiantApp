@@ -117,7 +117,7 @@ namespace Server {
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
-            UserPost post = new UserPost(info[1], info[2], info[3], info[4]);
+            UserPost post = new UserPost(info[1], info[2], info[3], info[4], 0);
 
             string json = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
             List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(json);
@@ -180,6 +180,41 @@ namespace Server {
             }
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
+        private void removePlant (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+            string nickname = info[1]; string plant = info[2].Split('$')[0];
+
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+            foreach (Account a in accounts) {
+                if (a.nickname == nickname) {
+                    for (int i = 0; i < a.plants.Length; i++) {
+                        if (a.plants[i] == plant) {
+                            a.plants[i] = "";
+                            handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                        }
+                    }
+                }
+            }
+            System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
+        }
+        private void like (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+            string nickname = info[0]; string title = info[1];
+
+            string jsonA = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(jsonA);
+
+            string jsonP = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
+            List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(jsonP);
+            foreach (UserPost post in posts) {
+                if (post.title == title) {
+                    post.likes++;
+                    handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                }
+            }
+            System.IO.File.WriteAllText(@"..\..\..\json\posts", JsonSerializer.Serialize<List<UserPost>>(posts));
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -202,14 +237,19 @@ namespace Server {
                     }
                     listbox.Items.Add($"Testo ricevuto: { data }");
 
-                    if (data[0] == 'l') {                           // If the user sends login
+                    if (data[0] == 'l')
+                    {                           // If the user sends login
                         login(data, ref handler);
                     }
-                    else if (data[0] == 'r') {                      // If the user sends registration
+                    else if (data[0] == 'r')
+                    {                      // If the user sends registration
                         register(data, ref handler);
-                    } else if (data[0] == 'p') {                    // If the user sends post
+                    }
+                    else if (data[0] == 'p')
+                    {                    // If the user sends post
                         post(data, ref handler);
-                    } else if (data[0] == 'a') {
+                    }
+                    else if (data[0] == 'a') {
                         addPost(data, ref handler);
                     } else if (data[0] == 'u') {
                         getUser(data, ref handler);
@@ -217,7 +257,11 @@ namespace Server {
                         getPlants(data, ref handler);
                     } else if (data[0] == 'A') {
                         addPlant(data, ref handler);
-                    }  else {
+                    } else if (data[0] == 'R') {
+                        removePlant(data, ref handler); 
+                    } else if (data[0] == 'L') {
+                        like(data, ref handler);
+                    } else {
                         handler.Send(Encoding.ASCII.GetBytes(""));
                     }
                     listbox.Items.Add(data);
@@ -251,13 +295,14 @@ namespace Server {
     public class UserPost {
         public string title { get; set; }
         public string author { get; set; }
-        public string date { get; set; }
+        public string date { get; set; } 
         public string description { get; set; }
+        public int likes { get; set; }
         public UserPost() {
 
         }
-        public UserPost(string title, string author, string date, string description) {
-            this.title = title; this.author = author; this.date = date; this.description = description;
+        public UserPost(string title, string author, string date, string description, int likes) {
+            this.title = title; this.author = author; this.date = date; this.description = description; this.likes = likes;
         }
     }
 }

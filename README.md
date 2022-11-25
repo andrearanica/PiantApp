@@ -54,8 +54,8 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] F1.5: Controlla input vuoti nel login
   - [ ] F1.6: Controlla che il nickname e la mail sia libero
   - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
-  - [ ] F1.8: L'utente può scegliere un'immagine preimpostata
-  - [ ] F1.9: Modificare le informazioni dell'utente (nome, cognome, piante...)
+  - [X] F1.8: L'utente può scegliere un'immagine preimpostata
+  - [X] F1.9: Modificare le piante del proprio account (aggiungi e rimuovi)
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
@@ -94,6 +94,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] Restituire lo stesso post di fila
   - [X] Quando pubblico un post nella descrizione compare un $
   - [X] Se nel post pubblicato ci sono spazi da problemi
+  - [ ] Titolo univoco
 
 ## ❤️ Credits
 ### Immagini

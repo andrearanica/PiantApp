@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "JyjRJOWbYPzZOf1349OdTKSg+InTTQtySlDgtaYBGNeFYQHgWIHBt0+AwGfX3/4mQW1hTDXuKkIfwC+1+U98jA==",
+  "dgSpecHash": "swba4AmGZe3PTGM+mhgAAN+b6Nt9jb9TOaDhp+oCKb3JtDFSnuU8Ot4XMEx3lxL6Tolj8U3UKKnoCwz/jK6Ndg==",
   "success": true,
-  "projectFilePath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\andre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0-rc.2.22472.3\\microsoft.bcl.asyncinterfaces.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.text.encodings.web\\7.0.0-rc.2.22472.3\\system.text.encodings.web.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.text.json\\7.0.0-rc.2.22472.3\\system.text.json.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\andre\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0-rc.2.22472.3\\microsoft.bcl.asyncinterfaces.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.text.encodings.web\\7.0.0-rc.2.22472.3\\system.text.encodings.web.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.text.json\\7.0.0-rc.2.22472.3\\system.text.json.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\ranica.18375\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

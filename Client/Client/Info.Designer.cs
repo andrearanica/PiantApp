@@ -35,6 +35,9 @@ namespace Client
             this.txt_plant = new System.Windows.Forms.TextBox();
             this.lbl_ask = new System.Windows.Forms.Label();
             this.btn_add = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.list_plants = new System.Windows.Forms.ListBox();
+            this.btn_removePlant = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,16 +73,19 @@ namespace Client
             // 
             // txt_plant
             // 
-            this.txt_plant.Location = new System.Drawing.Point(209, 286);
+            this.txt_plant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_plant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_plant.Location = new System.Drawing.Point(404, 298);
             this.txt_plant.Name = "txt_plant";
-            this.txt_plant.Size = new System.Drawing.Size(186, 22);
+            this.txt_plant.Size = new System.Drawing.Size(211, 27);
             this.txt_plant.TabIndex = 3;
             // 
             // lbl_ask
             // 
+            this.lbl_ask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ask.AutoSize = true;
             this.lbl_ask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ask.Location = new System.Drawing.Point(12, 286);
+            this.lbl_ask.Location = new System.Drawing.Point(404, 274);
             this.lbl_ask.Name = "lbl_ask";
             this.lbl_ask.Size = new System.Drawing.Size(191, 21);
             this.lbl_ask.TabIndex = 4;
@@ -87,19 +93,57 @@ namespace Client
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(209, 314);
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_add.Location = new System.Drawing.Point(404, 326);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(186, 32);
+            this.btn_add.Size = new System.Drawing.Size(211, 32);
             this.btn_add.TabIndex = 5;
             this.btn_add.Text = "Aggiungi";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(404, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Le tue piante";
+            // 
+            // list_plants
+            // 
+            this.list_plants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.list_plants.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.list_plants.FormattingEnabled = true;
+            this.list_plants.ItemHeight = 21;
+            this.list_plants.Location = new System.Drawing.Point(404, 131);
+            this.list_plants.Name = "list_plants";
+            this.list_plants.Size = new System.Drawing.Size(211, 130);
+            this.list_plants.TabIndex = 7;
+            // 
+            // btn_removePlant
+            // 
+            this.btn_removePlant.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_removePlant.Location = new System.Drawing.Point(404, 364);
+            this.btn_removePlant.Name = "btn_removePlant";
+            this.btn_removePlant.Size = new System.Drawing.Size(211, 27);
+            this.btn_removePlant.TabIndex = 8;
+            this.btn_removePlant.Text = "Rimuovi pianta";
+            this.btn_removePlant.UseVisualStyleBackColor = true;
+            this.btn_removePlant.Click += new System.EventHandler(this.btn_removePlant_Click);
+            // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 403);
+            this.ClientSize = new System.Drawing.Size(625, 403);
+            this.Controls.Add(this.btn_removePlant);
+            this.Controls.Add(this.list_plants);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.lbl_ask);
             this.Controls.Add(this.txt_plant);
@@ -127,5 +171,8 @@ namespace Client
         private System.Windows.Forms.TextBox txt_plant;
         private System.Windows.Forms.Label lbl_ask;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox list_plants;
+        private System.Windows.Forms.Button btn_removePlant;
     }
 }

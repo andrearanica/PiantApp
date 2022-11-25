@@ -26,7 +26,6 @@ C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\bin\Debug\netcorea
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\bin\Debug\netcoreapp3.1\Client.runtimeconfig.dev.json
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\bin\Debug\netcoreapp3.1\Client.dll
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\bin\Debug\netcoreapp3.1\Client.pdb
-C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.csproj.AssemblyReference.cache
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.AddPost.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.Form1.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.Info.resources
@@ -35,10 +34,10 @@ C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcorea
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.Search.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.SignUp.resources
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.csproj.GenerateResource.cache
-C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfoInputs.cache
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfo.cs
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.csproj.CoreCompileInputs.cache
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.dll
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.pdb
 C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.genruntimeconfig.cache
+C:\Users\ranica.18375\Documents\GitHub\PiantApp\Client\Client\obj\Debug\netcoreapp3.1\Client.csprojAssemblyReference.cache

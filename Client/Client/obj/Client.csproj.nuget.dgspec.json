@@ -1,28 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\Client.csproj": {}
+    "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Client\\Client\\Client.csproj": {}
   },
   "projects": {
-    "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\Client.csproj": {
+    "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Client\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\obj\\",
+        "projectPath": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\ranica.18375\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ranica.18375\\Documents\\GitHub\\PiantApp\\Client\\Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ranica.18375\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\andre\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.211\\RuntimeIdentifierGraph.json"
         }
       }
     }

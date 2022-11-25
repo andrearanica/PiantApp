@@ -54,7 +54,7 @@ namespace Client
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(173, 20);
+            this.label1.Location = new System.Drawing.Point(258, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 28);
             this.label1.TabIndex = 0;
@@ -75,7 +75,7 @@ namespace Client
             this.txt_nickname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_nickname.Location = new System.Drawing.Point(171, 86);
             this.txt_nickname.Name = "txt_nickname";
-            this.txt_nickname.Size = new System.Drawing.Size(315, 26);
+            this.txt_nickname.Size = new System.Drawing.Size(435, 26);
             this.txt_nickname.TabIndex = 2;
             this.txt_nickname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -102,7 +102,7 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 345);
+            this.ClientSize = new System.Drawing.Size(631, 377);
             this.Controls.Add(this.pic_profile);
             this.Controls.Add(this.lbl_result);
             this.Controls.Add(this.txt_nickname);
