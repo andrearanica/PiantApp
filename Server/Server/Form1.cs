@@ -190,10 +190,11 @@ namespace Server {
                 if (a.nickname == nickname) {
                     for (int i = 0; i < a.plants.Length; i++) {
                         if (a.plants[i] == plant) {
-                            a.plants[i] = "";
-                            handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                                a.plants[i] = "";
+                                handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                            }
                         }
-                    }
+                    
                 }
             }
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));

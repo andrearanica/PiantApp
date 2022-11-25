@@ -98,9 +98,14 @@ namespace Client {
         }
 
         private void btn_add_Click(object sender, EventArgs e) {
-            connect();
-            list_plants.Items.Clear();
-            getPlants();
+            if (list_plants.Items.Count < 10) {
+                connect();
+                list_plants.Items.Clear();
+                getPlants();
+            } else {
+                MessageBox.Show("Puoi inserire solamente 10 piante, rimuovi quelle vecchie per inserirne una nuova");
+            }
+            
         }
 
         private void btn_removePlant_Click(object sender, EventArgs e) {

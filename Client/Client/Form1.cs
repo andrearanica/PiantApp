@@ -139,6 +139,9 @@ namespace Client {
 
             return post;
         }
+        private void like (string title) {
+
+        }
         private void btn_newPost_Click(object sender, EventArgs e) {
             createPost(getPost());
         }
