@@ -32,7 +32,7 @@ namespace Client {
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     if (response != "successfull") {
-                        MessageBox.Show("C'è stato un errore, riprova");
+                        MessageBox.Show("E' già presente un post con questo titolo", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();

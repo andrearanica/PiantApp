@@ -85,6 +85,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] Immagini di profilo predefinite
   - [X] Data automatica quando compilo un nuovo post
   - [ ] Aggiungi img profili
+  - [ ] Modificare i dati
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup

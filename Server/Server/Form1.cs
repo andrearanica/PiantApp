@@ -117,16 +117,20 @@ namespace Server {
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
-            UserPost post = new UserPost(info[1], info[2], info[3], info[4], 0);
+            UserPost post = new UserPost(info[1], info[2], info[3], info[4].Split('$')[0], 0);
 
             string json = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
             List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(json);
 
-            posts.Add(post);
+            bool invalid = false;
+            foreach (UserPost p in posts) {
+                if (p.title == post.title) {
+                    invalid = true;
+                }
+            }
+            if (invalid) { handler.Send(Encoding.ASCII.GetBytes("invalid")); } else { posts.Add(post); handler.Send(Encoding.ASCII.GetBytes("successfull")); }
 
             System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize(posts));
-
-            handler.Send(Encoding.ASCII.GetBytes("successfull"));
         }
         private void getUser (string data, ref Socket handler) {
             string[] info = data.Split(' ');
@@ -223,6 +227,11 @@ namespace Server {
             System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize<List<UserPost>>(posts));
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
+        private void updateInfo (string data, ref Socket handler) {
+            string[] info = data.Split(' ');
+            string nickname = info[1]; string name = info[2]; string surname = info[3]; string email = info[4].Split('$')[0];
+            MessageBox.Show($"Aggiorno { nickname }");
+        }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
             IPAddress ipAddress = System.Net.IPAddress.Parse(this.ip);
@@ -233,7 +242,7 @@ namespace Server {
                 listener.Bind(local);
                 listener.Listen(10);
                 while (true) {
-                    listbox.Items.Add("Aspetto una connessione...");
+                    listbox.Items.Add("Aspetto una richiesta...");
                     Socket handler = listener.Accept();
                     data = null;
                     while (true) {
@@ -243,31 +252,48 @@ namespace Server {
                             break;
                         }
                     }
-                    listbox.Items.Add($"Testo ricevuto: { data }");
+                    listbox.Items.Add($"Richiesta: { data }");
 
-                    if (data[0] == 'l') {                           // If the user sends login
+                    if (data[0] == 'l')
+                    {                           // If the user sends login
                         login(data, ref handler);
                     }
                     else if (data[0] == 'r')
                     {                      // If the user sends registration
                         register(data, ref handler);
-                    } else if (data[0] == 'p')
+                    }
+                    else if (data[0] == 'p')
                     {                    // If the user sends post
                         post(data, ref handler);
                     }
-                    else if (data[0] == 'a') {
+                    else if (data[0] == 'a')
+                    {
                         addPost(data, ref handler);
-                    } else if (data[0] == 'u') {
+                    }
+                    else if (data[0] == 'u')
+                    {
                         getUser(data, ref handler);
-                    } else if (data[0] == 'P') {
+                    }
+                    else if (data[0] == 'P')
+                    {
                         getPlants(data, ref handler);
-                    } else if (data[0] == 'A') {
+                    }
+                    else if (data[0] == 'A')
+                    {
                         addPlant(data, ref handler);
-                    } else if (data[0] == 'R') {
-                        removePlant(data, ref handler); 
-                    } else if (data[0] == 'L') {
+                    }
+                    else if (data[0] == 'R')
+                    {
+                        removePlant(data, ref handler);
+                    }
+                    else if (data[0] == 'L') {
                         like(data, ref handler);
-                    } else {
+                    }
+                    else if (data[0] == 'u') {
+                        updateInfo(data, ref handler);
+                    }
+                    else
+                    {
                         handler.Send(Encoding.ASCII.GetBytes(""));
                     }
                     listbox.Items.Add(data);
