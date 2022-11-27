@@ -20,6 +20,7 @@ namespace Client {
             account = new Account();
             lbl_nickname = new Label();
             lbl_title = new Label();
+            lbl_title.Text = "Premi il pulsante";
             lbl_description = new Label();
             lbl_date = new Label();
         }
@@ -42,6 +43,7 @@ namespace Client {
                     pic_liked.Visible = true;
                     lbl_countLiked.Text = account.liked.ToString();
                     btn_like.Visible = true;
+                    createPost(getPost());
                 }
             } else {
                 Info info = new Info(account);
@@ -95,6 +97,8 @@ namespace Client {
             createNickname(post.author);
             createDate(post.date);
             createDescription(post.description);
+            btn_like.Location = new Point(lbl_description.Location.X, lbl_description.Location.Y + 50);
+            pic_next.Location = new Point(lbl_description.Location.X + 200, lbl_description.Location.Y + 40);
         }
         private UserPost getPost () {
             UserPost post = new UserPost();

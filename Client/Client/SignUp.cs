@@ -46,7 +46,6 @@ namespace Client {
                 if (validPassword(txt_password.Text)) {
                     setNewAccount();
                     connect();
-                    this.Close();
                 } else {
                     lbl_passwordError.Visible = true;
                 }
@@ -69,16 +68,14 @@ namespace Client {
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
 
                     if (response != "") {
-
+                        this.Close();
                     } else {
-                        lbl_error.Visible = true;
+                        MessageBox.Show("Nome utente o email già usati", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
-                }
-                catch (Exception)
-                {
+                } catch (Exception) {
                     MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

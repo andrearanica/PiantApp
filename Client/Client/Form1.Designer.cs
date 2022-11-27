@@ -181,7 +181,7 @@ namespace Client
             this.pnl_header.Controls.Add(this.btn_signup);
             this.pnl_header.Controls.Add(this.label2);
             this.pnl_header.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pnl_header.Location = new System.Drawing.Point(129, 62);
+            this.pnl_header.Location = new System.Drawing.Point(129, 75);
             this.pnl_header.Name = "pnl_header";
             this.pnl_header.Size = new System.Drawing.Size(478, 101);
             this.pnl_header.TabIndex = 2;
@@ -252,6 +252,7 @@ namespace Client
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(542, -1);
             this.pictureBox2.Name = "pictureBox2";

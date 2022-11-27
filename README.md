@@ -40,12 +40,12 @@ Tramite i tasti laterali si può passare alle sezioni:
 
 ## 💻 Protocollo
 | ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                  |
-| --------------- | --------------------- | -----------------------------------------------------   | ------------------------------------------------------------------------  |
+| --------------- | --------------------- | -----------------------------------------------------   | ------------------------------------------------------------------------- |
 | F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked ``` o ``` ```  |
-| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull ``` o ``` ```                                             |
-| F1              | Aggiungere pianta     | ``` Addplant nickname plant ```                         | ``` successfull ``` o ``` ```                                             |
-| F1              | Rimuovere pianta      | ``` Removeplant nickname plant ```                      | ``` successfull ``` o ``` ```                                             |
-| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email ```          | ``` successfull ``` o ``` ```                                             |
+| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull ``` o ```" "```                                           |
+| F1              | Aggiungere pianta     | ``` Addplant nickname plant ```                         | ``` successfull ``` o ```" " ```                                          |
+| F1              | Rimuovere pianta      | ``` Removeplant nickname plant ```                      | ``` successfull ``` o ```" " ```                                          |
+| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email ```          | ``` successfull ``` o ```" " ```                                          |
 | F2              | Visualizzare post     | ``` post$ ```                                           | ``` titolo autore data descrizione ```                                    |
 | F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull ``` o ``` invalid ```                                     |
 | F4              | Cerca utente          | ``` user nickname ```                                   | ``` surname name nickname email password image likes liked ```            |
@@ -58,7 +58,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] F1.3: Registrazione
   - [X] F1.4: Controlla email valida e password con numeri e caratteri speciali
   - [X] F1.5: Controlla input vuoti nel login
-  - [ ] F1.6: Controlla che il nickname e la mail sia libero
+  - [X] F1.6: Controlla che il nickname e la mail siano liberi
   - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
   - [X] F1.8: L'utente può scegliere un'immagine preimpostata
   - [X] F1.9: Modificare le piante del proprio account (aggiungi e rimuovi)
@@ -68,14 +68,12 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [X] F2.2: Leggere tutti i post da database
   - [X] F2.3: Vedere un post random
   - [ ] F2.4: Visualizzare il post con una UI decente
-  - [ ] F2.5: Le richieste possono essere effettuate solo da utenti loggati
-  - [ ] F2.6: Cambiare il post restituito in base agli interessi
-  - [ ] F2.7: Visualizzare i post recenti (solo frontend)
+  - [ ] F2.5: Cambiare il post restituito in base agli interessi
+  - [ ] F2.6: Visualizzare i post recenti (solo frontend)
 - [ ] F3: Pubblicare contenuti
   - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
   - [X] F3.2: Controllare i dati inseriti
   - [ ] F3.3: Aggiungere un'immagine dal web
-  - [ ] F3.4: Le richieste possono essere effettuate solo dal utenti loggati
 - [ ] F4: Cerca utenti
   - [X] F4.1: Vedere tutti gli utenti presenti nel database
   - [X] F4.2: Cercare un utente in base al nickname
