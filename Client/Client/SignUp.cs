@@ -79,12 +79,12 @@ namespace Client {
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -37,10 +37,10 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             this.Close();
         }
@@ -71,7 +71,7 @@ namespace Client {
             if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text)) {
                 connect();
             } else {
-                MessageBox.Show("Dati inseriti non correttamente");
+                MessageBox.Show("Dati inseriti non correttamente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

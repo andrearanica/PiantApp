@@ -121,10 +121,10 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return post;
@@ -142,16 +142,13 @@ namespace Client {
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response == "successfull") {
-                        MessageBox.Show($"Like a { lbl_title.Text }");
-                    }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btn_newPost_Click(object sender, EventArgs e) {

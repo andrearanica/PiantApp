@@ -37,10 +37,10 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,10 +63,10 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,11 +85,11 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -109,10 +109,10 @@ namespace Client {
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
-                    MessageBox.Show("C'è stato un errore, riprova");
+                    MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } catch (Exception) {
-                MessageBox.Show("C'è stato un errore, riprova");
+                MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,7 +122,7 @@ namespace Client {
                 list_plants.Items.Clear();
                 getPlants();
             } else {
-                MessageBox.Show("Puoi inserire solamente 10 piante, rimuovi quelle vecchie per inserirne una nuova");
+                MessageBox.Show("Puoi inserire solamente 10 piante, rimuovi quelle vecchie per inserirne una nuova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
