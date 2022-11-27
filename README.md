@@ -39,11 +39,17 @@ Tramite i tasti laterali si può passare alle sezioni:
 | F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
 
 ## 💻 Protocollo
-| ID Funzionalità | Nome sintetico        | Comando1                                   | Comando2                                               |
-| --------------- | --------------------- | -----------------------------------------  | ------------------------------------------------------ |
-| F1              | Login/registrazione   | ``` login nickname password$```            | ``` register surname name nickname email password$ ``` |
-| F2              | Visualizzare post     | ``` post$ ```                              |                                                        |
-| F3              | Pubblicare contenuti  | ``` add title author data description$ ``` |                                                        |
+| ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                  |
+| --------------- | --------------------- | -----------------------------------------------------   | ------------------------------------------------------------------------  |
+| F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked ``` o ``` ```  |
+| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull ``` o ``` ```                                             |
+| F1              | Aggiungere pianta     | ``` Addplant nickname plant ```                         | ``` successfull ``` o ``` ```                                             |
+| F1              | Rimuovere pianta      | ``` Removeplant nickname plant ```                      | ``` successfull ``` o ``` ```                                             |
+| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email ```          | ``` successfull ``` o ``` ```                                             |
+| F2              | Visualizzare post     | ``` post$ ```                                           | ``` titolo autore data descrizione ```                                    |
+| F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull ``` o ``` invalid ```                                     |
+| F4              | Cerca utente          | ``` user nickname ```                                   | ``` surname name nickname email password image likes liked ```            |
+| F5              | Like                  | ``` like title ```                                      | ``` successfull ```                                                       |
 
 ## 🚀 Roadmap
 - [ ] F1: Login e registrazione
@@ -56,6 +62,7 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
   - [X] F1.8: L'utente può scegliere un'immagine preimpostata
   - [X] F1.9: Modificare le piante del proprio account (aggiungi e rimuovi)
+  - [ ] F1.10: Modificare i dati
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database
@@ -81,11 +88,10 @@ Tramite i tasti laterali si può passare alle sezioni:
   - [ ] Aggiungi dettagli piante
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
-  - [ ] Controlla le risposte delle richieste
+  - [X] Controlla le risposte delle richieste
   - [X] Immagini di profilo predefinite
   - [X] Data automatica quando compilo un nuovo post
   - [ ] Aggiungi img profili
-  - [ ] Modificare i dati
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
