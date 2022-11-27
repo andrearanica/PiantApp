@@ -13,7 +13,6 @@ namespace Client {
         Label lbl_nickname;
         Label lbl_title;
         Label lbl_description;
-        Button btn_like;
         Label lbl_date;
 
         public Form1() {
@@ -22,7 +21,6 @@ namespace Client {
             lbl_nickname = new Label();
             lbl_title = new Label();
             lbl_description = new Label();
-            btn_like = new Button();
             lbl_date = new Label();
         }
 
@@ -43,6 +41,7 @@ namespace Client {
                     pic_profile.Image = new Bitmap($@"..\..\..\img\{ account.image }.jpg");
                     pic_liked.Visible = true;
                     lbl_countLiked.Text = account.liked.ToString();
+                    btn_like.Visible = true;
                 }
             } else {
                 Info info = new Info(account);
@@ -59,8 +58,8 @@ namespace Client {
             lbl_title.Text = title;
             Font font = new Font("Century Gothic", 20);
             lbl_title.Font = font;
-            lbl_title.Location = new System.Drawing.Point(133, 60);
-            lbl_title.Size = new System.Drawing.Size(1000, 30);
+            lbl_title.Location = new System.Drawing.Point(133, 80);
+            lbl_title.Size = new System.Drawing.Size(1000, 40);
             Controls.Remove(lbl_title);
             Controls.Add(lbl_title);
         }
@@ -69,7 +68,7 @@ namespace Client {
             lbl_nickname.Text = $"Post di { nickname }";
             Font font = new Font("Century Gothic", 14);
             lbl_nickname.Font = font;
-            lbl_nickname.Location = new System.Drawing.Point(133, 100);
+            lbl_nickname.Location = new System.Drawing.Point(133, 120);
             lbl_nickname.Size = new System.Drawing.Size(500, 30);
             Controls.Add(lbl_nickname);
         }
@@ -78,23 +77,15 @@ namespace Client {
             lbl_description.Text = description;
             Font font = new Font("Century Gothic", 11);
             lbl_description.Font = font;
-            lbl_description.Location = new System.Drawing.Point(133, 160);
+            lbl_description.Location = new System.Drawing.Point(133, 180);
             lbl_description.Size = new System.Drawing.Size(500, 30);
             Controls.Remove(lbl_description);
             Controls.Add(lbl_description);
         }
-        private void createLike () {
-            btn_like.Visible = true;
-            btn_like.Text = "<3";
-            btn_like.Location = new System.Drawing.Point(133, 190);
-            btn_like.Size = new System.Drawing.Size(50, 50);
-            Controls.Remove(btn_like);
-            Controls.Add(btn_like);
-        }
         private void createDate (string date) {
             lbl_date.Visible = true;
             lbl_date.Text = date;
-            lbl_date.Location = new System.Drawing.Point(133, 130);
+            lbl_date.Location = new System.Drawing.Point(133, 150);
             lbl_date.Size = new System.Drawing.Size(500, 30);
             Controls.Remove(lbl_date);
             Controls.Add(lbl_date);
@@ -104,7 +95,6 @@ namespace Client {
             createNickname(post.author);
             createDate(post.date);
             createDescription(post.description);
-            createLike();
         }
         private UserPost getPost () {
             UserPost post = new UserPost();
@@ -139,8 +129,30 @@ namespace Client {
 
             return post;
         }
-        private void like (string title) {
-
+        private void like () {
+            UserPost post = new UserPost();
+            byte[] bytes = new byte[1024];
+            try {
+                IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
+                IPEndPoint remote = new IPEndPoint(ipAddress, 5000);
+                Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                try {
+                    sender.Connect(remote);
+                    byte[] msg = Encoding.ASCII.GetBytes($"Like { lbl_title.Text.Replace(' ', '-') }$");
+                    int bytestSent = sender.Send(msg);
+                    int bytesRec = sender.Receive(bytes);
+                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    if (response == "successfull") {
+                        MessageBox.Show($"Like a { lbl_title.Text }");
+                    }
+                    sender.Shutdown(SocketShutdown.Both);
+                    sender.Close();
+                } catch (Exception) {
+                    MessageBox.Show("C'è stato un errore, riprova");
+                }
+            } catch (Exception) {
+                MessageBox.Show("C'è stato un errore, riprova");
+            }
         }
         private void btn_newPost_Click(object sender, EventArgs e) {
             createPost(getPost());
@@ -154,8 +166,7 @@ namespace Client {
             this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) {
 
         }
 
@@ -171,6 +182,10 @@ namespace Client {
 
         private void pic_next_Click(object sender, EventArgs e) {
             createPost(getPost());
+        }
+
+        private void btn_like_Click(object sender, EventArgs e) {
+            like();
         }
     }
     public class Account {

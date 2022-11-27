@@ -91,8 +91,7 @@ namespace Client {
                     //MessageBox.Show("C'è stato un errore, riprova");
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 MessageBox.Show("C'è stato un errore, riprova");
             }
         }

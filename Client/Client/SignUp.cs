@@ -3,6 +3,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace Client {
     public partial class SignUp : Form {
@@ -83,6 +85,13 @@ namespace Client {
             catch (Exception)
             {
                 MessageBox.Show("C'è stato un errore, riprova");
+            }
+        }
+
+        private void SignUp_Load(object sender, EventArgs e) {
+            string json = System.IO.File.ReadAllText(@"..\..\..\img\images.json");
+            foreach (string image in JsonSerializer.Deserialize<List<String>>(json)) {
+                cmb_images.Items.Add(image);
             }
         }
     }

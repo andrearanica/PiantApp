@@ -87,9 +87,9 @@ namespace Client
             this.lbl_ask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_ask.Location = new System.Drawing.Point(404, 274);
             this.lbl_ask.Name = "lbl_ask";
-            this.lbl_ask.Size = new System.Drawing.Size(176, 20);
+            this.lbl_ask.Size = new System.Drawing.Size(201, 20);
             this.lbl_ask.TabIndex = 4;
-            this.lbl_ask.Text = "Hai una nuova pianta?";
+            this.lbl_ask.Text = "Inserisci una nuova pianta";
             // 
             // btn_add
             // 

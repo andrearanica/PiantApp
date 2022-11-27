@@ -108,3 +108,5 @@ Tramite i tasti laterali si può passare alle sezioni:
 | Next icons      | Smashicons - Flaticon | https://www.flaticon.com/free-icons/next
 | Cipresso		| brgfx                 | https://www.freepik.com/free-vector/isolated-tree-white-background_29280578.htm#query=cartoon%20tree&position=20&from_view=keyword |
 | Cuore verde	| rawpixel.com          | https://it.freepik.com/vettori-gratuito/illustrazione-dell-icona-medica_2606899.htm#query=green%20heart&position=21&from_view=search&track=sph |
+| Plants falling  | rawpixel.com      | https://www.freepik.com/free-vector/illustration-hanging-plant-isolated-white-background_2616106.htm#query=watercolor%20plants&position=11&from_view=keyword |
+| Coccinella      | jcomp             | https://www.freepik.com/free-vector/set-lady-bug-cute-bee-with-flower-cartoon-animal-element-drawing-water-color-graphic-designer-flat-design-vector-illustration_25273063.htm#query=cute%20leaves%20paint&position=5&from_view=search&track=sph |

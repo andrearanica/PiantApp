@@ -201,7 +201,7 @@ namespace Server {
         }
         private void like (string data, ref Socket handler) {
             string[] info = data.Split(' ');
-            string nickname = info[0]; string title = info[1];
+            string title = info[1].Split('$')[0];
 
             string jsonA = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
             List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(jsonA);
@@ -212,9 +212,16 @@ namespace Server {
                 if (post.title == title) {
                     post.likes++;
                     handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                    MessageBox.Show($"Cerco { post.author }");
+                    foreach (Account a in accounts) {
+                        if (a.nickname == post.author) {
+                            a.liked++;
+                        }
+                    }
                 }
             }
-            System.IO.File.WriteAllText(@"..\..\..\json\posts", JsonSerializer.Serialize<List<UserPost>>(posts));
+            System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize<List<UserPost>>(posts));
+            System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
@@ -238,15 +245,13 @@ namespace Server {
                     }
                     listbox.Items.Add($"Testo ricevuto: { data }");
 
-                    if (data[0] == 'l')
-                    {                           // If the user sends login
+                    if (data[0] == 'l') {                           // If the user sends login
                         login(data, ref handler);
                     }
                     else if (data[0] == 'r')
                     {                      // If the user sends registration
                         register(data, ref handler);
-                    }
-                    else if (data[0] == 'p')
+                    } else if (data[0] == 'p')
                     {                    // If the user sends post
                         post(data, ref handler);
                     }

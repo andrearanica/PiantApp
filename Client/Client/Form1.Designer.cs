@@ -46,6 +46,8 @@ namespace Client
             this.pic_next = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
+            this.btn_like = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).BeginInit();
@@ -54,6 +56,7 @@ namespace Client
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,12 +177,13 @@ namespace Client
             // 
             // pnl_header
             // 
+            this.pnl_header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_header.Controls.Add(this.btn_signup);
             this.pnl_header.Controls.Add(this.label2);
             this.pnl_header.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pnl_header.Location = new System.Drawing.Point(129, 62);
             this.pnl_header.Name = "pnl_header";
-            this.pnl_header.Size = new System.Drawing.Size(879, 136);
+            this.pnl_header.Size = new System.Drawing.Size(478, 101);
             this.pnl_header.TabIndex = 2;
             // 
             // btn_signup
@@ -235,18 +239,41 @@ namespace Client
             this.btn_newPost.Visible = false;
             this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
             // 
+            // btn_like
+            // 
+            this.btn_like.Location = new System.Drawing.Point(827, 250);
+            this.btn_like.Name = "btn_like";
+            this.btn_like.Size = new System.Drawing.Size(76, 40);
+            this.btn_like.TabIndex = 5;
+            this.btn_like.Text = "<3";
+            this.btn_like.UseVisualStyleBackColor = true;
+            this.btn_like.Visible = false;
+            this.btn_like.Click += new System.EventHandler(this.btn_like_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(542, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(466, 384);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 620);
+            this.Controls.Add(this.btn_like);
             this.Controls.Add(this.pic_next);
             this.Controls.Add(this.btn_newPost);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.btn_addPost);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1020, 620);
@@ -263,6 +290,7 @@ namespace Client
             this.pnl_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +314,8 @@ namespace Client
         private System.Windows.Forms.PictureBox pic_next;
         private System.Windows.Forms.PictureBox pic_liked;
         private System.Windows.Forms.Label lbl_countLiked;
+        private System.Windows.Forms.Button btn_like;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

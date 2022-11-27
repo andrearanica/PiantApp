@@ -157,7 +157,7 @@ namespace Client
             this.btn_register.Location = new System.Drawing.Point(15, 328);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(236, 45);
-            this.btn_register.TabIndex = 11;
+            this.btn_register.TabIndex = 12;
             this.btn_register.Text = "Registrati";
             this.btn_register.UseVisualStyleBackColor = true;
             this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
@@ -190,13 +190,10 @@ namespace Client
             // cmb_images
             // 
             this.cmb_images.FormattingEnabled = true;
-            this.cmb_images.Items.AddRange(new object[] {
-            "cactus",
-            "cipresso"});
             this.cmb_images.Location = new System.Drawing.Point(108, 239);
             this.cmb_images.Name = "cmb_images";
             this.cmb_images.Size = new System.Drawing.Size(145, 28);
-            this.cmb_images.TabIndex = 14;
+            this.cmb_images.TabIndex = 11;
             // 
             // label7
             // 
@@ -232,6 +229,7 @@ namespace Client
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUp";
             this.Text = "SignUp";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
