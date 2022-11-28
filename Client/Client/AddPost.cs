@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace Client {
     public partial class AddPost : Form {
@@ -27,7 +29,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"add { txt_title.Text } { txt_author.Text } { txt_data.Text } { txt_description.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"add { txt_title.Text } { txt_author.Text } { txt_data.Text } { txt_description.Text } { cmb_images.Text }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
@@ -45,8 +47,8 @@ namespace Client {
             this.Close();
         }
 
-        private bool checkData (string title, string author, string date, string description) {
-            if (title != "" && author != "" && date != "" && description != "") {
+        private bool checkData (string title, string author, string date, string description, string image) {
+            if (title != "" && author != "" && date != "" && description != "" && image != "") {
                 int n = 0;
                 foreach (char a in date) {
                     if (a == '/') n++;
@@ -68,16 +70,17 @@ namespace Client {
         private void btn_send_Click(object sender, EventArgs e) {
             replace();
 
-            if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text)) {
+            if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text, cmb_images.Text)) {
                 connect();
             } else {
                 MessageBox.Show("Dati inseriti non correttamente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void AddPost_Load(object sender, EventArgs e)
-        {
-
+        private void AddPost_Load(object sender, EventArgs e) {
+            foreach (string image in JsonSerializer.Deserialize<List<string>>(System.IO.File.ReadAllText(@"..\..\..\img\images.json"))) {
+                cmb_images.Items.Add(image);
+            }
         }
     }
 }

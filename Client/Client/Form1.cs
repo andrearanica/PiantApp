@@ -14,6 +14,7 @@ namespace Client {
         Label lbl_title;
         Label lbl_description;
         Label lbl_date;
+        PictureBox pic_post;
 
         public Form1() {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace Client {
             lbl_title.Text = "Premi il pulsante";
             lbl_description = new Label();
             lbl_date = new Label();
+            pic_post = new PictureBox();
         }
 
         private void setImg (string image) {
@@ -77,7 +79,7 @@ namespace Client {
         }
         private void createDescription (string description) {
             lbl_description.Visible = true;
-            lbl_description.Text = description;
+            lbl_description.Text = description.Split('$')[0];
             Font font = new Font("Century Gothic", 11);
             lbl_description.Font = font;
             lbl_description.Location = new System.Drawing.Point(133, 180);
@@ -93,6 +95,14 @@ namespace Client {
             Controls.Remove(lbl_date);
             Controls.Add(lbl_date);
         }
+        private void createPicturebox (string image) {
+            pic_post.Visible = true;
+            pic_post.Image = new Bitmap($@"..\..\..\img\{ image }.jpg");
+            pic_post.Location = new System.Drawing.Point(800, 800);
+            pic_post.Size = new System.Drawing.Size(500, 500);
+            Controls.Remove(pic_post);
+            Controls.Add(pic_post);
+        }
         private void createPost (UserPost post) {
             createTitle(post.title);
             createNickname(post.author);
@@ -100,6 +110,7 @@ namespace Client {
             createDescription(post.description);
             btn_like.Location = new Point(lbl_description.Location.X, lbl_description.Location.Y + 50);
             pic_next.Location = new Point(lbl_description.Location.X + 200, lbl_description.Location.Y + 40);
+            if (post.image != "") { createPicturebox(post.image); }
         }
         private UserPost getPost () {
             UserPost post = new UserPost();
@@ -120,7 +131,8 @@ namespace Client {
                         post.title = data[0].Replace('-', ' ');
                         post.author = data[1].Replace('-', ' ');
                         post.date = data[2];
-                        post.description = data[3].Replace('-', ' ').Replace('$', ' ');
+                        post.description = data[3].Replace('-', ' ');
+                        post.image = data[4].Split('$')[0];
                         // this.Close();
                     }
                     sender.Shutdown(SocketShutdown.Both);
@@ -191,7 +203,11 @@ namespace Client {
         }
 
         private void btn_like_Click(object sender, EventArgs e) {
-            like();
+            if (lbl_nickname.Text != $"Post di { account.nickname }") {
+                like();
+            } else {
+                MessageBox.Show("Non puoi dare un like al tuo post", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     public class Account {
@@ -216,11 +232,12 @@ namespace Client {
         public string author { get; set; }
         public string date { get; set; }
         public string description { get; set; }
+        public string image { get; set; }
         public UserPost () {
 
         }
-        public UserPost (string title, string author, string date, string description) {
-            this.title = title; this.author = author; this.date = date; this.description = description;
+        public UserPost (string title, string author, string date, string description, string image) {
+            this.title = title; this.author = author; this.date = date; this.description = description; this.image = image;
         }
     }
 }

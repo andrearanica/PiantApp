@@ -48,6 +48,11 @@ namespace Client
             this.btn_newPost = new System.Windows.Forms.Button();
             this.btn_like = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbl_info = new System.Windows.Forms.Label();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.btn_apply = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnl_parameters = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).BeginInit();
@@ -57,6 +62,7 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnl_parameters.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -261,11 +267,62 @@ namespace Client
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_info.Location = new System.Drawing.Point(4, 17);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(194, 23);
+            this.lbl_info.TabIndex = 7;
+            this.lbl_info.Text = "Parametri di ricerca";
+            // 
+            // txt_username
+            // 
+            this.txt_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_username.Location = new System.Drawing.Point(129, 47);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(263, 27);
+            this.txt_username.TabIndex = 8;
+            // 
+            // btn_apply
+            // 
+            this.btn_apply.Location = new System.Drawing.Point(8, 189);
+            this.btn_apply.Name = "btn_apply";
+            this.btn_apply.Size = new System.Drawing.Size(86, 28);
+            this.btn_apply.TabIndex = 9;
+            this.btn_apply.Text = "Applica";
+            this.btn_apply.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(8, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Nome utente";
+            // 
+            // pnl_parameters
+            // 
+            this.pnl_parameters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnl_parameters.Controls.Add(this.lbl_info);
+            this.pnl_parameters.Controls.Add(this.label3);
+            this.pnl_parameters.Controls.Add(this.txt_username);
+            this.pnl_parameters.Controls.Add(this.btn_apply);
+            this.pnl_parameters.Location = new System.Drawing.Point(129, 389);
+            this.pnl_parameters.Name = "pnl_parameters";
+            this.pnl_parameters.Size = new System.Drawing.Size(431, 225);
+            this.pnl_parameters.TabIndex = 11;
+            this.pnl_parameters.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 620);
+            this.Controls.Add(this.pnl_parameters);
             this.Controls.Add(this.btn_like);
             this.Controls.Add(this.pic_next);
             this.Controls.Add(this.btn_newPost);
@@ -292,6 +349,8 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnl_parameters.ResumeLayout(false);
+            this.pnl_parameters.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,6 +376,11 @@ namespace Client
         private System.Windows.Forms.Label lbl_countLiked;
         private System.Windows.Forms.Button btn_like;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbl_info;
+        private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.Button btn_apply;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnl_parameters;
     }
 }
 
