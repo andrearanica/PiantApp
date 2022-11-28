@@ -47,6 +47,7 @@ namespace Client {
             var hashedPassword = sha.ComputeHash(asByteArray);
             return Convert.ToBase64String(hashedPassword);
         }
+
         private void btn_register_Click(object sender, EventArgs e) {
             lbl_error.Visible = false;
             lbl_passwordError.Visible = false;
@@ -72,10 +73,13 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { hash(newAccount.password) } { cmb_images.Text }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
 
-                    if (response != "") {
+                    if (response != "$") {
                         this.Close();
                     } else {
                         MessageBox.Show("Nome utente o email già usati", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);

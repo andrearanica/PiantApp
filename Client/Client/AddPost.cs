@@ -31,9 +31,12 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"add { txt_title.Text } { txt_author.Text } { txt_data.Text } { txt_description.Text } { cmb_images.Text }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response != "successfull") {
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
+                    if (response != "successfull$") {
                         MessageBox.Show("E' già presente un post con questo titolo", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     sender.Shutdown(SocketShutdown.Both);

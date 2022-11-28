@@ -47,7 +47,6 @@ namespace Client {
                     lbl_countLiked.Text = account.liked.ToString();
                     btn_like.Visible = true;
                     createPost(getPost());
-                    pnl_parameters.Visible = true;
                 }
             } else {
                 Info info = new Info(account);
@@ -59,6 +58,7 @@ namespace Client {
             SignUp signUp = new SignUp();
             signUp.ShowDialog();
         }
+
         private void createTitle (string title) {
             lbl_title.Visible = true;
             lbl_title.Text = title;
@@ -69,6 +69,7 @@ namespace Client {
             Controls.Remove(lbl_title);
             Controls.Add(lbl_title);
         }
+
         private void createNickname (string nickname) {
             lbl_nickname.Visible = true;
             lbl_nickname.Text = $"Post di { nickname }";
@@ -78,6 +79,7 @@ namespace Client {
             lbl_nickname.Size = new System.Drawing.Size(500, 30);
             Controls.Add(lbl_nickname);
         }
+
         private void createDescription (string description) {
             lbl_description.Visible = true;
             lbl_description.Text = description.Split('$')[0];
@@ -88,6 +90,7 @@ namespace Client {
             Controls.Remove(lbl_description);
             Controls.Add(lbl_description);
         }
+
         private void createDate (string date) {
             lbl_date.Visible = true;
             lbl_date.Text = date;
@@ -96,6 +99,7 @@ namespace Client {
             Controls.Remove(lbl_date);
             Controls.Add(lbl_date);
         }
+
         private void createPicturebox (string image) {
             pic_post.Visible = true;
             pic_post.Image = new Bitmap($@"..\..\..\img\{ image }.jpg");
@@ -104,6 +108,7 @@ namespace Client {
             Controls.Remove(pic_post);
             Controls.Add(pic_post);
         }
+
         private void createPost (UserPost post) {
             createTitle(post.title);
             createNickname(post.author);
@@ -113,6 +118,7 @@ namespace Client {
             pic_next.Location = new Point(lbl_description.Location.X + 200, lbl_description.Location.Y + 40);
             if (post.image != "") { createPicturebox(post.image); }
         }
+
         private UserPost getPost () {
             UserPost post = new UserPost();
             byte[] bytes = new byte[1024];
@@ -124,8 +130,11 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"post$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
                     if (response != "") {
                         // response: title nickame
                         string[] data = response.Split(' ');
@@ -147,6 +156,7 @@ namespace Client {
 
             return post;
         }
+
         private void like () {
             UserPost post = new UserPost();
             byte[] bytes = new byte[1024];
@@ -157,9 +167,12 @@ namespace Client {
                 try {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"Like { lbl_title.Text.Replace(' ', '-') }$");
+                    string response = "";
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
@@ -169,6 +182,7 @@ namespace Client {
                 MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btn_newPost_Click(object sender, EventArgs e) {
             createPost(getPost());
         }

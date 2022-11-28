@@ -71,9 +71,9 @@ namespace Server {
             string[] loginInfo = info.Split(' ');
             Account result = new Account();
             if (login(loginInfo[0], loginInfo[1].Remove(loginInfo[1].Length - 1, 1), ref result)) {
-                handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password } { result.image } { result.likes } { result.liked }"));
+                handler.Send(Encoding.ASCII.GetBytes($"{ result.surname } { result.name } { result.nickname } { result.email } { result.password } { result.image } { result.likes } { result.liked }$"));
             } else {
-                handler.Send(Encoding.ASCII.GetBytes(""));
+                handler.Send(Encoding.ASCII.GetBytes("$"));
             }
         }
         private void register (string data, ref Socket handler) {
@@ -101,9 +101,9 @@ namespace Server {
                 
             if (valid) {
                 writeNewAccount(newAccount);
-                handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                handler.Send(Encoding.ASCII.GetBytes("successfull$"));
             } else {
-                handler.Send(Encoding.ASCII.GetBytes(""));
+                handler.Send(Encoding.ASCII.GetBytes("$"));
             }
         }
         private void post (string data, ref Socket handler) {
@@ -113,7 +113,7 @@ namespace Server {
 
             post = posts[new Random().Next(0, posts.Count)];
 
-            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description } { post.image }"));
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description } { post.image }$"));
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
@@ -128,7 +128,7 @@ namespace Server {
                     invalid = true;
                 }
             }
-            if (invalid) { handler.Send(Encoding.ASCII.GetBytes("invalid")); } else { posts.Add(post); handler.Send(Encoding.ASCII.GetBytes("successfull")); }
+            if (invalid) { handler.Send(Encoding.ASCII.GetBytes("invalid$")); } else { posts.Add(post); handler.Send(Encoding.ASCII.GetBytes("successfull$")); }
 
             System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize(posts));
         }
@@ -142,11 +142,11 @@ namespace Server {
             foreach (Account account in accounts) {
                 if (account.nickname == info[1].Split('$')[0]) {
                     found = true;
-                    handler.Send(Encoding.ASCII.GetBytes($"{ account.surname } { account.name } { account.nickname } { account.email } password { account.image } { account.likes } { account.liked }"));
+                    handler.Send(Encoding.ASCII.GetBytes($"{ account.surname } { account.name } { account.nickname } { account.email } password { account.image } { account.likes } { account.liked }$"));
                 }
             }
             if (!found) {
-                handler.Send(Encoding.ASCII.GetBytes("not found"));
+                handler.Send(Encoding.ASCII.GetBytes("$"));
             }
         }
         private void getPlants (string data, ref Socket handler) {
@@ -161,10 +161,11 @@ namespace Server {
                     foreach (string plant in a.plants) {
                         returnPlants += $" { plant }";
                     }
-                    handler.Send(Encoding.ASCII.GetBytes(returnPlants)); 
+                    handler.Send(Encoding.ASCII.GetBytes($"{ returnPlants }$")); 
                     listbox.Items.Add($"Ritorno { returnPlants }");
                 }
             }
+            handler.Send(Encoding.ASCII.GetBytes("$"));
         }
         private void addPlant (string data, ref Socket handler) {
             string[] info = data.Split(' ');
@@ -179,7 +180,7 @@ namespace Server {
                         if (a.plants[lastPos] != "") lastPos++;
                     }
                     a.plants[lastPos] = newPlant;
-                    handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                    handler.Send(Encoding.ASCII.GetBytes("successfull$"));
                 }
             }
             handler.Send(Encoding.ASCII.GetBytes(""));
@@ -196,7 +197,7 @@ namespace Server {
                     for (int i = 0; i < a.plants.Length; i++) {
                         if (a.plants[i] == plant) {
                                 a.plants[i] = "";
-                                handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                                handler.Send(Encoding.ASCII.GetBytes("successfull$"));
                             }
                         }
                     
@@ -217,7 +218,7 @@ namespace Server {
             foreach (UserPost post in posts) {
                 if (post.title == title) {
                     post.likes++;
-                    handler.Send(Encoding.ASCII.GetBytes("successfull"));
+                    handler.Send(Encoding.ASCII.GetBytes("successfull$"));
                     foreach (Account a in accounts) {
                         if (a.nickname == post.author) {
                             a.liked++;
@@ -290,7 +291,7 @@ namespace Server {
                     else if (data[0] == 'L') {
                         like(data, ref handler);
                     }
-                    else if (data[0] == 'u') {
+                    else if (data[0] == 'U') {
                         updateInfo(data, ref handler);
                     }
                     else

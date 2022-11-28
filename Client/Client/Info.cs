@@ -29,11 +29,12 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"Addplant { account.nickname } { txt_plant.Text }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response != "") {
-                        
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     }
+                    if (response != "successfull$") { MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
@@ -54,11 +55,14 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"Plants { account.nickname }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
                     string[] plants = response.Split(' ');
                     foreach (string plant in plants) {
-                        if (plant != "") list_plants.Items.Add(plant);
+                        if (plant != "" && plant != "$") list_plants.Items.Add(plant);
                     }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();

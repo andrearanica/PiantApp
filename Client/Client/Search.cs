@@ -35,9 +35,12 @@ namespace Client
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"Plants { txt_nickname.Text }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response != "") {
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
+                    if (response != "$") {
                         lbl_result.Text += $"\nPiante: { response }";
                     } else {
                         account = new Account("", "", "", "", "", "", 0, 0);
@@ -50,9 +53,7 @@ namespace Client
                 {
                     //MessageBox.Show("C'è stato un errore, riprova");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 MessageBox.Show("C'è stato un errore, riprova");
             }
         }
@@ -67,11 +68,14 @@ namespace Client
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"user { txt_nickname.Text }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response != "not found") {
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
+                    if (response != "$") {
                         string[] data = response.Split(' ');
-                        account = new Account(data[1], data[0], data[2], data[3], data[4], data[5], int.Parse(data[6]), int.Parse(data[7]));
+                        account = new Account(data[1], data[0], data[2], data[3], data[4], data[5], int.Parse(data[6]), int.Parse(data[7].Split('$')[0]));
                         lbl_result.Text = $"Account trovato:\n{ account.name } { account.surname } | { account.nickname }\nLikes: { account.likes } | Like ricevuti: { account.liked }";
                         pic_profile.Image = new Bitmap(@$"..\..\..\img\{ account.image }.jpg");
                     } else {

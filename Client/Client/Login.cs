@@ -34,8 +34,11 @@ namespace Client {
                     sender.Connect(remote);
                     byte[] msg = Encoding.ASCII.GetBytes($"login { txt_username.Text } { hash(txt_password.Text) }$");
                     int bytestSent = sender.Send(msg);
-                    int bytesRec = sender.Receive(bytes);
-                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    string response = "";
+                    while (response.IndexOf('$') == -1) {
+                        int bytesRec = sender.Receive(bytes);
+                        response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    }
                     if (response != "") {
                         // response: surname + name + nickname + email + password
                         string[] data = response.Split(' ');
@@ -46,7 +49,7 @@ namespace Client {
                         account.password = data[4];
                         account.image = data[5];
                         account.likes = int.Parse(data[6]);
-                        account.liked = int.Parse(data[7]);
+                        account.liked = int.Parse(data[7].Split('$')[0]);
                         this.Close();
                     } else {
                         lbl_error.Visible = true;
