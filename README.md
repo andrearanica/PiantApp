@@ -52,14 +52,14 @@ Tramite i tasti laterali si può passare alle sezioni:
 | F5              | Like                  | ``` like title ```                                      | ``` successfull ```                                                       |
 
 ## 🚀 Roadmap
-- [ ] F1: Login e registrazione
+- [X] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
   - [X] F1.4: Controlla email valida e password con numeri e caratteri speciali
   - [X] F1.5: Controlla input vuoti nel login
   - [X] F1.6: Controlla che il nickname e la mail siano liberi
-  - [ ] F1.7: Utilizzare un metodo hash per cifrare le password
+  - [X] F1.7: Utilizzare un metodo hash per cifrare le password
   - [X] F1.8: L'utente puo' scegliere un'immagine preimpostata
   - [X] F1.9: Modificare le piante del proprio account (aggiungi e rimuovi)
   - [ ] F1.10: Modificare i dati

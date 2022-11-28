@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace Client {
     public partial class Login : Form {
@@ -16,6 +17,13 @@ namespace Client {
             connect();
         }
 
+        string hash(string password) {
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(password);
+            var hashedPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashedPassword);
+        }
+
         private void connect () {
             byte[] bytes = new byte[1024];
             try {
@@ -24,7 +32,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"login { txt_username.Text } { txt_password.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"login { txt_username.Text } { hash(txt_password.Text) }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);

@@ -1,1 +1,200 @@
-[{"name":"Andrea","surname":"Ranica","nickname":"andre","email":"andrearanica2004@gmail.com","password":"ciao","image":"cactus","likes":0,"liked":14,"plants":["Cactus","Fico","Erika","","","","","","",""]},{"name":"Riccardo","surname":"Ranica","nickname":"ranga","email":"riccardoranica@gmail.com","password":"rangapwd","image":"cipresso","likes":0,"liked":0,"plants":["Cactus","Fico","Caco","","","","","","",""]},{"name":"Diego","surname":"Bernini","nickname":"oldiego","email":"ilprofesur@a.a","password":"ciao!1","image":"cactus","likes":0,"liked":0,"plants":["Orchidea","Fico","","","","","","","",""]},{"name":"Sara","surname":"Ranica","nickname":"sara","email":"sararanica@gmail.com","password":"sara1!","image":"cipresso","likes":0,"liked":0,"plants":["Ciao","","","","","","","","",""]},{"name":"Stefano","surname":"Pezzotta","nickname":"ste","email":"ste@a.a","password":"ste1!","image":"cipresso","likes":0,"liked":0,"plants":["Graminacee","","","","","","","","",""]},{"name":"weikai","surname":"ji","nickname":"kai","email":"jiwei03?icoud@.,kndeh","password":"jiweikai03#","image":"cipresso","likes":0,"liked":0,"plants":["olivo","","","","","","","","",""]},{"name":"Filippo","surname":"Graziano","nickname":"grax","email":"grax@a.","password":"ciao1!","image":"cactus","likes":0,"liked":5,"plants":["Oleandro","","","","","","","","",""]},{"name":"Diego","surname":"Bernini","nickname":"bernini","email":"b@b.b","password":"ciao!1","image":"cactus","likes":0,"liked":0,"plants":["","","","","","","","","",""]},{"name":"Omar","surname":"Samii","nickname":"omar","email":"omar@a.e","password":"omar1!","image":"cactus","likes":0,"liked":0,"plants":["Albero","","","","","","","","",""]},{"name":"Marco","surname":"Salvi","nickname":"marco","email":"marco@a.a","password":"marco1!","image":"coccinella","likes":0,"liked":0,"plants":["","","","","","","","","",""]}]
+[
+	{
+		"name": "Andrea",
+		"surname": "Ranica",
+		"nickname": "andre",
+		"email": "andrearanica2004@gmail.com",
+		"password": "sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=",
+		"image": "cactus",
+		"likes": 0,
+		"liked": 15,
+		"plants": [
+			"Cactus",
+			"Fico",
+			"Erika",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Riccardo",
+		"surname": "Ranica",
+		"nickname": "ranga",
+		"email": "riccardoranica@gmail.com",
+		"password": "+9IYzLxiuB+tiQtDWHnLTyDJemO/4D89kLQQ+2Vnhck=",
+		"image": "cipresso",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"Cactus",
+			"Fico",
+			"Caco",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Stefano",
+		"surname": "Pezzotta",
+		"nickname": "ste",
+		"email": "ste@a.a",
+		"password": "Rp2dGW5YoQA/5TuDH7AA3h7IlXKupUXZzSduvPBY/Ak=",
+		"image": "cipresso",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"Graminacee",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "weikai",
+		"surname": "ji",
+		"nickname": "kai",
+		"email": "jiwei03?icoud@.,kndeh",
+		"password": "jiweikai03#",
+		"image": "cipresso",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"olivo",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Filippo",
+		"surname": "Graziano",
+		"nickname": "grax",
+		"email": "grax@a.",
+		"password": "ciao1!",
+		"image": "cactus",
+		"likes": 0,
+		"liked": 5,
+		"plants": [
+			"Oleandro",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Diego",
+		"surname": "Bernini",
+		"nickname": "bernini",
+		"email": "b@b.b",
+		"password": "ciao!1",
+		"image": "cactus",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Omar",
+		"surname": "Samii",
+		"nickname": "omar",
+		"email": "omar@a.e",
+		"password": "omar1!",
+		"image": "cactus",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"Albero",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Marco",
+		"surname": "Salvi",
+		"nickname": "marco",
+		"email": "marco@a.a",
+		"password": "marco1!",
+		"image": "coccinella",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	{
+		"name": "Hash",
+		"surname": "Ketz",
+		"nickname": "hash",
+		"email": "hash@a.h",
+		"password": "hTz95DHNGGAkgxUYimwyhBo5FUqv68AzthSSOf4ycG4=",
+		"image": "cipresso",
+		"likes": 0,
+		"liked": 0,
+		"plants": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	}
+]

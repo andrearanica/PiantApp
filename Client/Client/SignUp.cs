@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Text.Json;
+using System.Security.Cryptography;
 
 namespace Client {
     public partial class SignUp : Form {
@@ -39,6 +40,13 @@ namespace Client {
             }
             return false;
         }
+
+        string hash(string password) {
+            var sha = SHA256.Create();
+            var asByteArray = Encoding.Default.GetBytes(password);
+            var hashedPassword = sha.ComputeHash(asByteArray);
+            return Convert.ToBase64String(hashedPassword);
+        }
         private void btn_register_Click(object sender, EventArgs e) {
             lbl_error.Visible = false;
             lbl_passwordError.Visible = false;
@@ -62,7 +70,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { newAccount.password } { cmb_images.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"register { newAccount.surname } { newAccount.name } { newAccount.nickname } { newAccount.email } { hash(newAccount.password) } { cmb_images.Text }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
