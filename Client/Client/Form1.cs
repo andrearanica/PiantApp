@@ -44,6 +44,7 @@ namespace Client {
                     lbl_countLiked.Text = account.liked.ToString();
                     btn_like.Visible = true;
                     createPost(getPost());
+                    pnl_parameters.Visible = true;
                 }
             } else {
                 Info info = new Info(account);
@@ -182,7 +183,11 @@ namespace Client {
         }
 
         private void pic_next_Click(object sender, EventArgs e) {
-            createPost(getPost());
+            UserPost p = getPost();
+            do {
+                p = getPost();
+            } while (p.title == lbl_title.Text);
+            createPost(p);
         }
 
         private void btn_like_Click(object sender, EventArgs e) {

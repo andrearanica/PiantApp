@@ -118,9 +118,14 @@ namespace Client {
 
         private void btn_add_Click(object sender, EventArgs e) {
             if (list_plants.Items.Count < 10) {
-                addPlant();
-                list_plants.Items.Clear();
-                getPlants();
+                if (list_plants.Items.IndexOf(txt_plant.Text) == -1) {
+                    addPlant();
+                    list_plants.Items.Clear();
+                    getPlants();
+                } else {
+                    MessageBox.Show("Hai già inserito questa pianta", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             } else {
                 MessageBox.Show("Puoi inserire solamente 10 piante, rimuovi quelle vecchie per inserirne una nuova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

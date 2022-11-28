@@ -142,7 +142,7 @@ namespace Server {
             foreach (Account account in accounts) {
                 if (account.nickname == info[1].Split('$')[0]) {
                     found = true;
-                    handler.Send(Encoding.ASCII.GetBytes($"{ account.surname } { account.name } { account.nickname } { account.email } { account.password } { account.image } { account.likes } { account.liked }"));
+                    handler.Send(Encoding.ASCII.GetBytes($"{ account.surname } { account.name } { account.nickname } { account.email } password { account.image } { account.likes } { account.liked }"));
                 }
             }
             if (!found) {
@@ -182,6 +182,7 @@ namespace Server {
                     handler.Send(Encoding.ASCII.GetBytes("successfull"));
                 }
             }
+            handler.Send(Encoding.ASCII.GetBytes(""));
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
         private void removePlant (string data, ref Socket handler) {
@@ -201,6 +202,7 @@ namespace Server {
                     
                 }
             }
+            handler.Send(Encoding.ASCII.GetBytes(""));
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
         private void like (string data, ref Socket handler) {
@@ -216,7 +218,6 @@ namespace Server {
                 if (post.title == title) {
                     post.likes++;
                     handler.Send(Encoding.ASCII.GetBytes("successfull"));
-                    MessageBox.Show($"Cerco { post.author }");
                     foreach (Account a in accounts) {
                         if (a.nickname == post.author) {
                             a.liked++;
