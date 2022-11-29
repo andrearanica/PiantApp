@@ -41,7 +41,7 @@ namespace Client
                         response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     }
                     if (response != "$") {
-                        lbl_result.Text += $"\nPiante: { response }";
+                        lbl_result.Text += $"\nPiante: { response.Replace('$', ' ') }";
                     } else {
                         account = new Account("", "", "", "", "", "", 0, 0);
                         lbl_result.Text = "";

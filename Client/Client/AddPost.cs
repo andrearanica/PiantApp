@@ -29,7 +29,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"add { txt_title.Text } { txt_author.Text } { txt_data.Text } { txt_description.Text } { cmb_images.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"add { txt_title.Text } { txt_author.Text } { txt_data.Text } { txt_description.Text }$");
                     int bytestSent = sender.Send(msg);
                     string response = "";
                     while (response.IndexOf('$') == -1) {
@@ -50,8 +50,8 @@ namespace Client {
             this.Close();
         }
 
-        private bool checkData (string title, string author, string date, string description, string image) {
-            if (title != "" && author != "" && date != "" && description != "" && image != "") {
+        private bool checkData (string title, string author, string date, string description) {
+            if (title != "" && author != "" && date != "" && description != "") {
                 int n = 0;
                 foreach (char a in date) {
                     if (a == '/') n++;
@@ -73,16 +73,10 @@ namespace Client {
         private void btn_send_Click(object sender, EventArgs e) {
             replace();
 
-            if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text, cmb_images.Text)) {
+            if (checkData(txt_title.Text, txt_author.Text, txt_data.Text, txt_description.Text)) {
                 connect();
             } else {
                 MessageBox.Show("Dati inseriti non correttamente", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AddPost_Load(object sender, EventArgs e) {
-            foreach (string image in JsonSerializer.Deserialize<List<string>>(System.IO.File.ReadAllText(@"..\..\..\img\images.json"))) {
-                cmb_images.Items.Add(image);
             }
         }
     }

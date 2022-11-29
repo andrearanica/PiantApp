@@ -40,8 +40,6 @@ namespace Client
             this.txt_author = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_data = new System.Windows.Forms.TextBox();
-            this.lbl_image = new System.Windows.Forms.Label();
-            this.cmb_images = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +101,7 @@ namespace Client
             // 
             // btn_send
             // 
-            this.btn_send.Location = new System.Drawing.Point(67, 265);
+            this.btn_send.Location = new System.Drawing.Point(65, 230);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(171, 34);
             this.btn_send.TabIndex = 5;
@@ -147,30 +145,11 @@ namespace Client
             this.txt_data.Size = new System.Drawing.Size(144, 26);
             this.txt_data.TabIndex = 3;
             // 
-            // lbl_image
-            // 
-            this.lbl_image.AutoSize = true;
-            this.lbl_image.Location = new System.Drawing.Point(12, 212);
-            this.lbl_image.Name = "lbl_image";
-            this.lbl_image.Size = new System.Drawing.Size(82, 20);
-            this.lbl_image.TabIndex = 10;
-            this.lbl_image.Text = "Immagine";
-            // 
-            // cmb_images
-            // 
-            this.cmb_images.FormattingEnabled = true;
-            this.cmb_images.Location = new System.Drawing.Point(136, 206);
-            this.cmb_images.Name = "cmb_images";
-            this.cmb_images.Size = new System.Drawing.Size(144, 28);
-            this.cmb_images.TabIndex = 11;
-            // 
             // AddPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 311);
-            this.Controls.Add(this.cmb_images);
-            this.Controls.Add(this.lbl_image);
+            this.ClientSize = new System.Drawing.Size(296, 282);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_data);
             this.Controls.Add(this.label2);
@@ -182,10 +161,12 @@ namespace Client
             this.Controls.Add(this.txt_title);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddPost";
             this.Text = "AddPost";
-            this.Load += new System.EventHandler(this.AddPost_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -206,7 +187,5 @@ namespace Client
         private System.Windows.Forms.TextBox txt_author;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_data;
-        private System.Windows.Forms.Label lbl_image;
-        private System.Windows.Forms.ComboBox cmb_images;
     }
 }

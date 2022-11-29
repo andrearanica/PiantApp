@@ -113,11 +113,11 @@ namespace Server {
 
             post = posts[new Random().Next(0, posts.Count)];
 
-            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description } { post.image }$"));
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description }$"));
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
-            UserPost post = new UserPost(info[1], info[2], info[3], info[4], 0, info[5].Split('$')[0]);
+            UserPost post = new UserPost(info[1], info[2], info[3], info[4].Split('$')[0], 0);
 
             string json = System.IO.File.ReadAllText(@"..\..\..\json\posts.json");
             List<UserPost> posts = JsonSerializer.Deserialize<List<UserPost>>(json);
@@ -208,7 +208,7 @@ namespace Server {
         }
         private void like (string data, ref Socket handler) {
             string[] info = data.Split(' ');
-            string title = info[1].Split('$')[0];
+            string title = info[1]; string account = info[2].Split('$')[0];
 
             string jsonA = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
             List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(jsonA);
@@ -224,6 +224,11 @@ namespace Server {
                             a.liked++;
                         }
                     }
+                }
+            }
+            foreach (Account a in accounts) {
+                if (a.nickname == account) {
+                    a.likes++;
                 }
             }
             System.IO.File.WriteAllText(@"..\..\..\json\posts.json", JsonSerializer.Serialize<List<UserPost>>(posts));
@@ -332,12 +337,11 @@ namespace Server {
         public string date { get; set; } 
         public string description { get; set; }
         public int likes { get; set; }
-        public string image { get; set; }
         public UserPost() {
 
         }
-        public UserPost(string title, string author, string date, string description, int likes, string image) {
-            this.title = title; this.author = author; this.date = date; this.description = description; this.likes = likes; this.image = image;
+        public UserPost(string title, string author, string date, string description, int likes) {
+            this.title = title; this.author = author; this.date = date; this.description = description; this.likes = likes;
         }
     }
 }

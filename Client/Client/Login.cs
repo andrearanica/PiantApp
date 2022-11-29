@@ -39,7 +39,7 @@ namespace Client {
                         int bytesRec = sender.Receive(bytes);
                         response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     }
-                    if (response != "") {
+                    if (response != "$") {
                         // response: surname + name + nickname + email + password
                         string[] data = response.Split(' ');
                         account.surname = data[0];
@@ -62,6 +62,11 @@ namespace Client {
             } catch (Exception) {
                 MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -212,7 +212,7 @@ namespace Client
             // pic_next
             // 
             this.pic_next.Image = ((System.Drawing.Image)(resources.GetObject("pic_next.Image")));
-            this.pic_next.Location = new System.Drawing.Point(909, 243);
+            this.pic_next.Location = new System.Drawing.Point(211, 243);
             this.pic_next.Name = "pic_next";
             this.pic_next.Size = new System.Drawing.Size(56, 55);
             this.pic_next.TabIndex = 2;
@@ -232,7 +232,7 @@ namespace Client
             // btn_newPost
             // 
             this.btn_newPost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_newPost.Location = new System.Drawing.Point(909, 62);
+            this.btn_newPost.Location = new System.Drawing.Point(730, 62);
             this.btn_newPost.Name = "btn_newPost";
             this.btn_newPost.Size = new System.Drawing.Size(96, 29);
             this.btn_newPost.TabIndex = 4;
@@ -243,7 +243,7 @@ namespace Client
             // 
             // btn_like
             // 
-            this.btn_like.Location = new System.Drawing.Point(827, 250);
+            this.btn_like.Location = new System.Drawing.Point(129, 258);
             this.btn_like.Name = "btn_like";
             this.btn_like.Size = new System.Drawing.Size(76, 40);
             this.btn_like.TabIndex = 5;
@@ -256,9 +256,9 @@ namespace Client
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(553, -15);
+            this.pictureBox2.Location = new System.Drawing.Point(462, -15);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(466, 384);
+            this.pictureBox2.Size = new System.Drawing.Size(378, 281);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -267,7 +267,7 @@ namespace Client
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(842, 453);
+            this.pictureBox3.Location = new System.Drawing.Point(663, 453);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(177, 170);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +278,7 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 620);
+            this.ClientSize = new System.Drawing.Size(841, 620);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btn_like);
             this.Controls.Add(this.pic_next);
@@ -291,7 +291,7 @@ namespace Client
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1020, 620);
+            this.MinimumSize = new System.Drawing.Size(400, 600);
             this.Name = "Form1";
             this.Text = " PiantApp";
             this.Load += new System.EventHandler(this.Form1_Load);

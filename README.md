@@ -9,7 +9,6 @@ Tramite i tasti laterali si può passare alle sezioni:
   - Home
   - Pubblica post
   - Cerca utente
-  - Ultimi "mi piace"
   - Logout
 
 ## ⚙️ Architettura
@@ -52,7 +51,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 | F5              | Like                  | ``` like title ```                                      | ``` successfull ```                                                       |
 
 ## 🚀 Roadmap
-- [X] F1: Login e registrazione
+- [ ] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
@@ -73,7 +72,7 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [X] F3: Pubblicare contenuti
   - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
   - [X] F3.2: Controllare i dati inseriti
-  - [ ] F3.3: Aggiungere un'immagine
+  - [X] F3.3: Aggiungere un'immagine
 - [X] F4: Cerca utenti
   - [X] F4.1: Vedere tutti gli utenti presenti nel database
   - [X] F4.2: Cercare un utente in base al nickname
@@ -81,15 +80,15 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [ ] F5: Interagire con i post
   - [X] F5.1: Like ai post
   - [ ] F5.2: Commenti ai post
-- [ ] UI:
-  - [ ] Cambia il design delle finestre secondarie
-  - [ ] Aggiungi dettagli piante
+- [X] UI:
+  - [X] Cambia il design delle finestre secondarie
+  - [X] Aggiungi dettagli piante
 - [ ] Aggiunte varie
   - [ ] Visualizzare se un utente è online
   - [X] Controlla le risposte delle richieste
   - [X] Immagini di profilo predefinite
   - [X] Data automatica quando compilo un nuovo post
-  - [ ] Aggiungi img profili
+  - [X] Aggiungi img profili
 - [ ] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
