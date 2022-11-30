@@ -40,15 +40,15 @@ Tramite i tasti laterali si può passare alle sezioni:
 ## 💻 Protocollo
 | ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                  |
 | --------------- | --------------------- | -----------------------------------------------------   | ------------------------------------------------------------------------- |
-| F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked ``` o ``` ```  |
-| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull ``` o ```" "```                                           |
-| F1              | Aggiungere pianta     | ``` Addplant nickname plant ```                         | ``` successfull ``` o ```" " ```                                          |
-| F1              | Rimuovere pianta      | ``` Removeplant nickname plant ```                      | ``` successfull ``` o ```" " ```                                          |
-| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email ```          | ``` successfull ``` o ```" " ```                                          |
-| F2              | Visualizzare post     | ``` post$ ```                                           | ``` titolo autore data descrizione ```                                    |
-| F3              | Pubblicare contenuti  | ``` add title author data description image$ ```        | ``` successfull ``` o ``` invalid ```                                     |
-| F4              | Cerca utente          | ``` user nickname ```                                   | ``` surname name nickname email password image likes liked ```            |
-| F5              | Like                  | ``` like title ```                                      | ``` successfull ```                                                       |
+| F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked$ ``` o ``` ```  |
+| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull$ ``` o ```" "```                                           |
+| F1              | Aggiungere pianta     | ``` Addplant nickname plant$ ```                        | ``` successfull$ ``` o ```" " ```                                          |
+| F1              | Rimuovere pianta      | ``` Removeplant nickname plant$ ```                     | ``` successfull$ ``` o ```" " ```                                          |
+| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email$ ```         | ``` successfull$ ``` o ```" " ```                                          |
+| F2              | Visualizzare post     | ``` post$ ```                                           | ``` title author date description$ ```                                    |
+| F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull$ ``` o ``` invalid$ ```                                     |
+| F4              | Cerca utente          | ``` user nickname$ ```                                   | ``` surname name nickname email password image likes liked$ ```            |
+| F5              | Like                  | ``` like title$ ```                                      | ``` successfull$ ```                                                       |
 
 ## 🚀 Roadmap
 - [ ] F1: Login e registrazione
@@ -72,7 +72,6 @@ Tramite i tasti laterali si può passare alle sezioni:
 - [X] F3: Pubblicare contenuti
   - [X] F3.1: Scrivere un post sul database (aggiornando l'elenco di post effettuati da ogni persona)
   - [X] F3.2: Controllare i dati inseriti
-  - [X] F3.3: Aggiungere un'immagine
 - [X] F4: Cerca utenti
   - [X] F4.1: Vedere tutti gli utenti presenti nel database
   - [X] F4.2: Cercare un utente in base al nickname
