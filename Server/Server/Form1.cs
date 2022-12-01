@@ -206,7 +206,7 @@ namespace Server {
             handler.Send(Encoding.ASCII.GetBytes(""));
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
-        private void like (string data, ref Socket handler) {
+        private void like (string data, ref Socket handler) {   
             string[] info = data.Split(' ');
             string title = info[1]; string account = info[2].Split('$')[0];
 
