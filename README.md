@@ -4,17 +4,16 @@ PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e
 
 ## ✨ Funzionamento
 Per utilizzare il programma esegui il server e fai partire il servizio premendo il pulsante apposito. Successivamente esegui i client ed effettua il login.
-Una volta aperto il client ed effettuato l'accesso verrà mostrato nella home un post; puoi mettere mi piace, commentare, visitare il profilo dell'utente che ha postato oppure passare al prossimo post. In questo modo, verrà mostrato un post per volta.
-Tramite i tasti laterali si può passare alle sezioni:
-  - Home
+Una volta aperto il client effettua l'accesso; verrà mostrato un post, e potrai passare a quello successivo tramite il pulsante sotto al post mostrato.
+Le funzioni raggiungibili dalla barra laterale sono:
   - Pubblica post
   - Cerca utente
   - Logout
 
 ## ⚙️ Architettura
 ### ⌨️ Architettura client-server
- - Server (uno): accettare le richieste dei client e risponde con le informazioni richieste
- - Client (da uno a n): richiedere informazioni al server e visualizzarle
+ - Server (uno): accetta le richieste dei client e risponde con le informazioni richieste
+ - Client (da uno a n): richiede informazioni al server e le visualizza
 ### 🗃️ Basi di dati
  - /json/users.json contiene gli utenti registrati
  - /json/posts.json contiene i post
@@ -26,16 +25,15 @@ Tramite i tasti laterali si può passare alle sezioni:
 | --------- | ------------------ | ------------------------------------------------------------------------------------ |
 | U1        | Utente non loggato | Utente che non ha effettuato il login a cui viene richiesto di autenticarsi          |
 | U2        | Utente loggato     | Utente che ha effettuato l'accesso e che quindi può richiedere tutte le funzionalità |
-| U3        | Admin              | Utenti con privilegi superiori, per controllare/eliminare i contenuti                |
 
 ### Funzionalità
 | ID Funzionalità | Nome sintetico        | Utenti interessati | Descrizione                                                                        |
 | --------------- | --------------------- | ------------------ | ---------------------------------------------------------------------------------- |
 | F1              | Login e registrazione | U1                 | L'utente deve inserire username e password per procedere                           |
-| F2              | Visualizzare post     | U2, U3             | Nella home dell'utente, deve essere presente un post                               |
-| F3              | Pubblicare contenuti  | U2                 | L'utente può essere in grado di pubblicare un post                                 |
-| F4              | Cerca utenti          | U2, U3             | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
-| F5              | Interagire con i post | U2, U3             | Mi piace, condividere, commentare...                                               |
+| F2              | Visualizzare post     | U2                 | Nella home dell'utente, deve essere presente un post                               |
+| F3              | Pubblicare contenuti  | U2                 | L'utente può pubblicare un post                                                    |
+| F4              | Cerca utenti          | U2                 | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
+| F5              | Interagire con i post | U2                 | Mi piace                                                                           |
 
 ## 💻 Protocollo
 | ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                  |
