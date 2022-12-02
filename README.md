@@ -4,11 +4,8 @@ PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e
 
 ## ✨ Funzionamento
 Per utilizzare il programma esegui il server e fai partire il servizio premendo il pulsante apposito. Successivamente esegui i client ed effettua il login.
-Una volta aperto il client effettua l'accesso; verrà mostrato un post, e potrai passare a quello successivo tramite il pulsante sotto al post mostrato.
-Le funzioni raggiungibili dalla barra laterale sono:
-  - Pubblica post
-  - Cerca utente
-  - Logout
+Nella parte centrale possiamo notare la sezione dei post, in cui possiamo scorrere i post pubblicati con il pulsante apposito. Possiamo anche dare un mi piace al post.
+Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve per pubblicare un nuovo post, cerca utente, che consente di trovare un utente in base al suo nickname, e l'immagine di profilo, che apre un menu con le informazioni sull'account (in questa sezione si possono modificare le informazioni). Nella barra laterale è presente inoltre il contatore dei mi piace che gli altri account hanno dato all'utente.
 
 ## ⚙️ Architettura
 ### ⌨️ Architettura client-server
@@ -51,9 +48,6 @@ Le funzioni raggiungibili dalla barra laterale sono:
 ## Utilizzo UI
 Una volta aperto il form ci ritroveremo davanti a questa schermata:
 
-Nella parte centrale possiamo notare la sezione dei post, in cui possiamo scorrere i post pubblicati con il pulsante apposito. Possiamo anche dare un mi piace al post.
-Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve per pubblicare un nuovo post, cerca utente, che consente di trovare un utente in base al suo nickname, e l'immagine di profilo, che apre un menu con le informazioni sull'account (in questa sezione si possono modificare le informazioni).
-
 ## 🚀 Roadmap
 - [X] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
@@ -92,7 +86,7 @@ Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve
   - [X] Immagini di profilo predefinite
   - [X] Data automatica quando compilo un nuovo post
   - [X] Aggiungi img profili
-- [ ] Bug
+- [X] Bug
   - [X] Compaiono popup a caso, magari toglili <3
   - [X] Quando faccio login e esco senza loggare, scompare il signup
   - [X] Responsive server
