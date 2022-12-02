@@ -105,11 +105,12 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"update { account.nickname } { txt_name.Text } { txt_surname.Text } { txt_email.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"Update { account.nickname } { txt_name.Text } { txt_surname.Text } { txt_email.Text }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    if (response == "successfull") { MessageBox.Show("Impostazioni aggiornate correttamente"); }
+                    if (response == "successfull$") { MessageBox.Show("Impostazioni aggiornate correttamente, riavvia l'applicazione per vedere le modifiche"); }
+                    else { MessageBox.Show("C'è stato un errore, riprova", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
                 } catch (Exception) {
@@ -146,9 +147,12 @@ namespace Client {
             }
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            updateInfo();
+        private void btn_update_Click(object sender, EventArgs e) {
+            if (txt_email.Text.IndexOf('@') != -1 && txt_email.Text.IndexOf('.') != -1) {
+                updateInfo();
+            } else {
+                MessageBox.Show("Formato della mail non corretto", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

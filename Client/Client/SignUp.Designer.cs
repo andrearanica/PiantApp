@@ -194,6 +194,8 @@ namespace Client
             this.cmb_images.Name = "cmb_images";
             this.cmb_images.Size = new System.Drawing.Size(145, 28);
             this.cmb_images.TabIndex = 11;
+            this.cmb_images.TextUpdate += new System.EventHandler(this.cmb_images_TextUpdate);
+            this.cmb_images.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_images_KeyDown);
             // 
             // label7
             // 

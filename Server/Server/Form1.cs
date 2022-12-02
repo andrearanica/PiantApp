@@ -237,7 +237,20 @@ namespace Server {
         private void updateInfo (string data, ref Socket handler) {
             string[] info = data.Split(' ');
             string nickname = info[1]; string name = info[2]; string surname = info[3]; string email = info[4].Split('$')[0];
-            MessageBox.Show($"Aggiorno { nickname }");
+
+            string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
+            List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+
+            foreach (Account account in accounts) {
+                if (account.nickname == nickname) {
+                    account.name = name;
+                    account.surname = surname;
+                    account.email = email;
+                }
+            }
+            
+            System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
+            handler.Send(Encoding.ASCII.GetBytes("successfull$"));
         }
         public void startListening () {     // Server starts listening for clients
             byte[] bytes = new byte[1024];
@@ -261,7 +274,7 @@ namespace Server {
                     }
                     listbox.Items.Add($"Richiesta: { data }");
 
-                    if (data[0] == 'l')
+                    if (data[0] == 'l' && data[1] == 'o')
                     {                           // If the user sends login
                         login(data, ref handler);
                     }
@@ -293,7 +306,7 @@ namespace Server {
                     {
                         removePlant(data, ref handler);
                     }
-                    else if (data[0] == 'L') {
+                    else if (data[0] == 'l' && data[1] == 'i') {
                         like(data, ref handler);
                     }
                     else if (data[0] == 'U') {

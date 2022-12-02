@@ -49,7 +49,7 @@ Le funzioni raggiungibili dalla barra laterale sono:
 | F5              | Like                  | ``` like title$ ```                                      | ``` successfull$ ```                                                       |
 
 ## 🚀 Roadmap
-- [ ] F1: Login e registrazione
+- [X] F1: Login e registrazione
   - [X] F1.1: Login con username e password prefissati
   - [X] F1.2: Login con username e password scelti dall'utente
   - [X] F1.3: Registrazione
@@ -59,7 +59,7 @@ Le funzioni raggiungibili dalla barra laterale sono:
   - [X] F1.7: Utilizzare un metodo hash per cifrare le password
   - [X] F1.8: L'utente puo' scegliere un'immagine preimpostata
   - [X] F1.9: Modificare le piante del proprio account (aggiungi e rimuovi)
-  - [ ] F1.10: Modificare i dati
+  - [X] F1.10: Modificare i dati
 - [ ] F2: Visualizzare post
   - [X] F2.1: Vedere un post di prova
   - [X] F2.2: Leggere tutti i post da database

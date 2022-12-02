@@ -76,7 +76,7 @@ namespace Client
                     if (response != "$") {
                         string[] data = response.Split(' ');
                         account = new Account(data[1], data[0], data[2], data[3], data[4], data[5], int.Parse(data[6]), int.Parse(data[7].Split('$')[0]));
-                        lbl_result.Text = $"Account trovato:\n{ account.name } { account.surname } | { account.nickname }\nLikes: { account.likes } | Like ricevuti: { account.liked }";
+                        lbl_result.Text = $"Account trovato:\n{ account.name } { account.surname } | { account.nickname }\nLike dati: { account.likes } | Like ricevuti: { account.liked }";
                         pic_profile.Image = new Bitmap(@$"..\..\..\img\{ account.image }.jpg");
                     } else {
                         account = new Account("", "", "", "", "", "", 0, 0);

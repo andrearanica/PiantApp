@@ -34,12 +34,12 @@ namespace Client
             this.txt_title = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_description = new System.Windows.Forms.TextBox();
             this.btn_send = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_author = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_data = new System.Windows.Forms.TextBox();
+            this.txt_description = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,19 +91,12 @@ namespace Client
             this.label1.TabIndex = 4;
             this.label1.Text = "Descrizione";
             // 
-            // txt_description
-            // 
-            this.txt_description.Location = new System.Drawing.Point(136, 173);
-            this.txt_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(144, 26);
-            this.txt_description.TabIndex = 4;
-            // 
             // btn_send
             // 
-            this.btn_send.Location = new System.Drawing.Point(65, 230);
+            this.btn_send.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_send.Location = new System.Drawing.Point(64, 215);
             this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(171, 34);
+            this.btn_send.Size = new System.Drawing.Size(171, 46);
             this.btn_send.TabIndex = 5;
             this.btn_send.Text = "Posta";
             this.btn_send.UseVisualStyleBackColor = true;
@@ -145,18 +138,26 @@ namespace Client
             this.txt_data.Size = new System.Drawing.Size(144, 26);
             this.txt_data.TabIndex = 3;
             // 
+            // txt_description
+            // 
+            this.txt_description.Location = new System.Drawing.Point(136, 173);
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(144, 26);
+            this.txt_description.TabIndex = 10;
+            // 
             // AddPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 282);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(296, 273);
+            this.Controls.Add(this.txt_description);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_data);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_author);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_description);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.txt_title);
             this.Controls.Add(this.panel1);
@@ -181,11 +182,11 @@ namespace Client
         private System.Windows.Forms.TextBox txt_title;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_author;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_data;
+        private System.Windows.Forms.TextBox txt_description;
     }
 }

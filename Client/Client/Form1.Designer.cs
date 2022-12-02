@@ -46,9 +46,10 @@ namespace Client
             this.pic_next = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
-            this.btn_like = new System.Windows.Forms.Button();
+            this.btn_lik = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_like = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_addPost)).BeginInit();
@@ -59,6 +60,7 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_like)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,7 +130,7 @@ namespace Client
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(80, 30);
             this.btn_logout.TabIndex = 2;
-            this.btn_logout.Text = "Logout";
+            this.btn_logout.Text = "Esci";
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
@@ -212,7 +214,7 @@ namespace Client
             // pic_next
             // 
             this.pic_next.Image = ((System.Drawing.Image)(resources.GetObject("pic_next.Image")));
-            this.pic_next.Location = new System.Drawing.Point(211, 243);
+            this.pic_next.Location = new System.Drawing.Point(191, 243);
             this.pic_next.Name = "pic_next";
             this.pic_next.Size = new System.Drawing.Size(56, 55);
             this.pic_next.TabIndex = 2;
@@ -241,16 +243,16 @@ namespace Client
             this.btn_newPost.Visible = false;
             this.btn_newPost.Click += new System.EventHandler(this.btn_newPost_Click);
             // 
-            // btn_like
+            // btn_lik
             // 
-            this.btn_like.Location = new System.Drawing.Point(129, 258);
-            this.btn_like.Name = "btn_like";
-            this.btn_like.Size = new System.Drawing.Size(76, 40);
-            this.btn_like.TabIndex = 5;
-            this.btn_like.Text = "<3";
-            this.btn_like.UseVisualStyleBackColor = true;
-            this.btn_like.Visible = false;
-            this.btn_like.Click += new System.EventHandler(this.btn_like_Click);
+            this.btn_lik.Location = new System.Drawing.Point(581, 573);
+            this.btn_lik.Name = "btn_lik";
+            this.btn_lik.Size = new System.Drawing.Size(76, 40);
+            this.btn_lik.TabIndex = 5;
+            this.btn_lik.Text = "<3";
+            this.btn_lik.UseVisualStyleBackColor = true;
+            this.btn_lik.Visible = false;
+            this.btn_lik.Click += new System.EventHandler(this.btn_like_Click);
             // 
             // pictureBox2
             // 
@@ -274,13 +276,27 @@ namespace Client
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
+            // btn_like
+            // 
+            this.btn_like.Image = ((System.Drawing.Image)(resources.GetObject("btn_like.Image")));
+            this.btn_like.Location = new System.Drawing.Point(129, 243);
+            this.btn_like.Name = "btn_like";
+            this.btn_like.Size = new System.Drawing.Size(56, 55);
+            this.btn_like.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_like.TabIndex = 13;
+            this.btn_like.TabStop = false;
+            this.btn_like.Visible = false;
+            this.btn_like.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(841, 620);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btn_like);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btn_lik);
             this.Controls.Add(this.pic_next);
             this.Controls.Add(this.btn_newPost);
             this.Controls.Add(this.pnl_header);
@@ -291,7 +307,7 @@ namespace Client
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(400, 600);
+            this.MinimumSize = new System.Drawing.Size(857, 659);
             this.Name = "Form1";
             this.Text = " PiantApp";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -307,6 +323,7 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_like)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,9 +347,10 @@ namespace Client
         private System.Windows.Forms.PictureBox pic_next;
         private System.Windows.Forms.PictureBox pic_liked;
         private System.Windows.Forms.Label lbl_countLiked;
-        private System.Windows.Forms.Button btn_like;
+        private System.Windows.Forms.Button btn_lik;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btn_like;
     }
 }
 

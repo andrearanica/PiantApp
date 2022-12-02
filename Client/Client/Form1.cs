@@ -70,7 +70,7 @@ namespace Client {
             Controls.Add(lbl_title);
         }
 
-        private void createNickname (string nickname) {
+        private void createNickname (string nickname, int likes) {
             lbl_nickname.Visible = true;
             lbl_nickname.Text = $"Post di { nickname }";
             Font font = new Font("Century Gothic", 15);
@@ -86,7 +86,12 @@ namespace Client {
             Font font = new Font("Century Gothic", 12);
             lbl_description.Font = font;
             lbl_description.Location = new System.Drawing.Point(133, lbl_date.Location.Y + 40);
-            lbl_description.Size = new System.Drawing.Size(500, 30);
+            lbl_description.Size = new System.Drawing.Size(description.Length * 10, 30);
+            if (lbl_description.Size.Width > this.Width) {
+                this.Width = lbl_description.Size.Width + 100;
+            } else {
+                this.Width = 857;
+            }
             Controls.Remove(lbl_description);
             Controls.Add(lbl_description);
         }
@@ -104,11 +109,11 @@ namespace Client {
 
         private void createPost (UserPost post) {
             createTitle(post.title);
-            createNickname(post.author);
+            createNickname(post.author, post.likes);
             createDate(post.date);
             createDescription(post.description);
             btn_like.Location = new Point(lbl_description.Location.X, lbl_description.Location.Y + 50);
-            pic_next.Location = new Point(lbl_description.Location.X + 200, lbl_description.Location.Y + 40);
+            pic_next.Location = new Point(lbl_description.Location.X + 100, lbl_description.Location.Y + 50);
         }
 
         private UserPost getPost () {
@@ -157,7 +162,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Like { lbl_title.Text.Replace(' ', '-') } { account.nickname }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"like { lbl_title.Text.Replace(' ', '-') } { account.nickname }$");
                     string response = "";
                     int bytestSent = sender.Send(msg);
                     while (response.IndexOf('$') == -1) {
@@ -215,6 +220,15 @@ namespace Client {
                 MessageBox.Show("Non puoi mettere un like ad un tuo post", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (lbl_nickname.Text != $"Post di { account.nickname }") {
+                like();
+            } else {
+                MessageBox.Show("Non puoi mettere un like ad un tuo post", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     public class Account {
         public string name { get; set; }
@@ -239,11 +253,12 @@ namespace Client {
         public string date { get; set; }
         public string description { get; set; }
         public string image { get; set; }
+        public int likes { get; set; }
         public UserPost () {
 
         }
-        public UserPost (string title, string author, string date, string description, string image) {
-            this.title = title; this.author = author; this.date = date; this.description = description; this.image = image;
+        public UserPost (string title, string author, string date, string description, string image, int likes) {
+            this.title = title; this.author = author; this.date = date; this.description = description; this.image = image; this.likes = likes;
         }
     }
 }

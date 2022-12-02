@@ -101,5 +101,14 @@ namespace Client {
                 cmb_images.Items.Add(image);
             }
         }
+
+        private void cmb_images_KeyDown(object sender, KeyEventArgs e) {
+            cmb_images.Text = "";
+        }
+
+        private void cmb_images_TextUpdate(object sender, EventArgs e)
+        {
+            cmb_images.Text = "";
+        }
     }
 }

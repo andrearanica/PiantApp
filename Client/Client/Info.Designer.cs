@@ -53,7 +53,7 @@ namespace Client
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(177, 18);
+            this.label1.Location = new System.Drawing.Point(97, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 44);
             this.label1.TabIndex = 0;
@@ -131,25 +131,25 @@ namespace Client
             // txt_name
             // 
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_name.Location = new System.Drawing.Point(101, 134);
+            this.txt_name.Location = new System.Drawing.Point(115, 134);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(253, 26);
+            this.txt_name.Size = new System.Drawing.Size(337, 26);
             this.txt_name.TabIndex = 9;
             // 
             // txt_surname
             // 
             this.txt_surname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_surname.Location = new System.Drawing.Point(101, 166);
+            this.txt_surname.Location = new System.Drawing.Point(115, 166);
             this.txt_surname.Name = "txt_surname";
-            this.txt_surname.Size = new System.Drawing.Size(253, 26);
+            this.txt_surname.Size = new System.Drawing.Size(337, 26);
             this.txt_surname.TabIndex = 10;
             // 
             // txt_email
             // 
             this.txt_email.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_email.Location = new System.Drawing.Point(101, 198);
+            this.txt_email.Location = new System.Drawing.Point(115, 198);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(253, 26);
+            this.txt_email.Size = new System.Drawing.Size(337, 26);
             this.txt_email.TabIndex = 11;
             // 
             // lbl_account
@@ -165,7 +165,7 @@ namespace Client
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_update.Location = new System.Drawing.Point(101, 230);
+            this.btn_update.Location = new System.Drawing.Point(199, 230);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(253, 32);
             this.btn_update.TabIndex = 14;
