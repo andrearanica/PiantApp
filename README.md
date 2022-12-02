@@ -35,11 +35,11 @@ Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve
 ## 💻 Protocollo
 | ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                   |
 | --------------- | --------------------- | -----------------------------------------------------   | -------------------------------------------------------------------------- |
-| F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked$ ``` o ``` ```  |
-| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull$ ``` o ```" "```                                           |
-| F1              | Aggiungere pianta     | ``` addplant nickname plant$ ```                        | ``` successfull$ ``` o ```" " ```                                          |
-| F1              | Rimuovere pianta      | ``` removeplant nickname plant$ ```                     | ``` successfull$ ``` o ```" " ```                                          |
-| F1              | Aggiorna informazioni | ``` update nickname name surname email$ ```             | ``` successfull$ ``` o ```" " ```                                          |
+| F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked$ ``` o ```$```  |
+| F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull$ ``` o ```"$"```                                           |
+| F1              | Aggiungere pianta     | ``` addplant nickname plant$ ```                        | ``` successfull$ ``` o ```"$" ```                                          |
+| F1              | Rimuovere pianta      | ``` removeplant nickname plant$ ```                     | ``` successfull$ ``` o ```"$" ```                                          |
+| F1              | Aggiorna informazioni | ``` update nickname name surname email$ ```             | ``` successfull$ ``` o ```"$" ```                                          |
 | F2              | Visualizzare post     | ``` post$ ```                                           | ``` title author date description$ ```                                     |
 | F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull$ ``` o ``` invalid$ ```                                    |
 | F4              | Cerca utente          | ``` user nickname$ ```                                  | ``` surname name nickname email password image likes liked$ ```            |
