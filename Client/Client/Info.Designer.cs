@@ -34,7 +34,7 @@ namespace Client
             this.txt_plant = new System.Windows.Forms.TextBox();
             this.lbl_ask = new System.Windows.Forms.Label();
             this.btn_add = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_pl = new System.Windows.Forms.Label();
             this.list_plants = new System.Windows.Forms.ListBox();
             this.btn_removePlant = new System.Windows.Forms.Button();
             this.txt_name = new System.Windows.Forms.TextBox();
@@ -42,9 +42,9 @@ namespace Client
             this.txt_email = new System.Windows.Forms.TextBox();
             this.lbl_account = new System.Windows.Forms.Label();
             this.btn_update = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_surname = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_mail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,15 +97,15 @@ namespace Client
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // label2
+            // lbl_pl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 270);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Le tue piante";
+            this.lbl_pl.AutoSize = true;
+            this.lbl_pl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_pl.Location = new System.Drawing.Point(12, 270);
+            this.lbl_pl.Name = "lbl_pl";
+            this.lbl_pl.Size = new System.Drawing.Size(143, 25);
+            this.lbl_pl.TabIndex = 6;
+            this.lbl_pl.Text = "Le tue piante";
             // 
             // list_plants
             // 
@@ -173,44 +173,44 @@ namespace Client
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // label3
+            // lbl_surname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Cognome";
+            this.lbl_surname.AutoSize = true;
+            this.lbl_surname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_surname.Location = new System.Drawing.Point(12, 169);
+            this.lbl_surname.Name = "lbl_surname";
+            this.lbl_surname.Size = new System.Drawing.Size(83, 20);
+            this.lbl_surname.TabIndex = 15;
+            this.lbl_surname.Text = "Cognome";
             // 
-            // label4
+            // lbl_name
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(12, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Nome";
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_name.Location = new System.Drawing.Point(12, 137);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(53, 20);
+            this.lbl_name.TabIndex = 16;
+            this.lbl_name.Text = "Nome";
             // 
-            // label5
+            // lbl_mail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(12, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Email";
+            this.lbl_mail.AutoSize = true;
+            this.lbl_mail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_mail.Location = new System.Drawing.Point(12, 201);
+            this.lbl_mail.Name = "lbl_mail";
+            this.lbl_mail.Size = new System.Drawing.Size(46, 20);
+            this.lbl_mail.TabIndex = 17;
+            this.lbl_mail.Text = "Email";
             // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 458);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_mail);
+            this.Controls.Add(this.lbl_name);
+            this.Controls.Add(this.lbl_surname);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.lbl_account);
             this.Controls.Add(this.txt_email);
@@ -218,7 +218,7 @@ namespace Client
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.btn_removePlant);
             this.Controls.Add(this.list_plants);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_pl);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.lbl_ask);
             this.Controls.Add(this.txt_plant);
@@ -244,7 +244,7 @@ namespace Client
         private System.Windows.Forms.TextBox txt_plant;
         private System.Windows.Forms.Label lbl_ask;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_pl;
         private System.Windows.Forms.ListBox list_plants;
         private System.Windows.Forms.Button btn_removePlant;
         private System.Windows.Forms.TextBox txt_name;
@@ -252,8 +252,8 @@ namespace Client
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label lbl_account;
         private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_surname;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_mail;
     }
 }

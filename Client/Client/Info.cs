@@ -27,7 +27,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Addplant { account.nickname } { txt_plant.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"addplant { account.nickname } { txt_plant.Text }$");
                     int bytestSent = sender.Send(msg);
                     string response = "";
                     while (response.IndexOf('$') == -1) {
@@ -53,7 +53,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Plants { account.nickname }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"plants { account.nickname }$");
                     int bytestSent = sender.Send(msg);
                     string response = "";
                     while (response.IndexOf('$') == -1) {
@@ -82,7 +82,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Removeplant { account.nickname } { plant }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"removeplant { account.nickname } { plant }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);
@@ -105,7 +105,7 @@ namespace Client {
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Update { account.nickname } { txt_name.Text } { txt_surname.Text } { txt_email.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"update { account.nickname } { txt_name.Text } { txt_surname.Text } { txt_email.Text }$");
                     int bytestSent = sender.Send(msg);
                     int bytesRec = sender.Receive(bytes);
                     string response = Encoding.ASCII.GetString(bytes, 0, bytesRec);

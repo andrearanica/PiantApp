@@ -1,18 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "nGyQh6kB3wCayQ6GG70D9a/ZcQd88/iWFPsnRetoTkyw6/zy46VT3W8badRhsuW3GC1nl1wJ8sV1Z6aadX5AtA==",
+  "dgSpecHash": "JyjRJOWbYPzZOf1349OdTKSg+InTTQtySlDgtaYBGNeFYQHgWIHBt0+AwGfX3/4mQW1hTDXuKkIfwC+1+U98jA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEMP.PALEOCAPA\\Documents\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
+  "projectFilePath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Server\\Server\\Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0-rc.2.22472.3\\microsoft.bcl.asyncinterfaces.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.text.encodings.web\\7.0.0-rc.2.22472.3\\system.text.encodings.web.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.text.json\\7.0.0-rc.2.22472.3\\system.text.json.7.0.0-rc.2.22472.3.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0-rc.2.22472.3\\microsoft.bcl.asyncinterfaces.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.text.encodings.web\\7.0.0-rc.2.22472.3\\system.text.encodings.web.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.text.json\\7.0.0-rc.2.22472.3\\system.text.json.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

@@ -33,7 +33,7 @@ namespace Client
                 Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 try {
                     sender.Connect(remote);
-                    byte[] msg = Encoding.ASCII.GetBytes($"Plants { txt_nickname.Text }$");
+                    byte[] msg = Encoding.ASCII.GetBytes($"plants { txt_nickname.Text }$");
                     int bytestSent = sender.Send(msg);
                     string response = "";
                     while (response.IndexOf('$') == -1) {

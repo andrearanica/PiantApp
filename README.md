@@ -32,21 +32,27 @@ Le funzioni raggiungibili dalla barra laterale sono:
 | F1              | Login e registrazione | U1                 | L'utente deve inserire username e password per procedere                           |
 | F2              | Visualizzare post     | U2                 | Nella home dell'utente, deve essere presente un post                               |
 | F3              | Pubblicare contenuti  | U2                 | L'utente può pubblicare un post                                                    |
-| F4              | Cerca utenti          | U2                 | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
+| F4              | Cercare utenti        | U2                 | L'utente può cercare altri utenti per vedere i loro contenuti tramite il nickname  |
 | F5              | Interagire con i post | U2                 | Mi piace                                                                           |
 
 ## 💻 Protocollo
-| ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                  |
-| --------------- | --------------------- | -----------------------------------------------------   | ------------------------------------------------------------------------- |
+| ID Funzionalità | Nome sintetico        | Comando                                                 | Risposta                                                                   |
+| --------------- | --------------------- | -----------------------------------------------------   | -------------------------------------------------------------------------- |
 | F1              | Login                 | ``` login nickname password$```                         | ``` surname name nickname email password image likes liked$ ``` o ``` ```  |
 | F1              | Registazione          | ``` register surname name nickname email password$ ```  | ``` successfull$ ``` o ```" "```                                           |
-| F1              | Aggiungere pianta     | ``` Addplant nickname plant$ ```                        | ``` successfull$ ``` o ```" " ```                                          |
-| F1              | Rimuovere pianta      | ``` Removeplant nickname plant$ ```                     | ``` successfull$ ``` o ```" " ```                                          |
-| F1              | Aggiorna informazioni | ``` updateInfo nickname name surname email$ ```         | ``` successfull$ ``` o ```" " ```                                          |
-| F2              | Visualizzare post     | ``` post$ ```                                           | ``` title author date description$ ```                                    |
-| F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull$ ``` o ``` invalid$ ```                                     |
-| F4              | Cerca utente          | ``` user nickname$ ```                                   | ``` surname name nickname email password image likes liked$ ```            |
-| F5              | Like                  | ``` like title$ ```                                      | ``` successfull$ ```                                                       |
+| F1              | Aggiungere pianta     | ``` addplant nickname plant$ ```                        | ``` successfull$ ``` o ```" " ```                                          |
+| F1              | Rimuovere pianta      | ``` removeplant nickname plant$ ```                     | ``` successfull$ ``` o ```" " ```                                          |
+| F1              | Aggiorna informazioni | ``` update nickname name surname email$ ```             | ``` successfull$ ``` o ```" " ```                                          |
+| F2              | Visualizzare post     | ``` post$ ```                                           | ``` title author date description$ ```                                     |
+| F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull$ ``` o ``` invalid$ ```                                    |
+| F4              | Cerca utente          | ``` user nickname$ ```                                  | ``` surname name nickname email password image likes liked$ ```            |
+| F5              | Like                  | ``` like title$ ```                                     | ``` successfull$ ```                                                       |
+
+## Utilizzo UI
+Una volta aperto il form ci ritroveremo davanti a questa schermata:
+
+Nella parte centrale possiamo notare la sezione dei post, in cui possiamo scorrere i post pubblicati con il pulsante apposito. Possiamo anche dare un mi piace al post.
+Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve per pubblicare un nuovo post, cerca utente, che consente di trovare un utente in base al suo nickname, e l'immagine di profilo, che apre un menu con le informazioni sull'account (in questa sezione si possono modificare le informazioni).
 
 ## 🚀 Roadmap
 - [X] F1: Login e registrazione

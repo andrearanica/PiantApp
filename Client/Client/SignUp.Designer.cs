@@ -31,21 +31,21 @@ namespace Client
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_surname = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_surname = new System.Windows.Forms.Label();
             this.txt_nickname = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_nickname = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.btn_register = new System.Windows.Forms.Button();
             this.lbl_error = new System.Windows.Forms.Label();
             this.lbl_passwordError = new System.Windows.Forms.Label();
             this.cmb_images = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_image = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +71,14 @@ namespace Client
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrati";
             // 
-            // label2
+            // lbl_name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nome";
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(8, 84);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(53, 20);
+            this.lbl_name.TabIndex = 1;
+            this.lbl_name.Text = "Nome";
             // 
             // txt_name
             // 
@@ -94,14 +94,14 @@ namespace Client
             this.txt_surname.Size = new System.Drawing.Size(147, 26);
             this.txt_surname.TabIndex = 4;
             // 
-            // label3
+            // lbl_surname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Cognome";
+            this.lbl_surname.AutoSize = true;
+            this.lbl_surname.Location = new System.Drawing.Point(8, 117);
+            this.lbl_surname.Name = "lbl_surname";
+            this.lbl_surname.Size = new System.Drawing.Size(83, 20);
+            this.lbl_surname.TabIndex = 3;
+            this.lbl_surname.Text = "Cognome";
             // 
             // txt_nickname
             // 
@@ -110,14 +110,14 @@ namespace Client
             this.txt_nickname.Size = new System.Drawing.Size(147, 26);
             this.txt_nickname.TabIndex = 6;
             // 
-            // label5
+            // lbl_nickname
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Nickname";
+            this.lbl_nickname.AutoSize = true;
+            this.lbl_nickname.Location = new System.Drawing.Point(8, 149);
+            this.lbl_nickname.Name = "lbl_nickname";
+            this.lbl_nickname.Size = new System.Drawing.Size(83, 20);
+            this.lbl_nickname.TabIndex = 5;
+            this.lbl_nickname.Text = "Nickname";
             // 
             // txt_password
             // 
@@ -127,14 +127,14 @@ namespace Client
             this.txt_password.Size = new System.Drawing.Size(147, 26);
             this.txt_password.TabIndex = 10;
             // 
-            // label4
+            // lbl_password
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 213);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Password";
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(12, 213);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(79, 20);
+            this.lbl_password.TabIndex = 9;
+            this.lbl_password.Text = "Password";
             // 
             // txt_email
             // 
@@ -143,14 +143,14 @@ namespace Client
             this.txt_email.Size = new System.Drawing.Size(147, 26);
             this.txt_email.TabIndex = 8;
             // 
-            // label6
+            // lbl_email
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 181);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(12, 181);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(46, 20);
+            this.lbl_email.TabIndex = 7;
+            this.lbl_email.Text = "Email";
             // 
             // btn_register
             // 
@@ -197,35 +197,35 @@ namespace Client
             this.cmb_images.TextUpdate += new System.EventHandler(this.cmb_images_TextUpdate);
             this.cmb_images.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_images_KeyDown);
             // 
-            // label7
+            // lbl_image
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Immagine";
+            this.lbl_image.AutoSize = true;
+            this.lbl_image.Location = new System.Drawing.Point(12, 242);
+            this.lbl_image.Name = "lbl_image";
+            this.lbl_image.Size = new System.Drawing.Size(82, 20);
+            this.lbl_image.TabIndex = 15;
+            this.lbl_image.Text = "Immagine";
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(270, 386);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_image);
             this.Controls.Add(this.cmb_images);
             this.Controls.Add(this.lbl_passwordError);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.txt_email);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.txt_nickname);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_nickname);
             this.Controls.Add(this.txt_surname);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_surname);
             this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -246,20 +246,20 @@ namespace Client
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.TextBox txt_surname;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_surname;
         private System.Windows.Forms.TextBox txt_nickname;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_nickname;
         private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Label lbl_error;
         private System.Windows.Forms.Label lbl_passwordError;
         private System.Windows.Forms.ComboBox cmb_images;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_image;
     }
 }

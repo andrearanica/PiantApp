@@ -96,9 +96,9 @@ namespace Client {
             Controls.Add(lbl_description);
         }
 
-        private void createDate (string date) {
+        private void createDate (string date, int likes) {
             lbl_date.Visible = true;
-            lbl_date.Text = $"Postato il { date }";
+            lbl_date.Text = $"Postato il { date } | { likes } like ricevuti";
             Font font = new Font("Century Gothic", 14);
             lbl_description.Font = font;
             lbl_date.Location = new System.Drawing.Point(133, lbl_nickname.Location.Y + 40);
@@ -110,7 +110,7 @@ namespace Client {
         private void createPost (UserPost post) {
             createTitle(post.title);
             createNickname(post.author, post.likes);
-            createDate(post.date);
+            createDate(post.date, post.likes);
             createDescription(post.description);
             btn_like.Location = new Point(lbl_description.Location.X, lbl_description.Location.Y + 50);
             pic_next.Location = new Point(lbl_description.Location.X + 100, lbl_description.Location.Y + 50);
@@ -138,7 +138,8 @@ namespace Client {
                         post.title = data[0].Replace('-', ' ');
                         post.author = data[1].Replace('-', ' ');
                         post.date = data[2];
-                        post.description = data[3].Replace('-', ' ').Split('$')[0];
+                        post.description = data[3].Replace('-', ' ');
+                        post.likes = int.Parse(data[4].Split('$')[0]);
                         // this.Close();
                     }
                     sender.Shutdown(SocketShutdown.Both);
@@ -211,6 +212,7 @@ namespace Client {
                 p = getPost();
             } while (p.title == lbl_title.Text);
             createPost(p);
+            btn_like.Visible = true;
         }
 
         private void btn_like_Click(object sender, EventArgs e) {
@@ -225,6 +227,7 @@ namespace Client {
         {
             if (lbl_nickname.Text != $"Post di { account.nickname }") {
                 like();
+                btn_like.Visible = false;
             } else {
                 MessageBox.Show("Non puoi mettere un like ad un tuo post", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

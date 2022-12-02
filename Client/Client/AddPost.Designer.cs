@@ -33,11 +33,11 @@ namespace Client
             this.lbl_1 = new System.Windows.Forms.Label();
             this.txt_title = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_description = new System.Windows.Forms.Label();
             this.btn_send = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_author = new System.Windows.Forms.Label();
             this.txt_author = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_data = new System.Windows.Forms.Label();
             this.txt_data = new System.Windows.Forms.TextBox();
             this.txt_description = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -82,14 +82,14 @@ namespace Client
             this.lbl_title.TabIndex = 2;
             this.lbl_title.Text = "Titolo";
             // 
-            // label1
+            // lbl_description
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 179);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Descrizione";
+            this.lbl_description.AutoSize = true;
+            this.lbl_description.Location = new System.Drawing.Point(12, 179);
+            this.lbl_description.Name = "lbl_description";
+            this.lbl_description.Size = new System.Drawing.Size(92, 20);
+            this.lbl_description.TabIndex = 4;
+            this.lbl_description.Text = "Descrizione";
             // 
             // btn_send
             // 
@@ -102,14 +102,14 @@ namespace Client
             this.btn_send.UseVisualStyleBackColor = true;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
-            // label2
+            // lbl_author
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Autore";
+            this.lbl_author.AutoSize = true;
+            this.lbl_author.Location = new System.Drawing.Point(12, 111);
+            this.lbl_author.Name = "lbl_author";
+            this.lbl_author.Size = new System.Drawing.Size(59, 20);
+            this.lbl_author.TabIndex = 7;
+            this.lbl_author.Text = "Autore";
             // 
             // txt_author
             // 
@@ -120,14 +120,14 @@ namespace Client
             this.txt_author.Size = new System.Drawing.Size(144, 26);
             this.txt_author.TabIndex = 2;
             // 
-            // label3
+            // lbl_data
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Data";
+            this.lbl_data.AutoSize = true;
+            this.lbl_data.Location = new System.Drawing.Point(12, 145);
+            this.lbl_data.Name = "lbl_data";
+            this.lbl_data.Size = new System.Drawing.Size(45, 20);
+            this.lbl_data.TabIndex = 9;
+            this.lbl_data.Text = "Data";
             // 
             // txt_data
             // 
@@ -143,7 +143,7 @@ namespace Client
             this.txt_description.Location = new System.Drawing.Point(136, 173);
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(144, 26);
-            this.txt_description.TabIndex = 10;
+            this.txt_description.TabIndex = 4;
             // 
             // AddPost
             // 
@@ -152,12 +152,12 @@ namespace Client
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(296, 273);
             this.Controls.Add(this.txt_description);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_data);
             this.Controls.Add(this.txt_data);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_author);
             this.Controls.Add(this.txt_author);
             this.Controls.Add(this.btn_send);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_description);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.txt_title);
             this.Controls.Add(this.panel1);
@@ -181,11 +181,11 @@ namespace Client
         private System.Windows.Forms.Label lbl_1;
         private System.Windows.Forms.TextBox txt_title;
         private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_author;
         private System.Windows.Forms.TextBox txt_author;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_data;
         private System.Windows.Forms.TextBox txt_data;
         private System.Windows.Forms.TextBox txt_description;
     }

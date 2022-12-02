@@ -113,7 +113,7 @@ namespace Server {
 
             post = posts[new Random().Next(0, posts.Count)];
 
-            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description }$"));
+            handler.Send(Encoding.ASCII.GetBytes($"{ post.title } { post.author } { post.date } { post.description } { post.likes }$"));
         }
         private void addPost (string data, ref Socket handler) {
             string[] info = data.Split(' ');
@@ -173,6 +173,7 @@ namespace Server {
 
             string json = System.IO.File.ReadAllText(@"..\..\..\json\accounts.json");
             List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+
             foreach (Account a in accounts) {
                 if (a.nickname == nickname) {
                     int lastPos = 0;
@@ -203,7 +204,7 @@ namespace Server {
                     
                 }
             }
-            handler.Send(Encoding.ASCII.GetBytes(""));
+            handler.Send(Encoding.ASCII.GetBytes("$"));
             System.IO.File.WriteAllText(@"..\..\..\json\accounts.json", JsonSerializer.Serialize<List<Account>>(accounts));
         }
         private void like (string data, ref Socket handler) {   
@@ -226,6 +227,7 @@ namespace Server {
                     }
                 }
             }
+            handler.Send(Encoding.ASCII.GetBytes("$"));
             foreach (Account a in accounts) {
                 if (a.nickname == account) {
                     a.likes++;
@@ -274,47 +276,49 @@ namespace Server {
                     }
                     listbox.Items.Add($"Richiesta: { data }");
 
-                    if (data[0] == 'l' && data[1] == 'o')
+                    string request = data.Split(' ')[0];
+
+                    if (request == "login")
                     {                           // If the user sends login
                         login(data, ref handler);
                     }
-                    else if (data[0] == 'r')
+                    else if (request == "register")
                     {                      // If the user sends registration
                         register(data, ref handler);
                     }
-                    else if (data[0] == 'p')
+                    else if (request == "post$")
                     {                    // If the user sends post
                         post(data, ref handler);
                     }
-                    else if (data[0] == 'a')
+                    else if (request == "add")
                     {
                         addPost(data, ref handler);
                     }
-                    else if (data[0] == 'u')
+                    else if (request == "user")
                     {
                         getUser(data, ref handler);
                     }
-                    else if (data[0] == 'P')
+                    else if (request == "plants")
                     {
                         getPlants(data, ref handler);
                     }
-                    else if (data[0] == 'A')
+                    else if (request == "addplant")
                     {
                         addPlant(data, ref handler);
                     }
-                    else if (data[0] == 'R')
+                    else if (request == "removeplant")
                     {
                         removePlant(data, ref handler);
                     }
-                    else if (data[0] == 'l' && data[1] == 'i') {
+                    else if (request == "like") {
                         like(data, ref handler);
                     }
-                    else if (data[0] == 'U') {
+                    else if (request == "update") {
                         updateInfo(data, ref handler);
                     }
                     else
                     {
-                        handler.Send(Encoding.ASCII.GetBytes(""));
+                        handler.Send(Encoding.ASCII.GetBytes("invalid$"));
                     }
                     listbox.Items.Add(data);
 

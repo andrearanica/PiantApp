@@ -32,8 +32,8 @@ namespace Client
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_nam = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_error = new System.Windows.Forms.Label();
@@ -70,25 +70,25 @@ namespace Client
             this.txt_username.Size = new System.Drawing.Size(228, 27);
             this.txt_username.TabIndex = 1;
             // 
-            // label2
+            // lbl_nam
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 90);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nickname";
+            this.lbl_nam.AutoSize = true;
+            this.lbl_nam.Location = new System.Drawing.Point(81, 90);
+            this.lbl_nam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nam.Name = "lbl_nam";
+            this.lbl_nam.Size = new System.Drawing.Size(89, 21);
+            this.lbl_nam.TabIndex = 2;
+            this.lbl_nam.Text = "Nickname";
             // 
-            // label3
+            // lbl_password
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 161);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(81, 161);
+            this.lbl_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(82, 21);
+            this.lbl_password.TabIndex = 4;
+            this.lbl_password.Text = "Password";
             // 
             // txt_password
             // 
@@ -128,9 +128,9 @@ namespace Client
             this.ClientSize = new System.Drawing.Size(268, 316);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_nam);
             this.Controls.Add(this.txt_username);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -153,8 +153,8 @@ namespace Client
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_username;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_nam;
+        private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_error;

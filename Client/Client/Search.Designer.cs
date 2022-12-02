@@ -31,8 +31,8 @@ namespace Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_s = new System.Windows.Forms.Label();
+            this.lbl_i = new System.Windows.Forms.Label();
             this.txt_nickname = new System.Windows.Forms.TextBox();
             this.lbl_result = new System.Windows.Forms.Label();
             this.pic_profile = new System.Windows.Forms.PictureBox();
@@ -43,32 +43,32 @@ namespace Client
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_s);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(808, 71);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // lbl_s
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(258, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cerca utente";
+            this.lbl_s.AutoSize = true;
+            this.lbl_s.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_s.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_s.Location = new System.Drawing.Point(226, 24);
+            this.lbl_s.Name = "lbl_s";
+            this.lbl_s.Size = new System.Drawing.Size(164, 28);
+            this.lbl_s.TabIndex = 0;
+            this.lbl_s.Text = "Cerca utente";
             // 
-            // label2
+            // lbl_i
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(13, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Inserisci il nickname";
+            this.lbl_i.AutoSize = true;
+            this.lbl_i.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_i.Location = new System.Drawing.Point(13, 88);
+            this.lbl_i.Name = "lbl_i";
+            this.lbl_i.Size = new System.Drawing.Size(152, 20);
+            this.lbl_i.TabIndex = 1;
+            this.lbl_i.Text = "Inserisci il nickname";
             // 
             // txt_nickname
             // 
@@ -106,7 +106,7 @@ namespace Client
             this.Controls.Add(this.pic_profile);
             this.Controls.Add(this.lbl_result);
             this.Controls.Add(this.txt_nickname);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_i);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -125,8 +125,8 @@ namespace Client
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_s;
+        private System.Windows.Forms.Label lbl_i;
         private System.Windows.Forms.TextBox txt_nickname;
         private System.Windows.Forms.Label lbl_result;
         private System.Windows.Forms.PictureBox pic_profile;

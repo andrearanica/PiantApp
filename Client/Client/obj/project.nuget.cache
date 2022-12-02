@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nxll9NLAGMEZ5dgu5ZcuO92fNK3kGBuh42RKMPaH2oyQpZF+pTjXjN43Oue8P3iqnsXJdLu2cR6HCJ1/ihGlnA==",
+  "dgSpecHash": "UUyclMGVoByuxmUZwlzwkaueAmu1TCE7R4GF+B0WtcOJq5JUcHVcuQ+BIvuI52T8wsmpC/DgTnkCJ4BQh/NdDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEMP.PALEOCAPA\\Documents\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\TEMP.PALEOCAPA\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Andrea\\Documenti\\GitHub\\PiantApp\\Client\\Client\\Client.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

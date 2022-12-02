@@ -39,16 +39,16 @@ namespace Client
             this.pic_profile = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.btn_addPost = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_title = new System.Windows.Forms.Label();
             this.pnl_header = new System.Windows.Forms.Panel();
             this.btn_signup = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_desc = new System.Windows.Forms.Label();
             this.pic_next = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_newPost = new System.Windows.Forms.Button();
             this.btn_lik = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pic_plant = new System.Windows.Forms.PictureBox();
+            this.pic_plan = new System.Windows.Forms.PictureBox();
             this.btn_like = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_liked)).BeginInit();
@@ -58,8 +58,8 @@ namespace Client
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_plant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_plan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_like)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,21 +169,21 @@ namespace Client
             this.btn_addPost.Visible = false;
             this.btn_addPost.Click += new System.EventHandler(this.btn_addPost_Click);
             // 
-            // label1
+            // lbl_title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(129, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Benvenuto in PiantApp";
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_title.Location = new System.Drawing.Point(129, 22);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(368, 38);
+            this.lbl_title.TabIndex = 1;
+            this.lbl_title.Text = "Benvenuto in PiantApp";
             // 
             // pnl_header
             // 
             this.pnl_header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_header.Controls.Add(this.btn_signup);
-            this.pnl_header.Controls.Add(this.label2);
+            this.pnl_header.Controls.Add(this.lbl_desc);
             this.pnl_header.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pnl_header.Location = new System.Drawing.Point(129, 75);
             this.pnl_header.Name = "pnl_header";
@@ -201,14 +201,14 @@ namespace Client
             this.btn_signup.UseVisualStyleBackColor = true;
             this.btn_signup.Click += new System.EventHandler(this.btn_signup_Click);
             // 
-            // label2
+            // lbl_desc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(470, 63);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Per effettuare l\'accesso clicca sull\'immagine profilo a sinistra\r\n\r\nSe non hai un" +
+            this.lbl_desc.AutoSize = true;
+            this.lbl_desc.Location = new System.Drawing.Point(3, 12);
+            this.lbl_desc.Name = "lbl_desc";
+            this.lbl_desc.Size = new System.Drawing.Size(470, 63);
+            this.lbl_desc.TabIndex = 0;
+            this.lbl_desc.Text = "Per effettuare l\'accesso clicca sull\'immagine profilo a sinistra\r\n\r\nSe non hai un" +
     " account, ";
             // 
             // pic_next
@@ -254,27 +254,27 @@ namespace Client
             this.btn_lik.Visible = false;
             this.btn_lik.Click += new System.EventHandler(this.btn_like_Click);
             // 
-            // pictureBox2
+            // pic_plant
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(462, -15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(378, 281);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.pic_plant.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_plant.Image = ((System.Drawing.Image)(resources.GetObject("pic_plant.Image")));
+            this.pic_plant.Location = new System.Drawing.Point(462, -15);
+            this.pic_plant.Name = "pic_plant";
+            this.pic_plant.Size = new System.Drawing.Size(378, 281);
+            this.pic_plant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_plant.TabIndex = 6;
+            this.pic_plant.TabStop = false;
             // 
-            // pictureBox3
+            // pic_plan
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(663, 453);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 170);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.pic_plan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_plan.Image = ((System.Drawing.Image)(resources.GetObject("pic_plan.Image")));
+            this.pic_plan.Location = new System.Drawing.Point(663, 453);
+            this.pic_plan.Name = "pic_plan";
+            this.pic_plan.Size = new System.Drawing.Size(177, 170);
+            this.pic_plan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_plan.TabIndex = 12;
+            this.pic_plan.TabStop = false;
             // 
             // btn_like
             // 
@@ -295,16 +295,16 @@ namespace Client
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(841, 620);
             this.Controls.Add(this.btn_like);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pic_plan);
             this.Controls.Add(this.btn_lik);
             this.Controls.Add(this.pic_next);
             this.Controls.Add(this.btn_newPost);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.btn_addPost);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_plant);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(857, 659);
@@ -321,8 +321,8 @@ namespace Client
             this.pnl_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_plant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_plan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_like)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,7 +337,7 @@ namespace Client
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Panel pnl_header;
         private System.Windows.Forms.Button btn_signup;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_desc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_newPost;
         private System.Windows.Forms.Button btn_addPost;
@@ -348,8 +348,8 @@ namespace Client
         private System.Windows.Forms.PictureBox pic_liked;
         private System.Windows.Forms.Label lbl_countLiked;
         private System.Windows.Forms.Button btn_lik;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pic_plant;
+        private System.Windows.Forms.PictureBox pic_plan;
         private System.Windows.Forms.PictureBox btn_like;
     }
 }
