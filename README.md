@@ -1,6 +1,6 @@
 # 🌵 PiantApp
 <!--Hai mai voluto--> 
-PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e parlare di piante. Ogni utente può condividere informazioni sulle piante che ha piantato, vedere le piante dei propri amici e moltre altre funzioni
+PiantApp è un'applicazione che consente agli utenti di condividere conoscenze e parlare di piante. Ogni utente può condividere informazioni sulle piante che ha piantato, vedere le piante dei propri amici e molto altro
 
 ## ✨ Funzionamento
 Per utilizzare il programma esegui il server e fai partire il servizio premendo il pulsante apposito. Successivamente esegui i client ed effettua il login.
@@ -44,9 +44,6 @@ Nella barra a sinistra sono presenti alcune funzionalità: nuovo post, che serve
 | F3              | Pubblicare contenuti  | ``` add title author data description$ ```              | ``` successfull$ ``` o ``` invalid$ ```                                    |
 | F4              | Cerca utente          | ``` user nickname$ ```                                  | ``` surname name nickname email password image likes liked$ ```            |
 | F5              | Like                  | ``` like title$ ```                                     | ``` successfull$ ```                                                       |
-
-## Utilizzo UI
-Una volta aperto il form ci ritroveremo davanti a questa schermata:
 
 ## 🚀 Roadmap
 - [X] F1: Login e registrazione
